@@ -1,0 +1,88 @@
+.contenter {
+  width:90%;
+  margin: 0 auto;
+  padding: 20rpx;
+}
+.money {
+  width: 60%;
+  margin: 100rpx auto;
+  margin-bottom: 50rpx;
+}
+.money text {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.money image {
+  width: 200rpx;
+  display: block;
+  margin: auto;
+  height:200rpx;
+  margin-bottom: 60rpx;
+}
+.money .mymoney {
+  font-size: 32rpx;
+}
+.money .num {
+  font-size: 60rpx;
+  font-weight: 600;
+  color: #f96086;
+}
+.tixian-box {
+  width:80%;
+  height: 150rpx;
+  margin: auto;
+}
+.title {
+  font-size: 32rpx;
+}
+.input {
+  float: left;
+  border-bottom:1px solid #999;
+  padding: 10rpx;
+}
+.input-box {
+  margin-top: 20rpx;
+}
+.input-box view {
+  float: left;
+}
+.input-box image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-top :20rpx;
+}
+.all {
+  width: 90%;
+  margin-left: 100rpx;
+  font-size: 28rpx;
+}
+.all .allTx {
+  color:cadetblue;
+  margin-right: 30rpx;
+}
+.look {
+  width:100%;
+  margin-top: 100rpx;
+  font-size: 24rpx;
+  color: deepskyblue;
+  text-align: center;
+  display: none;
+}
+.sure-btn {
+  width: 90%;
+  height: 80rpx;
+  font-size: 32rpx;
+  border-radius: 40rpx;
+  color: #fff;
+  background: #f96086;
+  margin: 100rpx auto;
+}
+.errShow {
+  width: 90%;
+  height: 20rpx;
+  display: block;
+  color: red;
+  font-size: 28rpx;
+  text-align: center;
+}

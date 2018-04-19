@@ -1,0 +1,425 @@
+.workercontent {
+  margin-top: 10rpx;
+  display: block;
+}
+.telbox {
+  margin-top: 10rpx;
+}
+.top {
+    height: 136rpx;
+    width: 100%;
+    background-color: #f96086;
+}
+.span-line {
+  width: 100%;
+  height: 100rpx;
+  display: block;
+}
+.top-box {
+    width: 80%;
+    height: 226rpx;
+    z-index: 100;
+    margin: -110rpx auto;
+    background-color: #fff;
+    padding-top: 20rpx;
+    padding-left: 40rpx;
+    padding-right: 40rpx;
+    border-radius: 10rpx;
+    box-shadow: 1rpx 1rpx 5rpx 5rpx #F1F1F1;
+}
+.err {
+  width: 100%;
+  text-align: center;
+  color: red;
+  font-size: 28rpx;
+  height: 40rpx;
+  margin-bottom: 5rpx;
+}
+.hiddentitle {
+  width: 100%;
+  color: red;
+  font-size: 34rpx;
+  text-align: center;
+}
+.topBox-top {
+    padding: 20rpx;
+}
+
+.topBox-span {
+    width: 49%;
+    height: 116rpx;
+    display: inline-block;
+}
+.topBox-span view:nth-child(2) {
+    font-size: 32rpx;
+    color: #999;
+}
+.spanyuan {
+  height: 50rpx;
+  float: right;
+}
+.topBox-top .topBox-span:nth-child(1) {
+    border-right: 1px solid #e2e2e2;
+}
+.topBox-top .topBox-span view:nth-child(1) text:nth-child(1) {
+    color: #f96086;
+}
+.topBox-top .topBox-span:nth-child(2) view {
+   
+    text-align:right;
+}
+.topBox-bottom {
+    color: #999;
+    font-size: 26rpx;
+}
+.bottom-box{
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+}
+.span-bottom {
+  margin-top: 20rpx;
+}
+.total {
+    color: #f96086;
+}
+.chance-status {
+     width: 90%;
+     margin: 150rpx auto;
+     margin-bottom: 0;
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+}
+.stateBtn{
+  font-size: 30rpx;
+  background-color: #EDEDED;
+  color: #ffffff;
+}
+.stateBtn::after{
+  border: none;
+}
+.changeStata{
+  background-color: #F85B80;
+}
+.user-order-bigbox {
+    width:90%;
+    margin: 40rpx auto;
+    margin-bottom: 500rpx;
+}
+.user-order-box {
+    padding: 20rpx;
+    position: relative;
+    margin-top: 20rpx;
+    box-shadow: 1rpx 1rpx 5rpx 5rpx #F1F1F1;
+}
+.address{
+    margin-top: 10rpx;
+    display:flex;
+    align-items: center;
+}
+
+.address text {
+    width: 100%;
+    font-size: 30rpx;
+    margin-left: 10rpx;
+}
+.message {
+    margin-top: 20rpx;
+    display: flex;
+}
+.message .tx image {
+    width: 110rpx;
+    height: 110rpx;
+    border-radius: 50%;
+}
+.message .tx {
+    display: inline-block;
+}
+.info {
+    margin-left: 20rpx;
+    height: 110rpx;
+    width: 100%;
+    display: inline-block;
+}
+.info text {
+    display: block;
+    font-size: 26rpx;
+    margin-top: 20rpx;
+}
+
+.info .nickName {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 30rpx;
+}
+.pf image {
+    width: 22rpx;
+    height: 22rpx;
+    display: inline-block;
+}
+.notices{
+  font-weight: bold
+}
+.score{
+  margin-top: 10rpx;
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+  position: relative
+}
+.Requirement{
+  position: absolute;
+  top: 0;
+  left: 33%;
+  color: #e2e2e2;
+}
+.pf text {
+    font-size: 30rpx;
+    margin-left: 20rpx;
+    display: inline-block;
+}
+.require {
+    margin-left: 20rpx;
+    display: inline-block;
+}
+.require text {
+    display: block;
+    margin-top: 20rpx;
+    color: #999;
+    font-size: 28rpx;
+}
+.require text:nth-child(1) {
+    margin-top: 0;
+}
+.time {
+    width: 120rpx;
+    height: 120rpx;
+    display: inline-block;
+    background-color: #e2e2e2;
+    border-radius: 50%;
+    margin-right: 10rpx;
+    float:right;
+}
+.time text {
+  display: block;
+  width: 120rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  text-align: center;
+}
+.project {
+    margin-top: 20rpx;
+}
+
+.tuijian-pro,.self-pro {
+    /* display: flex; */
+    font-size: 32rpx;
+}
+.self-pro {
+    margin-top: 10rpx;
+}
+.tuijian-content,.self-content {
+    color: #999;
+    float: left;
+    font-size: 32rpx;
+}
+.tuijian-content view text:nth-child(1),
+.self-content view text:nth-child(1) {
+    margin-left:  0;
+}
+.tj-title,.self-title {
+    width: 100%;
+    display: block;
+    font-size: 32rpx;
+}
+.tj-title text,.self-title text {
+   color: #e2e2e2;
+}
+.total-money {
+    font-size: 30rpx;
+}
+.total-money text:nth-child(2) {
+  margin-left: 10rpx;
+}
+
+.project-reply {
+  text-align: right;
+  width: 100%;
+  margin-top: 20rpx;
+}
+.project-reply button {
+    width: 150rpx;
+    height: 64rpx;
+    margin-left: 40rpx;
+    display: inline-block;
+    border-radius: 34rpx;
+    background-color: #f96086;
+    color: #fff;
+    font-size: 26rpx;
+}
+.project-reply button:nth-child(2) {
+    background-color: #3F67E6;
+}
+.footer {
+    width: 100%;
+    height: 200rpx;
+    position: fixed;
+    bottom: 0;
+    margin-top: 200rpx;
+    background-color: #fff;
+}
+.button-bigbox {
+    width: 82%;
+    margin: 20rpx auto;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+.button-box {
+    display: inline-block;
+    width: 88rpx;
+}
+.button-box image {
+    width: 88rpx;
+    display: block;
+    height: 88rpx;
+}
+.button-box text {
+    font-size: 32rpx;
+    color: #999;
+    display: block;
+    text-align: center;
+}
+.mask {
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:rgba(0,0,0,0.5);
+}
+.hiddenBox {
+  width: 100%;
+  height: 300%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: rgba(0,0,0,0.2);
+}
+.rejectBox {
+  width: 80%;
+  margin: 350rpx auto;
+  background: #fff;
+  padding: 20rpx;
+  border-radius: 20rpx;
+}
+.rej-title {
+  margin-left: 20rpx;
+  font-size: 36rpx;
+  padding-bottom: 10rpx;
+  border-bottom: 1px solid #999;
+}
+.rej-box {
+  width: 90%;
+  margin: 10rpx auto;
+}
+.label-box {
+  display: block;
+  margin-top: 10rpx;
+}
+.sureRej {
+  width: 200rpx;
+  background: #f96086;
+  font-size: 24rpx;
+  height: 60rpx;
+  color: #fff;
+  display: inline-block;
+  border-radius: 50rpx;
+  margin-left: 40rpx;
+}
+.blue {
+  background-color: #3F67E6;
+  margin-left: 40rpx;
+}
+.statesBtn{
+  width: 150rpx;
+  height: 50rpx;
+  font-size: 30rpx;
+  line-height: 1.5;
+  margin-right: 5rpx;
+
+}
+.statesBtn::after{
+  border: none;
+}
+
+
+/* 模态框 */
+.modelShow{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color:rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.scrollStyle{
+  width: 80%;
+  height: 380rpx;
+  margin: 40% auto;
+  background-color: #ffffff;
+  border-radius: 10rpx;
+}
+
+.commentItem{
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+  justify-content:space-between;
+}
+.doctorHead{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+}
+.star-image{
+  width: 35rpx;
+  height: 35rpx;
+}
+.starsNum{
+  margin-left: 10rpx;
+  display: flex;
+  align-items: center;
+}
+
+.formBtn{
+  border: none;
+  font-size: 32rpx;
+  line-height: 1.5;
+  color: #99A6C4;
+  background-color: #fff;
+  padding: 0rpx;
+}
+.formBtn::after{
+  border: none;
+}
+.formBtns{
+  border: none;
+  font-size: 30rpx;
+  line-height: 1.5;
+  background-color: #fff;
+  padding: 0rpx;
+}
+.formBtns::after{
+  border: none;
+}

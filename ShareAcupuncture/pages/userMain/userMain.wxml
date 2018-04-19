@@ -1,0 +1,44 @@
+<view class="container-user">
+    <view class="top">
+        <image src="{{photo}}"/>
+        <view class="user-name">{{nickName}}</view>
+    </view>
+    <view class="middr-box">
+        <view class="content-box" catchtap='gotoOrder'>
+            <view class="content-icon">
+                <image src='../../img/history.svg' />
+            </view>
+            <view class="content-title">
+                <text>历史订单</text>
+            </view>
+            <view class="content-right">
+                <image src="../../img/right1.svg" />
+            </view>
+        </view>
+        <view class="content-box"  catchtap='gotoDeposit'>
+            <view class="content-icon">
+                <image src='../../img/yajinjl.svg' />
+            </view>
+            <view class="content-title">
+                <text>押金记录</text>
+            </view>
+            <view class="content-right">
+                <image src="../../img/right1.svg" />
+            </view>
+        </view>
+        <view class="content-box"  bindtap='phone'>
+            <view class="content-icon">
+                <image src='../../img/lianxikf.svg' />
+            </view>
+            <view class="content-title">
+                <text>人工客服</text>
+            </view>
+            <view class="content-right">
+                <image src="../../img/right1.svg" />
+            </view>
+        </view>
+    </view>
+    <view class="footer">
+      <contact-button class="lxkf" session-from="weapp">联系客服</contact-button>
+    </view>
+</view>

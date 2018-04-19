@@ -1,0 +1,39 @@
+page{
+  background-color: #EDEDED;
+}
+.orderHead{
+  width: 90%;
+  height: 130rpx;
+  border-radius: 10rpx;
+  background-color: #fff;
+  margin: 50rpx auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+}
+.orderProName{
+  height: 90rpx;
+  line-height: 90rpx;
+  width: 50%;
+}
+.borderRight{
+  border-right: 1rpx solid #EDEDED;
+}
+.orderItem{
+  width: 90%;
+  height: 200rpx;
+  border-radius: 10rpx;
+  background-color: #fff;
+  margin: 30rpx auto;
+  text-align: center;
+}
+.ItemHead{
+  width: 80%;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1rpx  solid #EDEDED;
+  margin: 0 auto;
+  font-size: 35rpx;
+}

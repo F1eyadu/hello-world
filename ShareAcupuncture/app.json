@@ -1,0 +1,25 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/backMoney/backMoney",
+    "pages/orderBill/orderBill",
+    "pages/sureOrder/sureOrder",
+    "pages/userMain/userMain",
+    "pages/order-going/order-going",
+    "pages/deposit/deposit",
+    "pages/going-Service/going-Service",
+    "pages/waitService/waitService",
+    "pages/payDeposit/payDeposit",
+    "pages/select-technician/select-technician",
+    "pages/orderCase/orderCase",
+    "pages/waitAccept/waitAccept",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#f96086",
+    "navigationBarTitleText": "共享针灸",
+    "navigationBarTextStyle":"#fff"
+  }
+  
+}

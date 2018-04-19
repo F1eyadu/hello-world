@@ -1,0 +1,307 @@
+.doc-img .map-box {
+    width: 100%;
+    height: 700rpx;
+    position: absolute;
+    z-index: 1;
+}
+.err-show {
+    display: block;
+    width: 90%;
+    height: 40rpx;
+    margin: 0 auto;
+    color: red;
+}
+.lookComment {
+  font-size: 24rpx;
+  position: absolute;
+  right: 60rpx;
+}
+.closeDiv{
+  widows: 100%;
+  height: 40rpx;
+  margin-bottom: 10rpx;
+}
+.cha {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  top: 0;
+  right: 0rpx;
+  /* width: 100%;
+  height: 52rpx;
+  position: absolute;
+  top: 0rpx;
+  margin-bottom: 10rpx; */
+}
+/* .cha image {
+  width: 32rpx;
+  height: 32rpx; 
+  display: block;
+  margin-left: 550rpx;
+} */
+/*------------------------------技师框样式设计*/
+.doctor-box {
+  width: 100%;
+  position: absolute;
+  top: 700rpx;
+}
+.doc-box {
+  width: 86%;
+  margin: 0 auto;
+  height: 465rpx;
+  padding: 14rpx;
+}
+.technician-box {
+    width: 100%;
+    height: 450rpx;
+    margin: 0rpx auto;
+    border-radius: 10rpx;
+    box-shadow: 1rpx 1rpx 5rpx 5rpx #F1F1F1;
+}
+.technician-top {
+    padding: 10rpx;
+    padding-bottom: 20rpx;
+    background-color: #FAFAFA;
+}
+.commentbox-top {
+    height: 100%;
+    /* padding: 10rpx; */
+    background-color: #FAFAFA;
+}
+.img {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 0;
+}
+.img image {
+    width: 130rpx;
+    height: 130rpx;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+.img text {
+    width: 100%;
+    display: block;
+    margin: 10rpx auto;
+    margin-bottom: 0;
+    text-align: center;
+}
+.card {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+.card image {
+    width: 25rpx;
+    height: 25rpx;
+}
+.card text {
+    margin-left: 10rpx;
+    font-size: 28rpx;
+}
+.technician-bottom {
+    padding-bottom: 20rpx;
+    background-color: #fff;
+}
+.time {
+    width: 100%;
+    text-align: center;
+    font-size: 32rpx;
+    color: #999;
+    margin-top: 15rpx;
+}
+.sure-btn {
+    width: 240rpx;
+    height: 68rpx;
+    border-radius: 34rpx;
+    background-color: #f96086;
+    color: #fff;
+    margin-top: 15rpx;
+    font-size: 26rpx;
+}
+.map-img {
+    height: 110rpx; 
+    margin-top: -300rpx;
+    position: relative;
+    z-index: 1000;
+}
+.map-img image {
+    width: 60rpx;
+    height: 60rpx;
+}
+.map-img image:nth-child(1) {
+    position: absolute;
+    left: 20rpx;
+    top: 20%;
+}
+.map-img image:nth-child(2) {
+   position: absolute;
+    right: 20rpx;
+    top: 20%;
+}
+/*---------------------------------填写地址信息的样式配置*/
+.inputbox {
+    width: 90%;
+    height: 60rpx;
+    margin: auto;
+    margin-bottom: 20rpx;
+    border-bottom: 1px solid #F2F2F2;
+}
+.lastinputbox {
+    margin-bottom: 0;
+}
+.inputbox input {
+    font-size: 28rpx;
+}
+.sortinput {
+    width: 65%;
+    display: inline-block;
+}
+.getYZM {
+    width: 35%;
+    float: right;
+    color: #000;
+    padding-top: 0rpx;
+    padding-bottom: 0rpx;
+    font-size: 28rpx;
+    background-color: #F2F2F2;
+    text-align: center;
+}
+.placeclass {
+    font-size: 32rpx;
+    color: #999;
+}
+
+/*-----------------------------------确定信息之后的弹出层*/
+.hiddentime {
+    width: 160rpx;
+    height: 160rpx;
+    border-radius: 50%;
+    margin: 20rpx auto;
+    background-color: #F2F2F2;
+}
+.worker-name {
+    display: block;
+    width: 400rpx;
+    text-align: center;
+    margin: auto;
+}
+.zs {
+   width: 400rpx;
+    text-align: center;
+    margin: auto; 
+}
+.zs text {
+  display: block;
+  color: #738AEF;
+}
+/*---------------------------评论框*/
+.comment-box {
+  width: 90%;
+  height: 350rpx;
+  z-index: 999;
+  position: absolute;
+  top: 340rpx;
+  left: 40rpx;
+  background-color: #fff;
+}
+.scroll {
+  width: 100%;
+  /* padding: 8px; */
+  position: relative;
+}
+.comment-top {
+  width: 90%;
+  height: 50rpx;
+  position: fixed;
+  z-index: 1000;
+}
+.comment-top image {
+  width: 40rpx;
+  height: 40rpx;
+  display: block;
+  margin: 0 auto;
+}
+.evaluation {
+  margin: 8rpx auto;
+  padding-bottom : 10rpx;
+  border-bottom: 1px solid #F1F1F1;
+  height:122rpx;
+}
+.evaluation .doc-img {
+  width: 80rpx;
+  height: 120rpx;
+  display: inline-block;
+  float: left;
+}
+.doc-img image {
+  width: 70rpx;
+  height: 70rpx;
+  display: inline-block;
+  border-radius: 50%;
+}
+.eval-content {
+  width: 520rpx;
+  margin-top: 10rpx;
+  display: inline-block;
+  font-size: 28rpx;
+}
+.eval-content-top text {
+  font-size: 30rpx;
+}
+.docname {
+  font-weight: 600;
+  font-size: 18rpx;
+}
+.star-box {
+  display: inline-block;
+}
+.star-box image {
+    width: 20rpx;
+    height: 20rpx;
+}
+.pl-time {
+  display: inline-block;
+  float: right;
+  font-size: 14rpx;
+}
+.eval-content-bottom {
+  margin-top: 10rpx;
+  font-size: 28rpx;
+  color: #999;
+}
+.message {
+  width: 280rpx;
+  height: 80rpx;
+  background:#F2F2F2;
+  z-index: 2000;
+  position: absolute;
+  top: 740rpx;
+  border-radius: 10rpx;
+  margin-left: 260rpx;
+}
+.message text{
+  font-size: 32rpx;
+  width: 280rpx;
+  text-align: center;
+  line-height: 80rpx;
+  display: block;
+}
+.noDoctor {
+  width: 100%;
+  height: 100%;
+  z-index: 3000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color:rgba(100, 100, 100, .5);
+}
+.nocomment {
+  width:100%;
+  display: inline-block;
+  text-align: center;
+  margin: 100rpx auto;
+  color: #999;
+  font-size: 34rpx;
+}

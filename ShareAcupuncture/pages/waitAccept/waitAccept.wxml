@@ -1,0 +1,81 @@
+<view class="contenter">
+    <view class="top"></view>
+    <view class="time-box" style="height: {{timeBoxHeight}}rpx">
+        <view class="time">
+            <text>{{time}}</text>
+            <view class="warning" bindtap='warning'>
+                <image src="../../img/warning.svg"/>
+                <text>说明</text>
+            </view>
+            <view class="hidden-warning" style="display:{{displayStatus}};">
+                <view class="say-box">若超过预计时间还未到达，用户可拨打工作者电话进行催单</view>
+                <view class="down"  bindtap='warningUp'>
+                    <image src="../../img/upicon.svg"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="orderShow">
+        <view class="orderShow-top">
+          <view class="show-title">订单情况</view>
+          <view class="top-worker">
+            <view class="tx-box">
+              <view class="img-box">
+              <image src='{{orderInfo.doctor.userInfo.photo}}'></image>
+              </view>
+            </view>
+            <view class="worker-info">
+              <text class="block-text">{{orderInfo.doctor.doctor.name}}</text>
+              <view class="block-text" bindtap='phoneCall'>联系电话:
+              
+              <text class="tel">{{orderInfo.doctor.phone}}</text></view>
+              <view class="certificate">
+                <view class="card">
+                  <image src='../../img/blueright.svg'></image>
+                  <text>{{orderInfo.doctor.doctor.identification}}</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view> 
+        <view class="project-box">
+            <text class="class" style="display:{{tuijianDisplay}}">推荐套餐</text>
+            <view class="particulars" wx:for-items="{{tuijianArr}}" wx:for-index="idx" wx:key="tuijianArr">
+                <text class="title">{{tuijianArr[idx].service.title}}</text>
+                <text>{{tuijianArr[idx].service.equipmentName}}</text>
+                <text>{{tuijianArr[idx].amountTime}}分钟</text>
+                <text>{{tuijianArr[idx].service.price}}元</text>
+            </view>
+            <text class="class self" style="display:{{selfDisplay}}">自选项目</text>
+            <view class="particulars" wx:for-items="{{selfArr}}" wx:for-index="idx" wx:key="selfArr">
+                <text class="title">{{selfArr[idx].service.title}}</text>
+                <text>{{selfArr[idx].service.equipmentName}}</text>
+                <text>{{selfArr[idx].amountTime}}分钟</text>
+                <text>{{selfArr[idx].amountMoney}}元</text>
+            </view>
+        </view>
+    </view>
+    <view class="btn-box">
+      <button class="sure-btn" bindtap='cancelOrder'>撤销订单</button>
+    </view> 
+    <view class="tishibox">
+        提示：工作者三分钟之内未接受，订单将自动取消！
+    </view>
+    <modal hidden="{{hiddenshow}}" title="提示" confirm-text="确定" bindconfirm="confirm" no-cancel='true'>
+      <view class="hiddenContent  viewHeight">
+        <text>由于{{reject}}，</text>
+        <text>对方拒绝了你的订单！</text>
+      </view>
+    </modal>
+    <modal hidden="{{acceptDisplay}}" title="提示" confirm-text="确定" bindconfirm="confirm" no-cancel='true'>
+      <view class="hiddenContent  viewHeight">
+        <text class="jsl">对方已接受您的订单！</text>
+      </view>
+    </modal>
+    <modal hidden="{{quxiaoDisplay}}" title="提示" confirm-text="确定" bindconfirm="confirm" no-cancel='true'>
+      <view class="hiddenContent  viewHeight">
+        <text class="jsl">三分钟工作者未接单，此订单被自动取消！</text>
+      </view>
+    </modal>
+</view>
+   

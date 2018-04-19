@@ -1,0 +1,18 @@
+<view class='orderHead'>
+  <view class='orderProName borderRight'>订单收益</view><view class='orderProName'>订单状态</view>
+</view>
+<view class='orderItem' wx:for="{{orders}}" wx:key="index" bindtap='checkOrder' data-id='{{item.id}}'>
+    <view class='ItemHead'>{{item.createTime}}</view>
+    <view  class='flex mt20' wx:if="{{item.statusInfo ==0}}">
+      <view class='orderProName borderRight fz32'>{{item.servicePrice}}</view>
+      <view class='orderProName fz32'>已完成</view>
+    </view>
+    <view  class='flex mt20 cred' wx:elif='{{item.statusInfo==5 && item.userLiquidatedDamages==null}}'>
+      <view class='orderProName borderRight fz32'>{{item.servicePrice}}</view>
+      <view class='orderProName fz32' >用户取消</view>
+    </view>
+    <view  class='flex mt20 cred' wx:else='{{item.statusInfo==5 && item.userLiquidatedDamages}}'>
+      <view class='orderProName borderRight fz32'>{{item.servicePrice}}</view>
+      <view class='orderProName fz32' >用户违约</view>
+    </view>
+</view>

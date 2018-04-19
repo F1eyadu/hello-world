@@ -1,0 +1,57 @@
+<view class="contenter">
+    <view class="top"></view>
+    <view class="time-box" style="height: {{timeBoxHeight}}rpx">
+        <view class="time">
+            <text>{{time}}</text>
+        </view>
+    </view>
+    <view class="orderShow">
+        <view class="orderShow-top">
+            <view class="show-title">订单情况</view>
+            <view class="top-worker">
+                <view class="tx-box">
+                    <view class="img-box">
+                    <image src='{{orderInfo.doctor.userInfo.photo}}'></image>
+                    </view>
+                </view>
+                <view class="worker-info">
+                    <text class="block-text">{{orderInfo.doctor.doctor.name}}</text>
+                    <view class="block-text">联系电话:
+                        <text class="tel" bindtap='telCall' data-tel='{{orderInfo.doctor.phone}}'>{{orderInfo.doctor.phone}}</text>
+                    </view>
+                    <view class="certificate">
+                        <view class="card">
+                            <image src='../../img/blueright.svg'></image>
+                            <text>{{orderInfo.doctor.doctor.identification}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view> 
+        <view class="project-box">
+            <text class="class" style="display:{{tuijianDisplay}}">推荐套餐</text>
+            <view class="particulars" wx:for-items="{{tuijianArr}}" wx:for-index="idx" wx:key="tuijianArr">
+                <text class="title">{{tuijianArr[idx].service.title}}</text>
+                <text>{{tuijianArr[idx].service.equipmentName}}</text>
+                <text>{{tuijianArr[idx].service.timeUnit}}分钟</text>
+                <text>{{tuijianArr[idx].service.price}}元</text>
+            </view>
+            <text class="class self" style="display:{{selfDisplay}}">自选项目</text>
+            <view class="particulars"  wx:for-items="{{selfArr}}" wx:for-index="idx" wx:key="selfArr">
+                <text class="title">{{selfArr[idx].service.title}}</text>
+                <text>{{selfArr[idx].service.equipmentName}}</text>
+                <text>{{selfArr[idx].amountTime}}分钟</text>
+                <text>{{selfArr[idx].amountMoney}}元</text>
+            </view>
+        </view>
+    </view>
+    <view class="btn-box">
+        <button class="sure-btn" bindtap='beginDO'>开始针灸</button>
+        <button class="sure-btn chexiao" bindtap='cancelOrder'>撤销订单</button>
+    </view>
+    <view class="tsbox">提示：3分钟内撤单不扣费，3分钟后将按照时长扣取违约金！</view>
+    <modal hidden="{{hidden}}" title="提示" confirm-text="确定" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm" >
+    <text class="modalText">确定撤销订单？</text>
+    <text class="waittime">等待服务三分钟之内可以免费取消订单！</text>
+</modal>
+</view>

@@ -1,0 +1,91 @@
+<view class="container">
+    <view class="chance-title">
+        <view class="title-box" catchtap='goingShow'>
+            <text class="{{going}}">进行中</text>
+        </view>
+        <view class="title-box" catchtap='didShow'>
+            <text class="{{did}}">已结束</text>
+        </view>
+    </view>
+    <view class="work-bigbox-going"  style="display:{{goingStatus}}">
+        <view class="nohave" style="display:{{nohaveShow}}">
+        您目前还未拥有进行中的订单！
+        <image src="../../img/cry.png"></image>
+        </view>
+        <view class="work-box" style="display:{{goingShow}}" wx:for-items="{{unComArr}}" wx:for-index="idx" wx:key="unComArr" catchtap='{{unComArr[idx].bindtap}}' data-orderid='{{unComArr[idx].id}}'>
+            <view class="work-box-top">
+                <view class="img">
+                    <image src="{{unComArr[idx].doctor.userInfo.photo}}"></image>
+                </view>
+                <view class="worker-info">
+                    <view>{{unComArr[idx].doctor.doctor.name}}</view>
+                    <view>联系电话：{{unComArr[idx].doctor.phone}}</view>
+                </view>
+                <view class="status">
+                    <text class="{{unComArr[idx].class}}">{{unComArr[idx].words}}</text>
+                </view>
+            </view>
+            <view class="proiect-content">
+                <view class="content">
+                    <text class="Title" style="display:{{unComArr[idx].tuiDisplay}}">推荐套餐：</text>
+                    <text>{{unComArr[idx].tui}}</text>
+                </view>
+                <view class="content">
+                    <text class="Title" style="display:{{unComArr[idx].selfDisplay}}">自选套餐：</text>
+                    <text>{{unComArr[idx].self}}</text>
+                </view>
+            </view>
+            <view class="money">
+                <text>金额：</text>
+                <text>{{unComArr[idx].deposit}}元</text>
+            </view>
+        </view>
+    </view>
+    <view class="work-bigbox-did"  style="display:{{didStatus}}">
+        <view class="nohave" style="display:{{nohaveShowdid}}">{{nohaveOrderdid}}<image src="../../img/cry.png"></image></view>
+        <view class="work-box" style="display:{{didShow}}" wx:for-items="{{comArr}}" wx:for-index="idx" wx:key="comArr">
+            <view class="work-box-top">
+              <view class="img">
+                  <image src="{{comArr[idx].doctor.userInfo.photo}}"></image>
+              </view>
+              <view class="worker-info">
+                  <view>{{comArr[idx].doctor.doctor.name}}</view>
+                  <view>联系电话：<text bindtap='callphone' data-tel='{{comArr[idx].doctor.phone}}'>{{comArr[idx].doctor.phone}}</text></view>
+              </view>
+                <view class="status">
+                    <text class="{{comArr[idx].class}}">{{comArr[idx].status}}</text>
+                </view>
+            </view>
+            <view class="proiect-content">
+                <view class="content">
+                    <text class="Title" style="display:{{comArr[idx].tuiDisplay}}">推荐套餐：</text>
+                    <text class="stitle">{{comArr[idx].tui}}</text>
+                </view>
+                <view class="content">
+                    <text class="Title" style="display:{{comArr[idx].selfDisplay}}">自选套餐：</text>
+                    <text class="stitle">{{comArr[idx].self}}</text>
+                </view>
+            </view>
+            <view class="money">
+                <text>金额：</text>
+                <text>{{comArr[idx].actualPrice}}元</text>
+            </view>
+            <view class="time" style="display:{{comArr[idx].creshow}}">
+                <text>创建时间：</text>
+                <text>{{comArr[idx].createTime}}</text>
+            </view>
+            <view class="time" style="display:{{comArr[idx].creshow}}">
+                <text>取消时间：</text>
+                <text>{{comArr[idx].cancelTime}}</text>
+            </view>
+            <view class="time" style="display:{{comArr[idx].show}}">
+                <text>开始时间：</text>
+                <text>{{comArr[idx].startServiceTime}}</text>
+            </view>
+            <view class="time" style="display:{{comArr[idx].show}}">
+                <text>结束时间：</text>
+                <text>{{comArr[idx].completeServiceTime}}</text>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,22 @@
+<view class="container">
+    <view class="nohave" style="display:{{nohaveShow}}">您目前无押金记录！
+        <image src="../../img/cry.png"></image></view>
+    <view class="content-box" style="display:{{boxShow}}" wx:for-items="{{depositArr}}" wx:for-index="idx" wx:key="depositArr">
+        <view class="title">
+            <text>押金</text>
+            <text>状态</text>
+        </view>
+        <view class="content-box-bottom">
+          <view class="c-b-b-left">
+            <text>退押金{{depositArr[idx].returnDeposit}}元</text>
+            <text class="time">{{depositArr[idx].paymentTime}}</text>
+          </view>
+          <view class="c-b-b-right">
+            <view class="{{depositArr[idx].color}}"  data-id='{{depositArr[idx].id}}' data-bind='{{depositArr[idx].go}}' bindtap='gotopj'>{{depositArr[idx].eds}}
+            <contact-button class="lxkf" style='display:{{depositArr[idx].show}}' session-from="weapp"></contact-button> 
+            </view>
+            <text class="time {{depositArr[idx].class}}">{{depositArr[idx].returnDepositTime}}</text>
+          </view>
+        </view>
+    </view>
+</view>

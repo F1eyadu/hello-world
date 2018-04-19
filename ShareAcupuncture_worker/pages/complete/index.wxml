@@ -1,0 +1,95 @@
+<view class='completeHead' wx:if='{{(orderInfo.statusInfo == 5 && orderInfo.userLiquidatedDamages==null) || orderInfo.statusInfo == 1}}'>
+  用户3分钟内无责取消
+</view>
+<view class='completeHead' wx:elif='{{orderInfo.statusInfo ==5 && orderInfo.userLiquidatedDamages!=null}}'>
+  用户3分钟后取消,赔付违约金{{orderInfo.userLiquidatedDamages}}元,已到你账户
+</view>
+<view wx:else class='block40'></view>
+<view class='completeBody'>
+    <view class='userInfo'>
+      <image src='{{orderInfo.user.userInfo.photo}}' class='userHead'></image>
+      <view class='ml30' style='width:100%'>
+        <view class='orderComment'>
+          <view class='w150'>{{orderInfo.user.userInfo.nickName}}</view>
+          <view hidden='{{orderInfo.statusInfo ==0}}'>
+            <view wx:if="{{orderInfo.comment}}" class='ml30 cfe2e2'>评论{{orderInfo.comment.length}}条</view>
+            <view wx:else class='ml30 cfe2e2'>暂无评论</view>
+          </view>
+          <button class='statesBtn serviceIng' wx:if='{{orderInfo.statusInfo == 5 && orderInfo.userLiquidatedDamages==null}}'>已取消</button>
+          <button class='statesBtn serviceIng' wx:elif='{{orderInfo.statusInfo ==5 && orderInfo.userLiquidatedDamages!=null}}'>已违约</button>
+          <button class='statesBtn waitComment' wx:else>已完成</button>
+        </view>
+
+        <view class='orderComment cfe2e2' wx:if="{{orderInfo.statusInfo ==0}}" bindtap='contactUser'>
+          联系电话:{{orderInfo.contactPhone}}
+        </view>
+        <view class='orderComment' wx:else>
+          <view class='w150'>
+            <image src='../../img/star.png' style='width:30rpx;height:30rpx'></image>
+            <view class='ml10'>{{orderInfo.doctor.doctor.starCount}}</view>
+          </view>
+          <view class='ml30 cfe2e2'>要求：{{orderInfo.expectTime}}分钟到达</view>
+        </view>
+      </view>
+    </view>
+
+    <view wx:if='{{orderInfo.statusInfo ==1}}'>
+      <view wx:for="{{orderInfo.serviceInfo}}">
+        <view class='mt10 lh45 clF9' wx:if="{{item.service.subServices}}">
+          推荐套餐:<text class='cfe2e2 ml10'>{{item.amountEquipment}} 份 {{item.service.equipmentName}} {{item.service.amountTime}}分钟</text>
+        </view>
+        <view class='mt10 lh45 clF9' wx:else>
+          自选套餐:<text class='cfe2e2 ml10'>{{item.amountEquipment}} 份 {{item.service.equipmentName}} {{item.service.amountTime}}分钟</text>
+        </view>
+      </view>
+      <view class='mt10 lh45'>
+        预收： <text class='cfe2e2 ml10'>{{orderInfo.deposit}}元(最终服务费以服务结束时间为准)</text>
+      </view>
+      <view class='mt10 lh45'>
+        失效时间: <text class='cfe2e2 ml10'>{{orderInfo.createTime}}</text>
+      </view>
+    </view>
+
+    <view wx:if='{{orderInfo.statusInfo ==5}}'>
+      <view wx:for="{{orderInfo.serviceInfo}}">
+        <view class='mt10 lh45 clF9' wx:if="{{item.service.subServices}}">
+          推荐套餐:<text class='cfe2e2 ml10'>{{item.amountEquipment}} 份 {{item.service.equipmentName}} {{item.amountTime}}分钟</text>
+        </view>
+        <view class='mt10 lh45 clF9' wx:else>
+          自选套餐:<text class='cfe2e2 ml10'>{{item.amountEquipment}} 份 {{item.service.equipmentName}} {{item.amountTime}}分钟</text>
+        </view>
+      </view>
+      <view class='mt10 lh45'>
+        预收： <text class='cfe2e2 ml10'>{{orderInfo.deposit}}元(最终服务费以服务结束时间为准)</text>
+      </view>
+      <view class='mt10 lh45'>
+        失效时间: <text class='cfe2e2 ml10'>{{orderInfo.cancelTime}}</text>
+      </view>
+    </view>
+
+    <view wx:else>
+      <view class='mt20 lh45' bindtap='checkAdd'>
+        地址：<text class='cfe2e2 ml10'>{{orderInfo.serviceAddress}}</text>
+      </view>
+      <view class='mt10 lh45'>
+        预计时长： <text class='cfe2e2 ml10'>{{orderInfo.duration}}分钟</text>
+      </view>
+      <view class='mt10 lh45'>
+        使用工具： <text class='cfe2e2 ml10' wx:for="{{orderInfo.serviceInfo}}">{{item.service.equipmentName}}</text>
+      </view>
+      <view class='mt10 lh45'>
+        服务开始时间： <text class='cfe2e2 ml10'>{{orderInfo.startServiceTime}}</text>
+      </view>
+      <view class='mt10 lh45'>
+        服务结束时间： <text class='cfe2e2 ml10'>{{orderInfo.completeServiceTime}}</text>
+      </view>
+      <view class='mt10 lh45'>
+        实际时长： <text class='cfe2e2 ml10'>{{orderInfo.completeTime}}分钟</text>
+      </view>
+      <view class='mt10 lh45'>
+        实收： <text class='cfe2e2 ml10'>{{orderInfo.actualPrice}}元</text>
+      </view>
+    </view>
+</view>
+
+  <map id="map" hidden='{{hiddenMap}}' longitude="{{longitude}}" latitude="{{latitude}}" scale="18"  markers="{{markers}}" show-location style="width: 100%; position:absolute;top:0;bottom:0;height:100vh;"></map> 

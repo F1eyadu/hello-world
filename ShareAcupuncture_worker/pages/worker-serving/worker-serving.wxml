@@ -1,0 +1,59 @@
+<view class="contenter">
+    <view class="top-box">
+        <view style='text-align:center;line-height:4;font-size:40rpx;'>{{time}}</view>
+    </view>
+    <view class="ts-box">
+        提示：当用户点击“结束针灸”后，计时停止。
+    </view>
+    <view class="user-order-box" style="display:{{displayStatus}}">
+        <view class="address">
+            <image src='../../img/address.svg'/>
+            <text>{{orderArr[0].serviceAddress}}</text>
+        </view>
+        <view class="message">
+            <view class="tx">
+                <image src="{{orderArr[0].user.userInfo.photo}}"/>
+            </view>
+            <view class="info">
+                <text>{{orderArr[0].user.userInfo.nickName}}</text>
+                <text>{{orderArr[0].contactPhone}}</text>
+            </view>
+        </view>
+        <view class="project">
+            <view class="project-info">
+                <view class="tuijian-pro">
+                    <view class="tj-title" style="display:{{tjShow}}">
+                        <text>推荐套餐:</text>
+                    </view>
+                    <view class="tuijian-content">
+                        <view wx:for-items="{{tuijianArr}}" wx:for-index="idx" wx:key="tuijianArr">
+                          <text>{{tuijianArr[idx].service.title}}</text>
+                          <text>{{tuijianArr[idx].amountTime}}分钟</text>
+                        </view>
+                    </view>
+                </view>
+                <view class="self-pro">
+                    <view class="self-title" style="display:{{selfShow}}">
+                        <text>自选套餐:</text>
+                    </view>
+                    <view class="self-content">
+                      <view wx:for-items="{{selfArr}}" wx:for-index="idx" wx:key="selfArr">
+                        <text>{{selfArr[idx].service.title}}</text>
+                        <text>{{selfArr[idx].amountTime}}分钟</text>
+                      </view>
+                    </view>
+                </view>
+                <view class="total-money">
+                    <text>合计：</text>
+                    <text>{{orderArr[0].servicePrice}}元</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <button class="sure-btn" bindtap='continueService'>继续接单</button>
+    <modal hidden="{{hiddenshow}}" title="提示" confirm-text="确定" bindconfirm="confirm" no-cancel="true">
+      <view class="hiddenContent">
+        <text>{{showWords}}！</text>
+      </view>
+</modal>
+</view>

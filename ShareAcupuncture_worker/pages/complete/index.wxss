@@ -1,0 +1,50 @@
+page{
+  background-color: #EDEDED;
+  font-size: 30rpx;
+}
+.completeHead{
+  width: 90%;
+  padding: 20rpx;
+  height: 120rpx;
+  margin: 40rpx auto;
+  background-color: #fff;
+  border-radius: 10rpx;
+  line-height: 120rpx;
+  text-align: center;
+  letter-spacing: 3rpx;
+}
+.completeBody{
+  width: 90%;
+  padding: 20rpx;
+  /* height: 550rpx; */
+  background-color: #fff;
+  border-radius: 10rpx;
+  margin: 0 auto;
+}
+.userInfo{
+  display: flex;
+  height: 100rpx;
+  align-items: center;
+}
+.userHead{
+  width: 100rpx;
+  height: 90rpx;
+  border-radius: 50%;
+}
+.orderComment{
+  display: flex;
+  align-items: center;
+  height: 50rpx;
+  line-height: 50rpx;
+  width: 100%;
+}
+.statesBtn{
+  width: 160rpx;
+  height: 50rpx;
+  font-size: 30rpx;
+  line-height: 1.5;
+  margin-right: 5rpx;
+}
+.statesBtn::after{
+  border: none;
+}

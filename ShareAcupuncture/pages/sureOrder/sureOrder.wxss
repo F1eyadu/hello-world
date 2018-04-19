@@ -1,0 +1,293 @@
+.contenter {
+  width: 100%;
+  height: 100%;
+}
+/* -------------------top*/
+.top {
+  margin-top: 20rpx;
+  width:100%;
+}
+.oldAddr {
+  font-size: 28rpx;
+}
+.select {
+  width: 80%;
+  padding: 10rpx;
+  display: inline-block;
+  border: 1px solid #F3F3F3;
+  margin: 10rpx auto;
+}
+.lxkf {
+  display: inline-block;
+    margin: 0 auto;
+    color: #7F7F7F;
+    font-size: 24rpx;
+    text-align: center;
+}
+.sure {
+  width: 200rpx;
+  height:50rpx;
+  font-size: 26rpx;
+  border-radius: 40rpx;
+  line-height: 50rpx;
+  color: #fff;
+  background: #f96086;
+}
+.cha-btn {
+  width: 10%;
+  display: inline-block;
+}
+.cha-btn image {
+  width: 50rpx;
+  height:50rpx;
+  display: block;
+  line-height: 120rpx;
+}
+.select .addr {
+  width: 90%;
+  height: 100%;
+  margin-top: 10rpx;
+  overflow: hidden;
+  white-space:nowrap;
+  text-overflow: ellipsis;
+  display: inline-block;
+}
+.chanceAdd {
+  height: 100%;
+}
+.mb2 {
+  border-bottom: 1px solid #F3F3F3;
+}
+.img {
+  width: 50rpx;
+  height: 50rpx;
+  float: right;
+  line-height: 80rpx;
+  display: inline-block;
+}
+.img image {
+  width: 40rpx;
+  height: 40rpx; 
+}
+.select-addr {
+  width: 90%;
+  padding: 10rpx 0rpx;
+  margin: 0rpx auto; 
+}
+.holdclass {
+  font-size: 32rpx;
+  color: #C1C1C2;
+}
+.getaddrbox {
+  width: 100%;
+  display: flex;
+  margin-top: 8rpx;
+}
+.line {
+  width: 100%;
+  margin-top: 5rpx;
+  border: 2rpx solid #f1f1f1;
+}
+.getaddrbox image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-top: 12rpx;
+  display: inline-block;
+  
+}
+.getaddrbox input {
+  width: 90%;
+  display: inline-block;
+  font-size: 28rpx;
+}
+.in2 {
+  margin-left: 50rpx;
+}
+.radio {
+  display: block;
+  margin-top: 10rpx;
+  font-size: 26rpx;
+}
+.in1 {
+  margin-left: 20rpx;
+  font-size: 28rpx;
+}
+.middr {
+  width: 90%;
+  padding: 20rpx 0rpx;
+  margin: 0 auto;
+  font-size: 34rpx;
+}
+.hiddenAddr {
+  z-index: 600;
+  background: #fff;
+  width: 75%;
+  padding-bottom: 20rpx;
+  margin-left: -10rpx;
+  border: 1px solid #f1f1f1;
+  position: absolute;
+}
+.errshow {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 28rpx;
+  color: red;
+  text-align: center;
+}
+.cha-btn2 {
+  display: inline-block;
+  height: 120rpx;
+  float: left;
+  margin-right: 20rpx;
+}
+.cha-btn2 image {
+  width: 50rpx;
+  height:50rpx;
+  display: inline-block;
+  margin-top: 50rpx;
+}
+.middr-box {
+  margin-top: 20rpx;
+  padding-bottom: 20rpx;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+}
+.middr-box view {
+  display: inline-block;
+}
+.input {
+  margin-left: 30rpx;
+}
+.input input {
+  color: #C1C1C2;
+}
+.cimg {
+  width: 60rpx;
+  height: 60rpx;
+}
+.v1 {
+  width: 120rpx;
+}
+.yzm {
+  background: #FF9C75;
+  color: #fff;
+  width: 120rpx;
+  display: block;
+  text-align: center;
+  padding: 10rpx;
+  font-size: 26rpx;
+}
+.yzn {
+  background: #FF9C75;
+  color: #fff;
+  width: 120rpx;
+  text-align: center;
+  padding: 10rpx;
+  font-size: 26rpx;
+}
+/*-------------------footer*/
+.footer {
+  width:100%;
+}
+
+.footer .sure-btn {
+  width: 90%;
+  height: 80rpx;
+  border-radius: 40rpx;
+  font-size: 32rpx;
+  display: block;
+  margin: 20rpx auto;
+  margin-bottom: 0;
+}
+.footer .sure-btn::after{
+  border: none
+}
+
+/*遮罩层*/
+.hidden-view {
+  width: 100%;
+  height: 100%;
+  background: rgba(100, 100, 100, .3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 500;
+}
+.hidden-box {
+  width: 80%;
+  height: 340rpx;
+  z-index: 600;
+  margin: 300rpx auto;
+  background: #fff;
+  border-radius: 40rpx;
+  position: relative;
+  overflow: hidden;
+}
+.inputclass {
+  font-size: 32rpx;
+  color: #C1C1C2;
+}
+.noaddr {
+   width: 100%;
+   margin: 20rpx auto;
+   font-size: 32rpx;
+   color: #999;
+   text-align: center;
+}
+.input-box {
+  width: 90%;
+  display: flex;
+  margin: 10rpx auto;
+  padding-bottom:10rpx;
+}
+.hidden-box .input-box:nth-child(1) {
+  margin-top: 50rpx;
+  border-bottom: 2rpx solid #f1f1f1;
+}
+.hidden-box .input-box:nth-child(2) {
+  margin-bottom: 5rpx;
+}
+.sortinput {
+  width:80%;
+  display: inline-block;
+}
+.hidden-foot {
+  width:100%;
+  height: 100rpx;
+  position: absolute;
+  box-shadow: 1rpx 1rpx 5rpx 5rpx #F1F1F1;
+  bottom: 0;
+}
+.hidden-foot view {
+  width: 50%;
+  height: 100%;
+  font-size: 32rpx;
+  display: inline-block;
+  text-align: center;
+}
+.choice {
+   background: #f96086;
+   color: #fff;
+   line-height: 100rpx;
+}
+.errShow {
+  width: 100%;
+  height: 60rpx;
+  font-size: 28rpx;
+  color: red;
+  display: block;
+  text-align: center;
+}
+
+.bgcff{
+  background-color: #F1F1F1;
+}
+.btnTap{
+  background-color: #F96086;
+  color: #fff;
+}
+.btnState{
+  background-color: #F1F1F1;
+  color: #000;
+}

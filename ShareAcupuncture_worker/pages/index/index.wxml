@@ -1,0 +1,218 @@
+<view class="contenter">
+    <view class="top"></view>
+    <view class="top-box" bindtap='gotoOrder'>
+      <view class="topBox-top">
+        <view class="topBox-span">
+          <view>
+            <text>{{singularNumber}}</text><text>单</text>
+          </view>
+          <view class="span-bottom">
+            <text>今日接单</text>
+          </view>
+        </view>
+        <view class="topBox-span">
+          <view>
+            <text>{{income}}</text><text>元</text>
+          </view>
+          <view class="span-bottom">
+            <text>今日收入</text>
+          </view>
+        </view>
+      </view> 
+      <view class="topBox-bottom">
+        <text class='bottom-box'>累计收入：<text class="total">{{sumIncome}}</text>元</text>
+      </view> 
+    </view> 
+    <!-- //用户状态切换 -->
+    <view class="chance-status">
+        <form bindsubmit="workerStatusChange" report-submit="true" data-state="false">
+           <button class="stateBtn {{workState?'':'changeStata'}}" formType="submit">休息中</button>
+        </form> 
+        <form bindsubmit="workerStatusChange" report-submit="true" data-state="true">
+           <button class="stateBtn {{workState?'changeStata':''}}" formType="submit">努力接单中</button>
+        </form> 
+    </view>
+    <!-- 显示接单信息 -->
+    <view class="user-order-bigbox">
+      <view class="user-order-box" bindtap='checkOrder' hidden='{{!workState}}' wx:for="{{orderArr}}"  wx:for-index="idx" wx:key="orderArr" data-id='{{item.id}}' data-state='{{item.statusInfo}}'>
+            <view class='address' hidden='{{item.statusInfo==3 || item.statusInfo==6 || item.statusInfo==8 || item.statusInfo==0}}' catchtap='mapGuide' data-add='{{item.currentLocation}}' data-address='{{item.serviceAddress}}'>
+                <image src='../../img/address.svg' class='icon'></image><text>{{item.serviceAddress}}</text>
+            </view>
+            <view class="message">
+              <view class="tx">
+                  <image src="{{item.user.userInfo.photo}}"/>
+              </view>
+              <view class="info" wx:if="{{item.statusInfo==3 || item.statusInfo==6 || item.statusInfo==8 || item.statusInfo==0}}">
+                  <view class="nickName">
+                    <view>{{item.user.userInfo.nickName}}</view>
+                    <button class='statesBtn completeTime' hidden='{{item.statusInfo!=3}}'>待支付</button>
+                    <button class='statesBtn waitService' hidden='{{item.statusInfo!=6}}'>待服务</button>
+                    <button class='statesBtn serviceIng' hidden='{{item.statusInfo!=8}}'>服务中</button> 
+                    <button class='statesBtn waitComment' hidden='{{item.statusInfo!=0}}'>待评价</button>
+                  </view>
+                  <view class='score pl10' catchtap='callUser' data-phone='{{item.contactPhone}}'>
+                     <view>联系电话:</view>
+                    <view class='Requirement'>{{item.contactPhone}}</view> 
+                  </view>
+              </view>
+
+              <view class="info" wx:else>
+                  <view class="nickName">
+                    <view>{{item.user.userInfo.nickName}}</view>
+                    <view wx:if="{{item.comments.length == 0}}" class='cfe2e2'>暂无评论</view>
+                    <view wx:else catchtap="viewComments" data-comments="{{item.comments}}">评论{{item.comments.length}}条</view>
+                    <view class='notices'>{{item.createTime}}前确定</view>
+                  </view>
+                  <view class='score pl10'>
+                    <image src='../../img/star.png' style='width:30rpx;height:30rpx'></image>
+                    <view class='ml20'>{{item.user.userStar}}</view>
+                    <view class='Requirement'>要求:{{item.expectTime}}分钟到达</view>
+                  </view>
+              </view>
+            </view>
+
+          <view class="project" wx:if='{{item.statusInfo==3 || item.statusInfo==6 || item.statusInfo==8 || item.statusInfo==0}}'>
+            <view class="project-info">
+              <view class="tuijian-pro">
+                <view class="tj-title" catchtap='mapGuide' data-add='{{item.currentLocation}}' data-address='{{item.serviceAddress}}'>
+                  地址:<text class='ml10'>{{item.serviceAddress}}</text>
+                </view>
+                <view class="tj-title mt10">
+                  预计时长:<text class='ml10'>{{item.duration}}分钟</text>
+                </view>
+                <view class="tj-title mt10" wx:if='{{item.statusInfo==8 || item.statusInfo==0}}'>
+                  服务开始时间:<text class='ml10'>{{item.startServiceTime}}</text>
+                </view>
+                <view class="tj-title mt10" wx:if='{{item.statusInfo==0}}'>
+                  服务结束时间:<text class='ml10'>{{item.completeServiceTime}}</text>
+                </view>
+                <view class="tj-title mt10" wx:if='{{item.statusInfo==0}}'>
+                  实际时长:<text class='ml10'>{{item.completeTime}}分钟</text>
+                </view>
+                 <view class="tj-title mt10">
+                  使用工具:<text class='ml10' wx:for="{{item.serviceInfo}}">{{item.service.equipmentName}}</text>
+                </view>
+              </view>
+                <view class="total-money mt10" wx:if="{{item.actualPrice == null}}">
+                  <text>预收:</text>
+                  <text>{{item.deposit}}元(最终服务费以服务结束时间为准)</text>
+                </view>
+                <view class="total-money mt10" wx:else>
+                  <text>实收:</text>
+                  <text>{{item.actualPrice}}元(最终服务费以服务结束时间为准)</text>
+                </view>
+            </view>
+          </view>
+
+          <view class="project" wx:else>
+            <view class="project-info">
+              <view class="tuijian-pro" wx:for="{{item.serviceInfo}}" wx:key="{{index}}"  wx:for-index="index">
+                <view class="tj-title" wx:if="{{item.service.subServices}}">
+                  推荐套餐:<text class='ml10'>{{item.amountEquipment}} 份 {{item.service.equipmentName}} {{item.amountTime}}分钟</text>
+                </view>
+                <view class="tj-title" wx:else="{{item.service.subServices ===null}}">
+                  自选套餐:<text class='ml10'>{{item.amountEquipment}} 份 {{item.service.equipmentName}} {{item.amountTime}}分钟</text>
+                </view>
+              </view>
+                <view class="total-money mt10">
+                  <text>预收:</text>
+                  <text>{{item.deposit}}元(最终服务费以服务结束时间为准)</text>
+                </view>
+            </view>
+          </view>
+          
+            <view class="project-reply" hidden='{{item.statusInfo==3 || item.statusInfo==6 || item.statusInfo==8 || item.statusInfo==0}}'>
+              <form bindsubmit="acceptService" report-submit="true" data-id='{{orderArr[idx].id}}'>
+                <button formType="submit">接受</button>
+              </form> 
+              <form bindsubmit="showRejbox" report-submit="true" data-id='{{orderArr[idx].id}}'>
+                <button formType="submit" style='background:blue'>拒绝</button>
+              </form> 
+            </view>
+        </view>
+    </view>
+
+    <view class="span-line"></view>
+    <view class="footer">
+        <view class="button-bigbox">
+          <form bindsubmit="gotoOrder" report-submit="true">
+            <view class="button-box">
+              <button class='formBtn' formType="submit">
+                <image src="../../img/order.png"/>
+              </button>
+              <button class='formBtn' formType="submit">订单</button>
+            </view>
+          </form> 
+          <form bindsubmit="gotogetmoney" report-submit="true">
+            <view class="button-box">
+              <button class='formBtn' formType="submit">
+                <image src="../../img/order.png"/>
+              </button>
+              <button class='formBtn' formType="submit">提现</button>
+            </view>
+          </form> 
+        </view>
+    </view>
+    <modal hidden="{{hiddenshow}}" title="提示" confirm-text="确定"  no-cancel='true'>
+      <view class="hiddenContent">
+            <text>{{tishiWords}}</text>
+        </view>
+    </modal>
+    <loading hidden="{{hidden}}">
+        对方支付押金中...
+    </loading>
+    <view class="hiddenBox" style="display:{{hiddenRej}}" >
+      <view class="rejectBox" style='margin-top:{{topheight}}px'>
+        <view class="rej-title">请选择拒绝理由</view>
+        <view class="rej-box">
+        <radio-group class="radio-group" bindchange="radioChange">
+          <label class="label-box"><radio value="要求达不到"/>要求达不到</label>
+          <label class="label-box"><radio value="距离太远"/>距离太远</label>
+          <label class="label-box"><radio value="休息了"/>休息了</label>
+        </radio-group>
+        </view>
+        <view class="err">{{errword}}</view>
+        <view>
+          <form bindsubmit="rejectService" report-submit="true" data-id='{{rejorderId}}'>
+            <button class="sureRej" formType="submit">拒绝</button>
+          </form>
+          <form bindsubmit="quxiao" report-submit="true" data-id='{{rejorderId}}'>
+            <button class="sureRej blue" formType="submit">取消</button>
+          </form>
+        </view>
+      </view>
+    </view>
+</view>
+<modal bindconfirm="workpx" no-cancel="true" confirm-text="确定" hidden="{{noworkhidden}}">
+  <view class="hiddentitle">温馨提示</view>
+  <text class="workercontent">工作者是经过严格培训，针灸协会考核合格后方可提供服务的用户。广大用户须联系针灸服务体验馆报名参加培训，赚取高额佣金服务费！。</text>
+  <text class="workercontent">离您最近的针灸服务体验馆位于沙坪坝大学城科技学院39栋众创大厦2楼。</text>
+  <text class="workercontent">联系人：余会医生</text>
+  <view class="telbox">
+    联系电话：15023764389
+  </view>
+</modal>
+
+<view class='modelShow' hidden='{{checkComment}}' bindtap='hideModel'>
+  <scroll-view  scroll-y class='scrollStyle'>
+    <view wx:for="{{comments}}" wx:for-item="item" class='p20'>
+      <view class="commentItem">
+          <view class='flex'>
+            <image src="{{item.doctorInfo[0].userInfo.photo}}" class='doctorHead'></image>
+            <view class="starsNum" >
+                <image class='star-image' style="left: {{1*50}}rpx" src="{{item.comment[0].stars >'0'? selectedSrc : normalSrc}}"></image>
+                <image class='star-image' style="left: {{2*50}}rpx" src="{{item.comment[0].stars >'1'? selectedSrc : normalSrc}}"></image>
+                <image class='star-image' style="left: {{3*50}}rpx"  src="{{item.comment[0].stars >'2'? selectedSrc : normalSrc}}"></image>
+                <image class='star-image' style="left: {{4*50}}rpx" src="{{item.comment[0].stars >'3'? selectedSrc : normalSrc}}"></image>
+                <image class='star-image' style="left: {{5*50}}rpx" src="{{item.comment[0].stars >'4'? selectedSrc : normalSrc}}"></image>
+              </view>
+          </view>
+          <view>{{item.comment[0].commentTime}}</view>
+      </view>
+      <view class='ml50 cfe2e2 fz30' wx:if="{{item.comment[0].remark==null}}">{{item.comment[0].commentInfo}}</view>
+      <view class='ml50 cfe2e2 fz30' wx:else>{{item.comment[0].remark}}</view>
+    </view>
+  </scroll-view>
+</view>
+
+  <map id="map" hidden='{{hiddenMap}}' longitude="{{longitude}}" latitude="{{latitude}}" scale="18"  markers="{{markers}}" show-location style="width: 100%; position:absolute;top:0;bottom:0;height:100vh;"></map>  

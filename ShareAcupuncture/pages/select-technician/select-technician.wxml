@@ -1,0 +1,63 @@
+<view class="contenter">
+   <view class="map-box">
+    <map id="map" longitude="{{Clongitude}}" latitude="{{Clatitude}}" controls="{{controls}}" bindcontroltap="controltap" scale="14" bindmarkertap="markertap"  circles="{{circles}}" markers="{{markers}}"  show-location style="width: 100%;height:700rpx;"></map>
+  </view> 
+  <view class="doctor-box" id="doctor">
+    <view class="doc-box">
+      <view class="technician-box">
+        <view class="technician-top" style="display:{{doctorShow1}}">
+          <view class="img">
+            <image src="{{currentDocter.data.userInfo.photo}}"></image>
+            <text>{{currentDocter.data.doctor.name}}</text>
+          </view>
+          <view class="certificate">
+            <view class="card">
+              <image src='../../img/blueright.svg'></image>
+              <text>{{currentDocter.data.doctor.identification}}</text>
+            </view>
+          </view>
+        </view>
+        <!--  -->
+        <scroll-view class="commentbox-top" scroll-y style="display:{{doctorShow2}}">
+            <view class="closeDiv">
+               <image bindtap='nolookComment' src="../../img/cha.svg" class="cha"></image>
+            </view> 
+          <view class="scroll">
+            <view class="nocomment" style="display:{{nocomment}}">该工作者还未有评价！</view>
+            <view class="evaluation" wx:for-items="{{commentArr}}" wx:for-index="idx" wx:key="commentArr">
+            <view class="doc-img">
+              <image src="{{commentArr[idx].userInfo[0].photo}}"></image>
+            </view>
+            <view class="eval-content">
+              <view class="eval-content-top">
+                <text class="docname">{{commentArr[idx].data.userInfo[0].nickName}}</text>
+                <view class="star-box">
+                <image data-star='1' src="../../img/{{commentArr[idx].starimg1}}.png"/>
+                <image data-star='2' src="../../img/{{commentArr[idx].starimg2}}.png"/>
+                <image data-star='3' src="../../img/{{commentArr[idx].starimg3}}.png"/>
+                <image data-star='4' src="../../img/{{commentArr[idx].starimg4}}.png"/>
+                <image data-star='5' src="../../img/{{commentArr[idx].starimg5}}.png"/>
+                </view>
+                <text class="pl-time">{{commentArr[idx].comment[0].commentTime}}</text>
+              </view>
+              <view class="eval-content-bottom">
+                <text wx:for-items="{{commentArr[idx].comment[0].commentInfo}}" wx:for-index="num" wx:key="commentArr[idx].comment[0].commentInfo">{{commentArr[idx].comment[0].commentInfo[num]}}</text>
+                <text>{{commentArr[idx].comment[0].remark}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+        <view class="technician-bottom" hidden='{{showTechInfo}}'>
+          <view class="time">最快{{currentDocter.ETA}}分钟到达</view>
+          <button class='sure-btn' data-docid='{{currentDocter.data.id}}' bindtap="modalinput">确定</button>
+        </view>
+      </view>
+    </view>
+    <view class="map-img" hidden='{{showTechInfo}}'>
+      <image src="../../img/mapleft.svg" bindtap='leftbtn'></image>
+      <image src="../../img/mapright.svg" bindtap='rightbtn'></image>
+    </view>
+  </view>
+</view>
+

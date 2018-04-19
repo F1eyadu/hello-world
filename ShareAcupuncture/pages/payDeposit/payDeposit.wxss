@@ -1,0 +1,50 @@
+.top {
+    height: 136rpx;
+    width: 100%;
+    background-color: #f96086;
+}
+.money-box {
+    width: 90%;
+    height: 226rpx;
+    z-index: 100;
+    margin: -110rpx auto;
+    background-color: #fff;
+    border-radius: 10rpx;
+    padding: auto;
+    text-align: center;
+    line-height: 226rpx;
+    box-shadow: 1rpx 1rpx 5rpx 5rpx #F1F1F1;
+}
+.money-box text {
+    display: block;
+    font-size: 48rpx;
+    color: #f96086;
+    margin: auto;
+}
+.explain {
+    width: 90%;
+    margin: 160rpx auto;
+}
+.explain text {
+    font-size: 24rpx;
+    display: block;
+    color: #999;
+    margin-bottom: 20rpx;
+}
+.sure-btn {
+    width: 90%;
+    margin: 40rpx auto;
+    height: 90rpx;
+    border-radius: 45rpx;
+    color: #fff;
+    font-size: 36rpx;
+    background-color: #f96086;
+    padding-bottom: 20rpx;
+}
+.tishi {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    color: red;
+    text-align: center;
+}

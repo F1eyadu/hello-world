@@ -1,0 +1,20 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/complete/index",
+    "pages/worker-order/worker-order",
+    "pages/worker-deposit/worker-deposit",
+    "pages/worker-getmoney/worker-getmoney",
+    "pages/worker-serviceBill/worker-serviceBill",
+    "pages/worker-serving/worker-serving",
+    "pages/worker-startServe/worker-startServe",
+    "pages/logs/logs",
+    "pages/worker-bill/worker-bill"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#f96086",
+    "navigationBarTitleText": "共享针灸",
+    "navigationBarTextStyle":"#fff"
+  }
+}

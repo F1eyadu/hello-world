@@ -1,0 +1,141 @@
+/**app.wxss**/
+/*-------------------------遮罩层*/
+.hiddenView {
+    position: absolute;
+    width: 100%;
+    height: 120%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .3);
+}
+.window-tx {
+    width: 600rpx;
+    height: 200rpx;
+    margin: 400rpx auto;
+    background-color: #fff;
+    z-index: 999;
+}
+.tx-title {
+    width: 100%;
+    height: 30%;
+    background-color: #FFDBE3;
+}
+.tx-title text {
+    width: 80rpx;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+.hiddenContent text {
+    width: 600rpx;
+    display: block;
+    font-size: 32rpx;
+    color: #f96086;
+    text-align: center;
+    margin: 50rpx auto;
+}
+
+.flex{
+  display: flex;
+  align-items: center;
+}
+
+.icon{
+  width: 45rpx;
+  height: 45rpx;
+}
+
+/* 边距 */
+.ml10{
+  margin-left: 10rpx;
+}
+.ml20{
+  margin-left: 20rpx;
+}
+.ml30{
+  margin-left: 30rpx;
+}
+.ml50{
+  margin-left: 50rpx;
+}
+.ml100{
+  margin-left: 100rpx;
+}
+.mt10{
+  margin-top: 10rpx;
+}
+.mt20{
+  margin-top: 20rpx;
+}
+
+.pl10{
+  padding-left: 10rpx;
+}
+.p20{
+  padding: 20rpx;
+}
+
+/* 字体颜色 */
+.cfe2e2{
+  color: #A2A2A2;
+}
+.cred{
+  color: red
+}
+.clF9{
+  color: #F96086
+}
+/* 字体大小 */
+.fz30{
+  font-size: 30rpx;
+}
+.fz32{
+  font-size: 32rpx;
+}
+
+.block40{
+  height: 40rpx;
+}
+
+/* 宽度 */
+.w150{
+  display: flex;
+  align-items: center;
+  width: 200rpx;
+}
+
+/* 行高 */
+.lh45{
+  line-height: 45rpx;
+}
+/* 取消滚动条 */
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+/* 待支付 */
+.completeTime{
+  color: #A9A7A8;
+  background-color: #FFF1FC;
+  border: 2rpx solid #F85C80;
+}
+/* 待服务 */
+.waitService{
+  color: #DE9AB1;
+  background-color: #ffffff;
+  border: 2rpx solid #DE9AB1;
+}
+/* 服务中 */
+.serviceIng{
+  color: #fff;
+  background-color: #F86086;
+  border: 2rpx solid #F86086;
+}
+/* 待评价 */
+.waitComment{
+  color: #000;
+  background-color: #D65774;
+  border: 2rpx solid #F85B80;
+}

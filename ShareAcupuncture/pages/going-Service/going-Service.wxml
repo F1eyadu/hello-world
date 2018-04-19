@@ -1,0 +1,72 @@
+ <view class="contenter">
+    <view class="top"></view>
+    <view class="time-box">
+        <view class="time">
+            <text>{{time}}</text>
+        </view>
+    </view>
+    <view class="orderShow">
+        <view class="orderShow-top">
+          <view class="show-title">订单情况</view>
+          <view class="top-worker">
+            <view class="tx-box">
+              <view class="img-box">
+              <image src='{{orderInfo.doctor.userInfo.photo}}'></image>
+              </view>
+            </view>
+            <view class="worker-info">
+              <text class="block-text">{{orderInfo.doctor.doctor.name}}</text>
+              <view class="block-text">联系电话:
+                <text class="tel" bindtap='telCall' data-tel='{{orderInfo.doctor.phone}}'>{{orderInfo.doctor.phone}}</text>
+              </view>
+              <view class="certificate">
+                <view class="card">
+                  <image src='../../img/blueright.svg'></image>
+                  <text>{{orderInfo.doctor.doctor.identification}}</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view> 
+        <view class="project-box">
+          <text class="class" style="display:{{tuijianDisplay}}">推荐套餐</text>
+          <view class="particulars" wx:for-items="{{tuijianArr}}" wx:for-index="idx" wx:key="tuijianArr">
+            <view>
+              <text>{{tuijianArr[idx].service.title}}</text>
+            </view>
+            <text>{{tuijianArr[idx].service.equipmentName}}</text>
+            <text>{{tuijianArr[idx].service.timeUnit}}分钟</text>
+            <text>{{tuijianArr[idx].service.price}}元</text>
+          </view>
+          <text class="class self" style="display:{{selfDisplay}}">自选项目</text>
+          <view class="particulars"  wx:for-items="{{selfArr}}" wx:for-index="idx" wx:key="selfArr">
+            <view>
+              <text>{{selfArr[idx].service.title}}</text>
+              <button class="overSone {{selfArr[idx].service.overClass}}" bindtap='overOneSer' data-sid='{{selfArr[idx].service.id}}' data-typen='{{selfArr[idx].typen}}'>结束</button>
+            </view>
+            <text>{{selfArr[idx].service.equipmentName}}</text>
+            <text>{{selfArr[idx].amountTime}}分钟</text>
+            <text>{{selfArr[idx].amountMoney}}元</text>
+          </view>
+        </view>
+    </view>
+    <button class="sure-btn" bindtap='endService'>结束服务</button>
+    <text class="tishi">
+        提示：若超时，则超时后的费用按照最长时间项目的单价进行计算</text>
+    <view class="hiddenView" style='display:{{acceptDisplay}}' >
+      <view class="window-tx">
+        <view class="tx-title"><text>提示</text></view>
+        <view class="hiddenContent">
+            <text class="jsl">您的服务将于3分钟后结束！</text>
+        </view>
+      </view>
+    </view>
+    <view class="hiddenView" style='display:{{overDisplay}}' >
+      <view class="window-tx">
+        <view class="tx-title"><text>提示</text></view>
+        <view class="hiddenContent">
+          <text class="jsl">网络异常，请稍后继续结束！</text>
+        </view>
+      </view>
+    </view>
+</view>

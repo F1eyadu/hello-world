@@ -1,0 +1,141 @@
+
+.user-order-box {
+    width: 85%;
+    padding: 20rpx;
+    position: relative;
+    margin: 60rpx auto;
+    box-shadow: 1rpx 1rpx 5rpx 5rpx #F1F1F1;
+}
+.address image {
+    width: 22rpx;
+    height: 22rpx;
+}
+.address text {
+    margin-left: 20rpx;
+    font-size: 28rpx;
+}
+.message {
+    margin-top: 20rpx;
+}
+.message .tx image {
+    width: 110rpx;
+    height: 110rpx;
+    border-radius: 50%;
+}
+.message .tx {
+    display: inline-block;
+}
+.info {
+    margin-left: 20rpx;
+    display: inline-block;
+}
+.info text {
+    display: block;
+    font-size: 32rpx;
+    margin-top: 20rpx;
+}
+.pf image {
+    width: 22rpx;
+    height: 22rpx;
+    display: inline-block;
+}
+.pf text {
+    font-size: 30rpx;
+    margin-left: 20rpx;
+    display: inline-block;
+}
+.require {
+    margin-left: 20rpx;
+    display: inline-block;
+}
+.require text {
+    display: block;
+    margin-top: 20rpx;
+    color: #999;
+    font-size: 28rpx;
+}
+.require text:nth-child(1) {
+    margin-top: 0;
+}
+.time {
+    width: 130rpx;
+    height: 130rpx;
+    display: inline-block;
+    background-color: #e2e2e2;
+    border-radius: 50%;
+    margin-right: 10rpx;
+    float: right;
+}
+.project {
+    margin-top: 40rpx;
+}
+
+.tuijian-pro,.self-pro {
+    display: inline-block;
+}
+.self-pro {
+    margin-top: 10rpx;
+}
+.tuijian-content,.self-content {
+    color: #999;
+    float: left;
+    margin-left: 20rpx;
+    font-size: 32rpx;
+}
+.tuijian-content view text,.self-content view text {
+    margin-left:  20rpx;
+}
+.tuijian-content view text:nth-child(1),
+.self-content view text:nth-child(1) {
+    margin-left:  0;
+}
+.tj-title,.self-title {
+    width: 180rpx;
+    color: #f96086;
+    float: left;
+    font-size: 36rpx;
+}
+.tj-title text,.self-title text {
+    display: block;
+}
+.total-money {
+    font-size: 32rpx;
+}
+.total-money text:nth-child(1) {
+    color: #999;
+}
+.total-money text:nth-child(2) {
+    color: #f96086;
+}
+
+.project-reply {
+    position: absolute;
+    right: 10rpx;
+    bottom: 10rpx;
+    display: inline-block;
+}
+.project-reply button {
+    width: 150rpx;
+    height: 64rpx;
+    border-radius: 34rpx;
+    background-color: #f96086;
+    color: #fff;
+    margin-top: 20rpx;
+    font-size: 26rpx;
+}
+.project-reply button:nth-child(2) {
+    background-color: #3F67E6;
+}
+
+.sure-btn {
+    width: 90%;
+    margin: 40rpx auto;
+    height: 90rpx;
+    border-radius: 45rpx;
+    color: #fff;
+    background-color: #f96086;
+    padding-bottom: 20rpx;
+}
+.kf {
+    background-color: #6C75FF;
+}

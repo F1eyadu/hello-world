@@ -1,0 +1,35 @@
+<view class="contenter">
+    <view class="bill-box">
+        <view class="bill">订单情况</view>
+        <view class="project-box">
+            <text class="class" style="display:{{tuijianDisplay}}">推荐套餐</text>
+            <view class="particulars" wx:for-items="{{tuijianArr}}" wx:for-index="idx" wx:key="tuijianArr">
+                <text class="title">{{tuijianArr[idx].service.title}}</text>
+                <text>{{tuijianArr[idx].service.equipmentName}}</text>
+                <text>{{tuijianArr[idx].service.timeUnit}}分钟</text>
+                <text>{{tuijianArr[idx].service.price}}元</text>
+            </view>
+            <text class="class self" style="display:{{selfDisplay}}">自选项目</text>
+            <view class="particulars" wx:for-items="{{selfArr}}" wx:for-index="idx" wx:key="selfArr">
+                <text class="title">{{selfArr[idx].service.title}}</text>
+                <text>{{selfArr[idx].service.equipmentName}}</text>
+                <text>{{selfArr[idx].service.timeUnit}}分钟</text>
+                <text>{{selfArr[idx].service.price}}元</text>
+            </view>
+            <view class="sum-bill">
+                <view class="bill-total">
+                    <text>时长：</text>
+                    <text>{{totalTime}}分钟</text>
+                </view>
+                <view class="bill-total">
+                    <text>金额：</text>
+                    <text>{{orderInfo.actualPrice}}元</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="help">如有问题请咨询客服
+    <contact-button class="lxkf" session-from="weapp"></contact-button>
+    <button class="sure-btn" bindtap='sureBill'>确 定</button>
+    </view>
+</view>

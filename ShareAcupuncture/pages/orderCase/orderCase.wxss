@@ -1,0 +1,55 @@
+.contenter {
+    width: 90%;
+    margin: 40rpx auto;
+    padding-bottom: 40rpx;
+}
+.title {
+    width: 90%;
+    color: #f96086;
+}
+.self-title {
+    margin-top:20rpx;
+}
+.box-show {
+    width: 90%;
+    padding: 20rpx;
+    height: 100rpx;
+    border-radius: 10rpx;
+    background-color: #F7F7F7;
+    margin: 20rpx auto;
+}
+.show-top text:nth-child(2) {
+    color: red;
+    float: right;
+}
+.show-bottom {
+    margin-top: 20rpx;
+    font-size: 32rpx;
+    color: #999;
+}
+.show-bottom text:nth-child(2) {
+    float: right;
+}
+.sum-money {
+    color: red;
+    width: 90%;
+    padding: 20rpx;
+    margin-top: 20rpx;
+}
+.sum-money text:nth-child(2) {
+    color: #999;
+    float: right;
+}
+.sum-money text:nth-child(1) {
+    float: right;
+}
+.sureBtn {
+    width: 90%;
+    margin: 40rpx auto;
+    height: 90rpx;
+    border-radius: 40rpx;
+    color: #fff;
+    font-size: 36rpx;
+    background-color: #f96086;
+    padding-bottom: 20rpx; 
+}

@@ -1,0 +1,24 @@
+<view class="contenter">
+  <view class="money">
+    <image src="../../img/money.png"/>
+    <text class="mymoney">可提现额度</text>
+    <text class="num">￥{{money}}</text>
+  </view>
+  <view class="tixian-box">
+    <view class="title">提现金额</view>
+    <view class="input-box">
+      <view><image src="../../img/NewBI-money.svg"></image></view>
+      <input class="input" bindinput='getMoney' type='text' value='{{txMoney}}'/>
+    </view>
+  </view>
+  <view class="all">
+    <text bindtap='allTx' class="allTx">全部提现</text>
+    <text>(每日最多提现5次)</text>
+  </view>
+  <text class="errShow">{{errWords}}</text>
+  <view class="button">
+    <button class="sure-btn" bindtap='sureTx'>提现</button>
+  </view>
+  <view class="look">查看账单明细</view>
+</view>
+<loading hidden="{{hidden}}">请稍等...</loading>

@@ -1,0 +1,119 @@
+<view class="contenter">
+  <form>
+
+    <view class="middr {{tele == true? 'bgcff':''}}" style="display:{{teldis1}}">
+      <view class="middr-box mb2">
+        <view class="v1">电话</view>
+        <view class="input">
+          <input disabled value="{{oldtel}}" placeholder-class='holdclass'/>
+        </view>
+        <view>
+          <image class="cimg" src="../../img/chance.svg" bindtap='xiugaitel'></image>
+        </view>
+      </view>
+    </view>
+
+    <view class="middr {{tele == true? 'bgcff':''}}" style="display:{{teldis2}}">
+      <view class="middr-box mb2">
+        <view class="v1">电话</view>
+        <view class="input">
+          <input placeholder='输入电话'  bindtap='telgive' bindinput='telBlur' type='number' maxlength="11" placeholder-class='holdclass'/>
+        </view>
+        <view bindtap='getYZMbtn'>
+          <text class="yzm">{{second}}</text>
+        </view>
+      </view>
+      <view class="middr-box">
+        <view class="v1">验证码</view>
+        <view class="input">
+          <input placeholder='输入验证码' bindtap='telgive' bindinput='yzmBlur' placeholder-class='holdclass'/>
+        </view>
+        <view>
+          <text class="yzm" style='visibility:hidden'></text>
+        </view>
+      </view>
+    </view>
+
+
+    <view class="top">
+      <view class="select-addr {{chooseAddress == 0? 'bgcff':''}}">
+        <view class="cha-btn">
+          <image src="../../img/{{img1}}.svg" bindtap='changeImg1'></image>
+        </view>
+        <view class="select">
+          <view bindtap='chanceAdd' class="chanceAdd">
+            <view class="addr">
+              <input class="oldAddr" placeholder='{{olda}}' disabled value ="{{oldvalue}}"placeholder-class='holdclass'></input>
+            </view>
+            <view class="img">
+              <image src="../../img/downicon.svg"></image>
+            </view>
+          </view>
+          <scroll-view class="hiddenAddr" scroll-y style="display:{{hiddAddr}}">
+            <view class="noaddr" style="display:{{noaddr}}">您未保存任何地址</view>
+            <view style="display:{{addrlist}}">
+              <radio-group bindchange="radioChange">
+                <label class="radio" wx:for-items="{{addarr}}" wx:for-index="idx" wx:key="addarr">
+                  <radio value="{{addarr[idx].address}}"/>{{addarr[idx].address}}
+                </label>
+              </radio-group>
+            </view>
+          </scroll-view>
+        </view>
+      </view>
+      <view class="select-addr sa1 {{chooseAddress == 1? 'bgcff':''}}">
+        <view class="cha-btn2">
+        <image src="../../img/{{img2}}.svg" bindtap='changeImg2'></image>
+        </view>
+        <view class="select">
+          <view class="getaddr">
+            <view class="getaddrbox" bindtap='getLOC'>
+              <image src="../../img/address.svg"></image>
+              <input class="in1" disabled placeholder='获取当前位置' bindtap='noshowoldAddr' value="{{bigaddr}}" placeholder-class='holdclass'></input>
+            </view>
+            <view class="line"></view>
+            <view class="getaddrbox">
+              <input class="in2" bindinput='addrBlur' bindtap='noshowoldAddr' placeholder='请输入详细地址' placeholder-class='holdclass'></input>
+            </view>
+          </view> 
+        </view>
+      </view>
+    </view>
+    <!-- <view class="middr" style="display:{{teldis1}}">
+      <view class="middr-box mb2">
+        <view class="v1">电话</view>
+        <view class="input">
+          <input disabled value="{{oldtel}}" placeholder-class='holdclass'/>
+        </view>
+        <view>
+          <image class="cimg" src="../../img/chance.svg" bindtap='xiugaitel'></image>
+        </view>
+      </view>
+    </view> -->
+
+    
+
+    <view class="errShow"><text>{{errMsg}}</text></view>
+    <view class="footer">
+      <form bindsubmit="makeOrder" report-submit="true">
+        <button class="sure-btn {{tele==true && (chooseAddress==0||chooseAddress==1)?'btnTap':'btnState'}}" formType="submit">确定</button>
+      </form> 
+    </view>
+  </form>
+  <view class="hidden-view" style='display:{{hiddenShow}}'>
+    <view class="hidden-box">
+      <view class="input-box">
+        <input class="sortinput" bindinput='telBlur2' type='number' maxlength="11" placeholder='请输入手机号码' placeholder-class='inputclass'/>
+        <text class="yzn" bindtap='getYZMbtnt'>{{second}}</text>
+      </view>
+      <view class="input-box">
+        <input placeholder='请输入验证码' bindinput='yzmBlur' placeholder-class='inputclass'/>
+      </view>
+      <view class="errShow">{{errwords}}</view>
+      <view class="hidden-foot">
+        <view class="choice" bindtap='suretel'>确 定</view>
+        <view  bindtap='quxiao'>取 消</view>
+      </view>
+    </view>
+  </view>
+</view>

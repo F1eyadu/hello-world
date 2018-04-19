@@ -1,0 +1,22 @@
+<view class="contenter">
+    <view class="top"></view>
+    <view class="money-box">
+        <text>￥{{totalMoney}}</text>
+    </view>
+    <view class="explain">
+        <text>说明：</text>
+        <text>1.押金在订单结束评价后自动退回您的微信账户中。</text>
+        <text>2.无订单可直接退押金。</text>
+        <text>3.若超过3分钟未支付押金，订单自动取消。</text>
+    </view>
+    <text class="tishi">{{errShow}}</text>
+    <button class="sure-btn" bindtap='payBtn'>确定</button>
+    <view class="hiddenView" style='display:{{payDisplay}}' >
+      <view class="window-tx">
+        <view class="tx-title"><text>提示</text></view>
+        <view class="hiddenContent">
+          <text class="jsl">您在三分钟之内未付款，订单被自动取消！</text>
+        </view>
+      </view>
+    </view>
+</view>

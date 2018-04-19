@@ -1,0 +1,47 @@
+<view class="contenter">
+  <form bindsubmit="bindFormSubmit">
+    <view class="star-box">
+      <image data-star='1' src="../../img/{{star1}}" bindtap='starBtn1'/>
+      <image data-star='2' src="../../img/{{star2}}" bindtap='starBtn2'/>
+      <image data-star='3' src="../../img/{{star3}}" bindtap='starBtn3'/>
+      <image data-star='4' src="../../img/{{star4}}" bindtap='starBtn4'/>
+      <image data-star='5' src="../../img/{{star5}}" bindtap='starBtn5'/>
+    </view>
+    <view class="evaluate-box">
+      <text class="evaluate-title">评价</text>
+      <view class="comment-box">
+        <view class="py-box">
+          <image bindtap='pingImg' data-imgsrc='{{pjImg1}}1' src="../../img/{{pjImg1}}"/>
+          <text bindtap='pingImg' data-imgsrc='{{pjImg1}}1'>{{p1}}</text>
+        </view>
+        <view class="py-box">
+          <image bindtap='pingImg' data-imgsrc='{{pjImg2}}2' src="../../img/{{pjImg2}}"/>
+          <text bindtap='pingImg' data-imgsrc='{{pjImg2}}2'>{{p2}}</text>
+        </view>
+      </view>
+      <view class="comment-box">
+        <view class="py-box">
+          <image bindtap='pingImg' data-imgsrc='{{pjImg3}}3' src="../../img/{{pjImg3}}"/>
+          <text bindtap='pingImg' data-imgsrc='{{pjImg3}}3'>{{p3}}</text>
+        </view>
+        <view class="py-box">
+          <image bindtap='pingImg' data-imgsrc='{{pjImg4}}4' src="../../img/{{pjImg4}}"/>
+          <text bindtap='pingImg' data-imgsrc='{{pjImg4}}4'>{{p4}}</text>
+        </view>
+      </view>
+    </view>
+  <textarea name="textarea" class="input-box" placeholder='输入你想输的话...' bindinput='inputComment' value='{{doctorComment}}'></textarea> 
+  <text class="remark">评价提交后佣金会到您账户</text>
+    <form bindsubmit="Confirmation" report-submit="true" >
+      <button form-type="submit" class="sure-btn" >确认提交</button>
+    </form>  
+  <view class="hiddenView" style='display:{{hiddenshow}}' >
+    <view class="window-tx">
+      <view class="tx-title"><text>提示</text></view>
+      <view class="hiddenContent">
+        <text>{{show}}</text>
+      </view>
+    </view>
+  </view>
+  </form>
+</view>

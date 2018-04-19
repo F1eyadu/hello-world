@@ -1,0 +1,70 @@
+.star-box {
+    width: 60%;
+    height: 46rpx;
+    margin: 30rpx auto;
+}
+.star-box image {
+    width: 46rpx;
+    height: 46rpx;
+    margin-left: 28rpx;
+}
+.evaluate-box {
+    width: 90%;
+    margin: 30rpx auto;
+}
+.evaluate-title {
+    font-size: 26rpx; 
+    display: block;
+}
+.window-tx {
+    width: 600rpx;
+    height: 200rpx;
+    margin: 100rpx auto;
+    background-color: #fff;
+    z-index: 999;
+}
+.comment-box {
+    width: 100%;
+    display: block;
+    margin-top: 20rpx;
+}
+.comment-box .py-box {
+    width: 49%;
+    display: inline-block;
+    margin-bottom: 10rpx;
+}
+.comment-box .py-box image {
+    width: 28rpx;
+    height: 28rpx;
+}
+.comment-box .py-box text {
+    font-size: 28rpx;
+    margin-left: 10rpx; 
+}
+.input-box {
+    width: 86%;
+    height: 262rpx;
+    border:1px solid #F3F3F3;
+    border-radius: 10rpx;
+    font-size: 30rpx;
+    color: #000;
+    margin: 30rpx auto;
+    margin-bottom: 0rpx;
+}
+.remark {
+    width: 86%;
+    font-size: 24rpx;
+    display: block;
+    margin: 0 auto;
+    color: #C5C5C5;
+}
+.sure-btn {
+    width: 90%;
+    margin: 80rpx auto;
+    height: 80rpx;
+    border-radius: 45rpx;
+    color: #fff;
+    font-size: 32rpx;
+    background-color: #f96086;
+    padding-bottom: 20rpx;
+}

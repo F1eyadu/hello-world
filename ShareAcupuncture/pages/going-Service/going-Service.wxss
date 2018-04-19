@@ -1,0 +1,184 @@
+.top {
+    height: 136rpx;
+    width: 100%;
+    background-color: #f96086;
+}
+.time-box {
+    width: 90%;
+    height: 126rpx;
+    margin: -110rpx auto;
+    background-color: #fff;
+    border-radius: 10rpx;
+    padding: auto;
+    padding-top: 40rpx;
+    text-align: center;
+    box-shadow: 1rpx 1rpx 5rpx 5rpx #F1F1F1;
+}
+.tel {
+  color: #2BA245;
+}
+.time-box .time {
+    display: block;
+    font-size: 48rpx;
+    color: #f96086;
+    margin: auto;
+    height: 150rpx;
+}
+.time-box .time text {
+    color:  #000;
+    line-height: 90rpx;
+    font-size: 48rpx;
+}
+
+.say-box {
+    font-size: 26rpx;
+    width: 90%;
+    margin: 30rpx auto;
+    color: #333;
+}
+.reject-btn {
+   padding: 6rpx;
+   width: 64rpx;
+   font-size: 28rpx;
+   float: right;
+   margin-top: 10rpx;
+   margin-right: 60rpx;
+   border: 4rpx solid #9EA2EF;
+   color: #738AEF;
+}
+.warning image {
+    width: 26rpx;
+    height: 24rpx;
+}
+.warning text {
+    font-size: 26rpx;
+    color:  #738AEF;
+    height: 40rpx;
+    margin-left: 10rpx;
+    margin-bottom: 20rpx;
+}
+.down {
+    width: 44rpx;
+    height: 44rpx;
+    margin: 15rpx auto;
+}
+.down image {
+    width: 44rpx;
+    height: 44rpx;
+}
+.orderShow {
+    width: 85%;
+    padding: 20rpx;
+    border: 1rpx solid #e6e6e6;
+    border-radius: 10rpx;
+    margin: 140rpx auto;
+    margin-bottom: 0;
+}
+.show-title {
+    font-size: 32rpx;
+    display: block;
+}
+.top-worker {
+    margin-top: 40rpx;
+    border-bottom: 1px solid #F1F1F1;
+}
+.tx-box {
+    width: 130rpx;
+    display: inline-block; 
+}
+.tx-box image {
+    width: 130rpx;
+    height: 130rpx;
+    border-radius: 50%;
+}
+.worker-info {
+    height: 200rpx;
+    margin-left: 40rpx;
+    font-size: 32rpx;
+    display: inline-block; 
+}
+.worker-info .block-text {
+    display: block;
+    margin-bottom: 20rpx;
+}
+.card {
+    display: inline-block;
+    margin-right: 20rpx;
+}
+.card image {
+    width: 30rpx;
+    height: 30rpx;
+}
+.card text {
+    margin-left: 10rpx;
+    font-size: 28rpx;
+}
+.project-box {
+    width: 90%;
+    padding: 10rpx;
+}
+.project-box .class {
+    color: #f96086;
+    display: block;
+}
+.particulars text {
+    font-size: 30rpx;
+    margin-right: 30rpx;
+    color: #999;
+}
+.particulars text:nth-child(4) {
+    color: red;
+}
+.particulars .title {
+    margin-top:20rpx;
+    margin-bottom:20rpx;
+    display: block;
+    font-size: 32rpx;
+    color: #000;
+}
+.self {
+    margin-top: 40rpx;
+}
+
+.sure-btn {
+    width: 90%;
+    height: 80rpx;
+    border-radius: 40rpx;
+    color: #fff;
+    margin: 40rpx auto;
+    font-size: 32rpx;
+    margin-bottom: 0;
+    display: block;
+    background-color: #f96086;
+}
+modal .qdcxdd {
+    font-size: 44rpx;
+    display: block;
+}
+.tishi {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    color: #999;
+    font-size: 32rpx;
+}
+.overService {
+  font-size: 30rpx;
+  width: 60rpx;
+  background-color: #f96086;
+}
+.overSone {
+  width:120rpx;
+  font-size: 26rpx;
+  color: #fff;
+  display: inline-block;
+  float: right;
+  border-radius: 50rpx;
+  background-color: #f96086;
+}
+.over {
+    background-color: #999;
+}
+.hiddenContent .jsl {
+  margin-top: 50rpx;
+}

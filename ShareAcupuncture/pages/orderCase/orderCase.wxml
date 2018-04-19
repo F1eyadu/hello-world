@@ -1,0 +1,29 @@
+<view class="contenter">
+    <view class="title" style="display:{{tuijianDisplay}}">推荐套餐</view>
+    <view class="box-show" wx:for-items="{{tuijianArr}}" wx:for-index="idx" wx:key="tuijianArr">
+        <view class="show-top" >
+            <text>{{item.title}}</text>
+            <text>￥{{item.price}}</text>
+        </view>
+        <view class="show-bottom">
+            <text>{{item.equipmentUnit}} 份 {{item.equipmentName}}</text>
+            <text>{{item.timeUnit}}分钟</text>
+        </view>
+    </view>
+    <view class="title self-title" style="display:{{selfDisplay}}">自选套餐</view>
+    <view class="box-show" wx:for-items="{{selfArr}}" wx:for-index="idx" wx:key="selfArr">
+        <view class="show-top">
+            <text>{{item.title}}</text>
+            <text>￥{{item.priceTotal}}</text>
+        </view>
+        <view class="show-bottom">
+            <text>{{item.equipmentUnit}} 份 {{item.equipmentName}}</text>
+            <text>{{item.timeUnit}}分钟</text>
+        </view>
+    </view>
+    <view class="sum-money">
+        <text>{{price}}元</text>
+        <text>合计：</text>
+    </view>
+    <button class="sureBtn" bindtap='goSelect'>确认</button>
+</view>

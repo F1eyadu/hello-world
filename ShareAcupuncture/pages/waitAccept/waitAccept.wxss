@@ -1,0 +1,179 @@
+.conrenter {
+  padding-bottom: 50rpx;
+}
+.top {
+    height: 136rpx;
+    width: 100%;
+    background-color: #f96086;
+}
+.tel {
+    color: #2BA245;
+}
+.time-box {
+    width: 90%;
+    height: 146rpx;
+    margin: -110rpx auto;
+    background-color: #fff;
+    border-radius: 10rpx;
+    padding: auto;
+    padding-top: 40rpx;
+    text-align: center;
+    box-shadow: 1rpx 1rpx 5rpx 5rpx #F1F1F1;
+}
+.time-box .time {
+    display: block;
+    font-size: 48rpx;
+    color: #f96086;
+    margin: auto;
+    height: 150rpx;
+}
+.time-box .time text:nth-child(1) {
+    color:  #000;
+    font-size: 48rpx;
+}
+
+.say-box {
+    font-size: 26rpx;
+    width: 90%;
+    margin: 30rpx auto;
+    margin-bottom: 10rpx;
+    color: #333;
+}
+.reject-btn {
+   padding: 6rpx;
+   width: 64rpx;
+   font-size: 28rpx;
+   float: right;
+   margin-top: 10rpx;
+   margin-right: 60rpx;
+   border: 4rpx solid #9EA2EF;
+   color: #738AEF;
+}
+.warning image {
+    width: 26rpx;
+    height: 24rpx;
+}
+.warning text {
+    font-size: 26rpx;
+    color:  #738AEF;
+    height: 30rpx;
+    margin-left: 10rpx;
+}
+.down {
+    width: 44rpx;
+    height: 44rpx;
+    margin: 0 auto;
+}
+.down image {
+    width: 44rpx;
+    height: 44rpx;
+}
+.orderShow {
+    width: 85%;
+    padding: 20rpx;
+    border: 1rpx solid #e6e6e6;
+    border-radius: 10rpx;
+    margin: 160rpx auto;
+    margin-bottom: 0;
+}
+.show-title {
+    font-size: 32rpx;
+    display: block;
+}
+.top-worker {
+    margin-top: 40rpx;
+    border-bottom: 1px solid #F1F1F1;
+}
+.tx-box {
+    width: 130rpx;
+    display: inline-block; 
+}
+.tx-box image {
+    width: 130rpx;
+    height: 130rpx;
+    border-radius: 50%;
+}
+.worker-info {
+    height: 200rpx;
+    margin-left: 40rpx;
+    font-size: 32rpx;
+    display: inline-block; 
+}
+.worker-info .block-text {
+    display: block;
+    margin-bottom: 20rpx;
+}
+.card {
+    display: inline-block;
+    margin-right: 10rpx;
+}
+.card image {
+    width: 30rpx;
+    height: 30rpx;
+}
+.card text {
+    margin-left: 10rpx;
+    font-size: 28rpx;
+}
+.project-box {
+    width: 96%;
+    padding: 10rpx;
+}
+.project-box .class {
+    color: #f96086;
+    display: block;
+}
+.particulars text {
+    font-size: 30rpx;
+    margin-right: 30rpx;
+    color: #999;
+}
+.particulars text:nth-child(4) {
+    color: red;
+}
+.particulars .title {
+    margin-top:20rpx;
+    margin-bottom:20rpx;
+    display: block;
+    font-size: 32rpx;
+    color: #000;
+}
+.self {
+    margin-top: 40rpx;
+}
+.btn-box {
+    width: 90%;
+    margin: 10rpx auto;
+}
+.tishibox {
+    width: 90%;
+    margin: 10rpx auto;
+    font-size: 32rpx;
+    color: #999;
+}
+.sure-btn {
+    width: 100%;
+    height: 80rpx;
+    border-radius: 40rpx;
+    font-size: 32rpx;
+    color: #fff;
+    display: block;
+    margin: 40rpx auto;
+    margin-bottom: 0;
+    background-color: #f96086;
+}
+.hiddenView {
+    width: 100%;
+    height: 140%;
+    z-index: 800;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(100, 100, 100, .5);
+}
+.hiddenContent text:nth-child(1) {
+    color: red;
+}
+.hiddenContent .jsl {
+  margin-top: 50rpx;
+}

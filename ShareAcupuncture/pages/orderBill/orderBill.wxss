@@ -1,0 +1,82 @@
+.contenter {
+  padding-bottom: 100rpx;
+}
+.bill-box {
+    width: 80%;
+    border: 1px solid #f4f4f4;
+    padding: 30rpx;
+    padding-bottom: 10rpx;
+    padding-top: 20rpx;
+    border-radius: 20rpx;
+    margin: 30rpx auto;
+    margin-bottom: 10rpx;
+}
+.project-box {
+    margin-top: 30rpx;
+}
+.project-box .class {
+    color: #f96086;
+    display: block;
+}
+.particulars text {
+    font-size: 30rpx;
+    margin-right: 30rpx;
+    color: #999;
+}
+.lxkf {
+    margin: 0 auto;
+    color: #7F7F7F;
+    font-size: 24rpx;
+    text-align: center;
+}
+.particulars text:nth-child(4),.particulars text:nth-child(5)  {
+    margin-right: 0;
+    color: red;
+}
+.particulars text:nth-child(5),
+.particulars text:nth-child(6) {
+    float: right;
+    margin-right: 0;
+    font-size: 32rpx;
+}
+.particulars text:nth-child(6) {
+    color: #000;
+}
+.particulars .title {
+    margin-top:20rpx;
+    margin-bottom:20rpx;
+    display: block;
+    font-size: 32rpx;
+    color: #000;
+}
+.self {
+    margin-top: 30rpx;
+}
+.help {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 30rpx;
+    color: #999;
+}
+.sum-bill {
+    font-size: 32rpx;
+}
+.bill-total {
+    margin-left: 380rpx;
+}
+.sum-bill .bill-total:nth-child(2) text:nth-child(2) {
+    color: red;
+}
+
+.help text {
+    color: #738AEF;
+}
+.sure-btn {
+    width: 90%;
+    margin: 80rpx auto;
+    height: 80rpx;
+    font-size: 32rpx;
+    border-radius: 40rpx;
+    color: #fff;
+    background-color: #f96086;
+}

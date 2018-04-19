@@ -1,0 +1,40 @@
+/**app.wxss**/
+/*-------------------------遮罩层*/
+ 
+.hiddenView {
+    position: absolute;
+    width: 100%;
+    height: 130%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .3);
+}
+.window-tx {
+    width: 600rpx;
+    height: 200rpx;
+    margin: 400rpx auto;
+    background-color: #fff;
+    z-index: 999;
+}
+.tx-title {
+    width: 100%;
+    height: 30%;
+    background-color: #FFDBE3;
+}
+.tx-title text {
+    width: 80rpx;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+.hiddenContent text {
+    width: 600rpx;
+    display: block;
+    font-size: 32rpx;
+    color: #f96086;
+    text-align: center;
+    margin: 10rpx auto;
+}
+.viewHeight {
+    margin: 10rpx auto;
+}
