@@ -1,0 +1,186 @@
+.position{
+  width: 100%;
+  display: flex;
+  margin-bottom: 60rpx;
+}
+.hostImg{
+  width: 220rpx;
+  height:150rpx;
+}
+.hostName{
+  padding-left: 20rpx;
+  font-size: 35rpx;
+}
+.posImg{
+  width: 30rpx;
+  height: 30rpx;
+}
+.address{
+  display: flex;
+  align-items: center;
+  margin-top: 25rpx;
+  font-size: 26rpx;
+  color: #868686;
+}
+.information{
+  display: flex;
+  margin-bottom: 35rpx;
+}
+.infoFort{
+  width: 25%;
+  font-size: 30rpx;
+  color: #B2B2B2;
+  padding: 15rpx 0rpx; 
+}
+.infoBack{
+  width: 75%;
+  text-align: right;
+  font-size: 30rpx;
+  padding: 15rpx 0rpx; 
+  border-bottom: 3rpx solid #EFEFEF;
+}
+.erweima{
+  width: 150rpx;
+  height: 150rpx;
+}
+.notice{
+  width: 80%;
+  margin: 0 auto 150rpx;
+  padding: 20rpx;
+  line-height: 45rpx;
+  font-size: 25rpx;
+  color: #9B9B9B;
+}
+.guideMap{
+  padding:20rpx;
+  font-size:35rpx;
+  color: #B2B2B2; 
+}
+.map{
+  margin: 0 auto;
+  width: 100%;
+}
+.order{
+  position:fixed;
+  bottom: 0rpx;
+  left: 0;
+  width: 100%;
+  padding: 30rpx 0rpx;
+  background-color:#F0F0F0; 
+}
+.orderBtn{
+  width: 90%;
+  line-height: 2.4;
+  font-size: 36rpx;
+  border: 3rpx solid #999999;
+  color: #3E3E3E;
+  background-color: rgba(255,255,255,0);
+}
+
+/* 弹框 */
+.show-btn {
+  margin-top: 100rpx;
+  color: #22cc22;
+}
+
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 99;
+  color: #fff;
+}
+
+.modal-dialog {
+  width: 90%;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 5%;
+  z-index: 199;
+  background: #f9f9f9;
+  border-radius: 10rpx;
+}
+
+.modal-title {
+  padding-top: 50rpx;
+  font-size: 34rpx;
+  letter-spacing: 5rpx;
+  color: #030303;
+  text-align: center;
+}
+input-holder {
+  color: #666;
+  font-size: 28rpx;
+}
+.modal-footer {
+  margin: 30rpx 0rpx 20rpx;
+  height: 80rpx;
+  font-size: 30rpx;
+  line-height: 80rpx;
+  letter-spacing: 10rpx;
+}
+.btn-confirm {
+  width: 80%;
+  margin: 20rpx auto 0rpx;
+  border-radius: 10rpx;
+  background-color: #588FD3;
+  color: #ffffff;
+  text-align:center;
+  line-height: 1.8;
+}
+.cancelSuss{
+  width: 50%;
+  position: fixed;
+  z-index: 199;
+  top: 30%;
+  left: 25%; 
+  padding: 20rpx;
+  border-radius: 10rpx;
+  background-color: rgba(0,0,0,0.4);
+  display: none;  
+}
+.cancelFaild{
+  width: 40%;
+  position: fixed;
+  z-index: 199;
+  top: 30%;
+  left: 30%; 
+  padding: 25rpx;
+  border-radius: 10rpx;
+  background-color: rgba(0,0,0,0.4);
+  display: none;  
+}
+.show{
+  display: block;
+}
+.cancelTit{
+  font-size: 30rpx;
+  color: #ffffff;
+  text-align:center;
+  line-height: 45rpx;
+  margin-bottom: 25rpx;
+  letter-spacing: 5rpx;
+}
+.cancelCont{
+  letter-spacing: 5rpx;
+  line-height: 35rpx;
+  font-size: 25rpx;
+  color: #ffffff;
+}
+.checkBtn{
+  width: 250rpx;
+  font-size: 30rpx;
+  line-height: 2;
+  margin-right: 0;
+}
+.guide{
+  width: 100%;
+}

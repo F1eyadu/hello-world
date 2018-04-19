@@ -1,0 +1,83 @@
+.address{
+  padding: 30rpx;
+  background-color: #ffffff;
+  font-size: 35rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.myAddress{
+  padding: 30rpx;
+  margin-top: 30rpx;
+  font-size: 35rpx;
+  background-color: #ffffff;
+}
+.default{
+  border: 1rpx solid #CCCCCC;
+  color: #CCCCCC;
+  font-size: 30rpx;
+  border-radius: 10rpx;
+  padding: 0 10rpx;
+}
+.defaults{
+  border: 1rpx solid #FF8149;
+  color: #FF8149;
+}
+.headAdd{
+  display: flex;
+  color: #424242;
+  align-items: center;
+  justify-content: space-between;
+}
+.Adress{
+  padding: 25rpx 0;
+  color: #7B7B7B;
+}
+.Adetails{
+  margin-top: 20rpx;
+  color: #7B7B7B;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modifyModal{
+ width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  z-index: 90;
+}
+.modifyTel{
+  width: 70%;
+  height: 200rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 20%;
+  left: 15%;
+  z-index: 99;
+  background: #ffffff;
+  border-radius: 15rpx;
+}
+.deleteAdd{
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+}
+.confirms{
+  display: flex;
+  width: 90%;
+  margin: 20rpx auto 0rpx;
+}
+.confirms button{
+  /* padding: 0rpx 15rpx; */
+  border: none;
+  font-size: 30rpx;
+  color: #ffffff; 
+}
+.confirms button::after{
+  border:none;
+}

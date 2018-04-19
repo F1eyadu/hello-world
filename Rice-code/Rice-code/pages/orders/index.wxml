@@ -1,0 +1,106 @@
+<view class='classifys'>
+  <view class="classify {{stuta==1?'border':''}}" data-stuta="1" bindtap='change'>进行中</view>
+  <view class="classify {{stuta==2?'border':''}}" data-stuta="2" bindtap='change'>已结束</view>
+  <view class="classify {{stuta==3?'border':''}}" data-stuta="3" bindtap='change'>已预定</view>
+</view>
+<view>
+  <view class="menu" hidden='{{stuta!=1}}'>
+    <view wx:if='{{ordering[0].id}}'>
+      <view class='contains' wx:for="{{ordering}}" wx:key="id" bindtap='tiaozhuan' data-sellerid='{{item.sellerId}}' data-add='{{item.sendAddress.id}}' data-id='{{item.id}}'>
+        <image src='{{url}}file/seller-{{item.sellerId}}-{{item.headIcon}}' class='foodImg'></image>
+        <view class='ml20 w70'>
+          <view class='flex saround'>
+            <view class='foodName'>{{item.sellerName}}</view>
+          </view>
+          <view class='flex mt10'>
+            <view class='times'>{{timeing[index]}}</view>
+          </view>
+          <view class='flex mt10'>
+            <view class='times' hidden='{{item.orderType!=1}}'>外卖</view>
+            <view class='times' hidden='{{item.orderType!=2}}'>预定</view>
+            <view class='times' hidden='{{item.type!=1 || item.orderType!=0}}'>先吃后付</view>
+            <view class='times' hidden='{{item.type!=0 || item.orderType!=0}}'>先付后吃</view>
+          </view>
+          <view class='flex mt10'>
+            <view class='orderTime'></view><view class='times' hidden="{{item.total==null}}">{{item.total}}元</view>
+            <view hidden='{{item.state!=9}}' class='fz30 ml20'>配送中</view>
+            <view hidden='{{item.state!=7}}' class='fz30 ml20'>支付中</view>
+            <view hidden='{{item.state!=0}}' class='fz30 ml20'>待付款</view>
+            <view hidden='{{item.state!=2}}' class='fz30 ml20'>已下单</view>
+            <view hidden='{{item.state!=11}}' class='fz30 ml20'>出菜中</view>
+            <view hidden='{{item.state!=3 || item.orderType!=1}}' class='fz30 ml20'>已付款</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:else class='noOrder'>
+      <image src='../../images/orders.svg' class='orderImg'></image>
+      <view class='mt20'>暂无订单</view>
+    </view>
+  </view>
+  <view class="menu" hidden='{{stuta!=2}}'>
+    <view wx:if="{{ordered[0].id}}">
+      <view class='contains' wx:for="{{ordered}}" wx:key="id" bindtap='details' data-sellerid='{{item.sellerId}}' data-addid='{{item.sendAddress.id}}' data-id='{{item.id}}' data-state='{{item.state}}'>
+        <image src='{{url}}file/seller-{{item.sellerId}}-{{item.headIcon}}' class='foodImg'></image>
+        <view class='ml20 w70'>
+          <view class='flex saround'>
+            <view class='foodName'>{{item.sellerName}}</view>
+          </view>
+          <view class='flex mt20'>
+            <view class='times'>{{timed[index]}}</view>
+          </view>
+          <view class='flex mt10'>
+            <view class='times' hidden='{{item.orderType!=1}}'>外卖</view>
+            <view class='times' hidden='{{item.orderType!=2}}'>预定</view>
+            <view class='times' hidden='{{item.type!=1 || item.orderType!=0}}'>先吃后付</view>
+            <view class='times' hidden='{{item.type!=0 || item.orderType!=0}}'>先付后吃</view>
+          </view>
+          <view class='flex mt10'> 
+            <view class='times'>{{item.total}} 元</view>
+            <view hidden='{{item.state!=10}}' class='fz30 ml20'>已送达</view>
+            <view hidden='{{item.state!=8}}' class='fz30 ml20'>已拒绝</view>
+            <view hidden='{{item.state!=5}}' class='fz30 ml20'>退款中</view>
+            <view hidden='{{item.state!=6}}' class='fz30 ml20'>已退款</view>
+            <view hidden='{{item.state!=4}}' class='fz30 ml20'>已取消</view>
+            <view hidden='{{item.state!=3 || item.orderType!=0}}' class='fz30 ml20'>已完成</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:else class='noOrder'>
+      <image src='../../images/orders.svg' class='orderImg'></image>
+      <view class='mt20'>暂无订单</view>
+    </view>
+  </view>
+  
+  <view class="menu" hidden='{{stuta!=3}}'>
+    <view wx:if='{{Reserve}}'>
+       <view class='contains' wx:for="{{Reserve}}" wx:key="id" bindtap='tiaozhuan' data-sellerid='{{item.sellerInfo.id}}' data-id='{{item.reserveInfo.id}}'>
+        <image src='{{url}}file/seller-{{item.sellerInfo.id}}-{{item.sellerInfo.headIcon}}' class='foodImg'></image>
+        <view class='ml20 w70'>
+          <view class='flex saround'>
+            <view class='foodName'>{{item.sellerInfo.name}}</view>
+          </view>
+          <view class='flex mt20'>
+            <view class='orderTime'>下单时间:</view><view class='times' style='margin-left:10rpx'> {{item.reserveInfo.createTime}}</view>
+          </view>
+          <view class='flex mt20'>
+            <view class='orderTime'>就餐时间:</view><view class='times' style='margin-left:10rpx'> {{item.reserveInfo.reserveTime}}</view>
+          </view>
+          <view hidden='{{item.reserveInfo.state!=4}}' class='fz30 mt20'>已完成 </view>
+          <view hidden='{{item.reserveInfo.state!=1}}' class='fz30 mt20'>已接受</view>
+          <view hidden='{{item.reserveInfo.state!=3}}' class='fz30 mt20'>已拒绝</view>
+          <view hidden='{{item.reserveInfo.state!=0}}' class='fz30 mt20'>已提交</view>
+        </view>
+      </view> 
+    </view>
+    <view wx:else class='noOrder'>
+      <image src='../../images/orders.svg' class='orderImg'></image>
+      <view class='mt20'>暂无订单</view>
+    </view>
+  </view>
+
+</view>
+<view>
+  <loading hidden="{{hidden}}" bindchange="loadingChange"> 加载中...</loading>
+</view>

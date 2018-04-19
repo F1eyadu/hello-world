@@ -1,0 +1,69 @@
+<view class='page'>
+  <view class='orders'>
+    <view data-num="1" class="choose {{_num==1?'addBoder':''}}" bindtap='menuClick'>进行中</view>
+    <view data-num="2" class="choose {{_num==2?'addBoder':''}}" bindtap='menuClick'>已结束</view>
+  </view>
+  <view class="Checking {{nums ==1?'show':''}}" data-nums="1">
+    <view  wx:if="{{lists[0].id}}">
+      <view wx:for="{{lists}}" wx:key="id" data-id="{{item.id}}" class='checks' bindtap='tiaozhuan'>
+        <image src="{{Url}}rest/Photo/download/photoType-house/fileName-{{item.house.fileName}}/file-{{Imging[index]}}" class='hostImg'></image>
+        <view class='checkInfo'>
+          <view class='hostHead'>
+            <view class='hostName'>{{item.house.houseName}}</view>
+            <view class='hostTime'>{{time[index].startTime}}-{{time[index].endTime}}</view>
+          </view>
+          <view class='host-Pos'>
+            <view class='host-Poss'>
+              <view class='pos-wide'>
+                <image src='../../images/position.png' class='posImg'></image>
+                <view class='hostPosition'>{{item.house.houseAddress}}</view>
+              </view>
+              <button class="evaBtns wait-Payfor {{item.state ==2?'show':''}}">待支付</button>
+              <button class="evaBtns wait-Into {{item.state ==3 || item.state ==4?'show':''}}">已付款</button>
+              <view class="evaBtns  {{item.state ==5?'show':''}}">状态异常</view>
+              <view class="evaBtns  {{item.state ==6?'show':''}}">退款中</view>
+            </view>
+            <view class='erweimaView'>
+              <image src='{{item.erweima}}' class='erweima'></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:else class='Noorder'>
+        <image src="../../images/orders.svg" class='orderImg'></image>
+        <view class='mt20'>暂无订单</view>
+    </view>
+  </view>
+  <view class="Checking {{nums ==2?'show':''}}" data-nums="2">
+    <view wx:if="{{list[0].id}}">
+      <view wx:for="{{list}}" wx:key="id" data-id="{{item.id}}" class='checks' bindtap='finish'>
+      <image src="{{Url}}rest/Photo/download/photoType-house/fileName-{{item.house.fileName}}/file-{{Imged[index]}}" class='hostImg'></image>
+      <view class='checkInfo'>
+        <view class='hostHead'>
+          <view class='hostName'>{{item.house.houseName}}</view>
+          <view class='hostTime'>{{times[index].startTime}}-{{times[index].endTime}}</view>
+        </view>
+        <view class='hostPos'>
+          <image src='../../images/position.png' class='posImg'></image>
+          <view class='hostPosition'>{{item.house.houseAddress}}</view>
+          <button class="evaBtn bgBlue {{item.ordercomment.content ==null&&item.state==0?'show':''}}">评价</button>
+           <view class="evaBtn  {{item.ordercomment.content !=null&&item.state==0?'show':''}}">已评价</view>
+           <view class="evaBtn {{item.refundState =='success'&& item.state==1?'show':''}}">已退款</view>
+            <view class="evaBtn {{item.state==1&&item.refundState !='success'?'show':''}}">订单取消</view> 
+        </view>
+      </view>
+    </view>
+    </view>
+    <view wx:else class='Noorder'>
+        <image src="../../images/orders.svg" class='orderImg'></image>
+        <view class='mt20'>暂无订单</view>
+    </view>
+  </view>
+</view>
+<view class="cancelFaild {{stutas ==2?'xianshi':''}}">
+  <view class='cancelCont'>订单异常，请联系客服</view>
+</view>
+<view class="cancelFaild {{stutas ==1?'xianshi':''}}">
+  <view class='cancelCont'>正在退款</view>
+</view>

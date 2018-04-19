@@ -1,0 +1,214 @@
+.containers{
+  height: 100vh;
+}
+.swiperS{
+  position: relative;
+  height: 500rpx;
+}
+.slide-image{
+  width: 100%;
+  height: 250px;
+}
+.posimg{
+  width: 35rpx;
+  height: 35rpx;
+}
+.PagNumber{
+  position: absolute;
+  z-index: 99;
+  bottom: 25rpx;
+  right: 30rpx;
+  color: #ffffff;
+  font-size: 30rpx;
+}
+.hostAddr{
+  line-height: 40rpx;
+  font-size: 40rpx;
+  padding: 20rpx;
+  color: #4C4C4C;
+}
+.hostAddress{
+  padding: 0rpx 20rpx;
+  font-size: 25rpx;
+  color: #999999;
+  display: flex;
+  align-items: center;
+}
+.hostDes{
+  margin-top: 35rpx;
+  padding: 0rpx 20rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.hostFun{
+  font-size: 25rpx;
+  color: #999999;
+  display: flex;
+  align-items: center;
+}
+.intoTime{
+  margin-top: 15rpx;
+  display: flex;
+  padding: 25rpx 20rpx 0rpx;
+  margin-bottom: 30rpx;
+}
+.intoTimes{
+  width: 50%;
+}
+.restri{
+  width: 50%;
+  text-align: right;
+}
+.title{
+  font-size: 35rpx;
+  line-height: 45rpx;
+}
+.times{
+  margin-top: 15rpx;
+  font-size: 28rpx;
+  color: #999999;
+}
+.introduce{
+  width: 90%;
+  margin: 0rpx auto 40rpx;
+}
+.taber{
+  display: flex;
+  justify-content:space-between; 
+  border-bottom: 1rpx solid #FAFAFA;
+}
+.tabers{
+  font-size: 30rpx;
+  font-weight: 400;
+  padding: 20rpx 0rpx;
+}
+.addBorder{
+  border-bottom: 5rpx solid #7BA6DC;
+}
+.content{
+  padding-top: 10rpx;
+  width: 100%;
+  display: none;
+  font-size: 26rpx;
+  line-height: 40rpx;
+  letter-spacing: 8rpx;
+  position: relative;
+  color: #7D7D7D;
+}
+.show{
+  display: block;
+}
+.showMore{
+  position: absolute;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0);
+  bottom: 10rpx;
+  right: 10rpx;
+}
+.evaluate{
+  width: 90%;
+  margin: 20rpx auto;
+}
+.roomEva{
+  font-size: 35rpx;
+}
+.roomEva-tit{
+  display: flex;
+  align-items: center;
+  margin-top: 20rpx;
+  position: relative;
+  font-size: 30rpx;
+}
+.evaluates{
+  margin: 30rpx auto;
+  padding-bottom: 35rpx;
+  border-bottom: 2rpx solid #DEDEDE;
+}
+.HeadImg{
+  width: 50rpx;
+  height: 50rpx;
+}
+.UserName{
+  margin-left: 20rpx;
+}
+.EvaTime{
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #DEDEDE;
+}
+.UserEva{
+  margin-top: 25rpx;
+  font-size: 28rpx;
+  line-height: 45rpx;
+  color: #7D7D7D;
+}
+.order{
+  width: 100%;
+  padding: 35rpx 0rpx;
+  background-color:#F0F0F0; 
+  position: fixed;
+  bottom: 0rpx;
+  left: 0rpx;
+  z-index: 199;
+}
+.orderBtn{
+  width: 90%;
+  background-color: #588FD3;
+  color: #ffffff;
+}
+.contents{
+  position: relative;
+  height: auto;
+  margin-bottom: 40rpx;
+}
+.hide{
+  font-size: 30rpx;
+  line-height:45rpx;
+  overflow : hidden; 
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+}
+.shows{
+  font-size: 30rpx;
+  line-height:45rpx;
+   overflow : hidden; 
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.color{
+  letter-spacing: 2rpx;
+  font-size: 30rpx;
+  position: absolute;
+  bottom: -35rpx;
+  right: 10rpx;
+  color: #588FD3;
+  z-index: 99;
+}
+.showBtn{
+  display: block;
+}
+.hideBtn{
+  display: none;
+}
+.EvaImg{
+  width: 200rpx;
+  height: 200rpx;
+  margin: 20rpx;
+}
+.EvaImgs{
+  display: flex;
+}
+.Noorder{
+  font-size: 30rpx;
+  text-align: center;
+}
+.orderImg{
+  margin-top: 20rpx;
+  width: 100rpx;
+  height: 100rpx;
+}

@@ -1,0 +1,56 @@
+<view class="saleName">{{sellerInfo.name}}</view>
+<view class='saleAdr'>
+  <view class='flex p20'>
+    <image src='../../images/SaleTel.svg' class='Myicon mr30' bindtap='callSeller'></image>
+    <view>电话:<text class='ml30'>{{sellerInfo.tel}}</text></view>
+  </view>
+  <view class='flex p20'>
+    <image src='../../images/position.svg' class='mr30' style='width:70rpx; height:70rpx'></image>
+    <view>地址:<text class='ml30'>{{sellerInfo.address}}</text></view>
+  </view>
+</view>
+<view class='mt20 showInfo'>
+<view class='containers'>
+    <view>订单号:</view> 
+    <view>{{orderInfo.orderNumber}}</view>
+  </view>
+  <view class='containers'>
+    <view>订餐人:</view> 
+    <view wx:if="{{orderInfo.gender == '男'}}">{{orderInfo.userName}}先生</view>
+     <view wx:else="{{orderInfo.gender == '女'}}">{{orderInfo.userName}}女士</view>
+  </view>
+  <view class='containers'>
+    <view>电话:</view><view>{{orderInfo.contactPhone}}</view>
+  </view>
+  <view class='containers'>
+    <view>用餐人数:</view><view>{{orderInfo.numberOfMeals}}人</view>
+  </view>
+  <view class='containers'>
+    <view>用餐时间:</view><view>{{time}}</view>
+  </view>
+  <!-- <view class='containers'>
+    <view>餐桌号:</view><view>{{orderInfo.tableType}}-{{orderInfo.tableNum}}</view>
+  </view> -->
+  <view class='containers' hidden="{{orderInfo.remark ==''}}">
+    <view >备注:</view><view>{{orderInfo.remark}}</view>
+  </view>
+</view>
+<view class='bottoms' hidden='{{state}}'>
+  <button class='confrimBtn' bindtap='confrim'>回到首页</button>
+  <button class='cancelBtn' bindtap='cancel'>取消订单</button>
+</view>
+<view class='remind'>
+ <view>说明:用户点击确认入住后即可扫描桌面二维码进入堂食流程进行就餐</view>
+</view>
+<view style='height:40rpx'></view>
+<view class='models' hidden='{{hidden}}'>
+  <view class='notess'>
+      <view class='noteTit'>{{title}}</view>
+      <view class='message'>{{message}}</view>
+      <view class='noteBtn'>
+        <button class='confrimBtn' bindtap='clickBtn'>确定</button>
+        <button class='cancelBtn bgff' bindtap='closeModel'>取消</button>
+      </view>
+  </view>
+</view>
+<view class='reminds' hidden='{{remind}}'>{{xiaoxi}}</view>

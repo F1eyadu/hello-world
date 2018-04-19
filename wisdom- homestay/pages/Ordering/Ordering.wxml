@@ -1,0 +1,73 @@
+<view class='page'>
+  <view class='position'>
+    <image src='{{Url}}rest/Photo/download/photoType-house/fileName-{{houseInfo.fileName}}/file-{{houseImg}}' class='hostImg'></image>
+    <view class='hostName'>
+      {{houseInfo.houseName}}
+      <view class='address' bindtap='map'>
+        <image src='../../images/position.png' class='posImg'></image>
+        <view>{{houseInfo.houseAddress}}</view>
+      </view>
+    </view>
+  </view>
+  <view>
+    <view class='information'>
+      <view class='infoFort'>房客</view>
+      <view class='infoBack'>{{shuliang}}位</view>
+    </view>
+    <view wx:for="{{user}}">
+      <view wx:if="{{user[index].realName}}" class='information'>
+        <view class='infoFort'>入住人</view>
+        <view class='infoBack'>{{user[index].realName}}</view>
+      </view>
+      <view wx:else></view>
+    </view>
+    <view class='information'>
+      <view class='infoFort'>日期</view>
+      <view class='infoBack'>{{startTime}} 至 {{endTime}}</view>
+    </view>
+    <view class='information'>
+      <view class='infoFort'>金额</view>
+      <view class='infoBack'>￥{{price}}</view>
+    </view>
+    <view class='information'>
+      <view class='infoFort'>二维码开锁</view>
+      <view class='infoBack'>
+        二维码链接已发送您手机
+      </view>
+    </view>
+  </view>
+</view>
+<view>
+  <view class='guideMap'>路线引导图</view>
+  <view class='map'>
+    <image mode="aspectFill" src='{{Url}}rest/Photo/download/photoType-bootstrapDiagram/fileName-{{houseInfo.fileName}}/file-{{houseInfo.bootstrapDiagram}}' class='guide'></image>
+  </view>
+</view>
+<view class='notice'>注意:下单两小时后不可再取消订单，当晚18点后也不可取消订单。 </view>
+<view style='height:30rpx'></view>
+<view class='order' hidden='{{hidden}}'>
+  <button class='orderBtn' bindtap='cancelOrder'>取消订单</button>
+</view>
+<!-- 弹框  -->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <view class="modal-title">确定取消订单</view>
+  <view class="modal-footer">
+    <form bindsubmit="onConfirm" report-submit="true">
+      <button class="btn-confirm" formType="submit">确定</button>
+    </form>
+  </view>
+</view>
+<!-- 成功取消 -->
+<view class="cancelSuss {{stuta ==1?'show':''}}">
+  <view class='cancelTit'>您的订单已成功取消</view>
+  <view class='cancelCont' style='text-align:center'>钱款会在3个工作日内打到您支出的银行卡上</view>
+</view>
+<!-- 取消失败 -->
+<view class="cancelSuss {{stuta ==2?'show':''}}">
+  <view class='cancelTit'>订单取消失败</view>
+  <view class='cancelCont' style='text-align:center'>{{message}}</view>
+</view>
+
+<map id="map4select" longitude="{{longitude}}" latitude="{{latitude}}" markers="{{markers}}" style="width: 100%; position:absolute;top:0;bottom:0;height:auto;" bindregionchange="regionchange" controls="{{controls}}" hidden='{{hiddens}}'>
+</map>

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "饭典",
+  "navigationBarBackgroundColor": "#FF8049",
+  "navigationBarTextStyle": "white",
+  "backgroundTextStyle": "dark",
+  "enablePullDownRefresh": true
+}

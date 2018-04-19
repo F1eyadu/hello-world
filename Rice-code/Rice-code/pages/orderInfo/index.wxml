@@ -1,0 +1,99 @@
+<view class='userInfos'>
+  <view class='userInfo addBorder'>
+    <view class='infoHead'>姓名</view>
+    <view class='addInfo'>
+      <input type='text' placeholder='请输入姓名' class='addName' bindinput='orderName'></input>
+    </view>
+  </view>
+  <view class='userInfo addBorders'>
+    <view class='infoHead'>性别</view>
+    <view class='addInfo'>
+      <radio-group  bindchange="radioChange">
+        <label class="radio mr20 fz35" wx:for="{{userSex}}" >
+          {{item.value}}<radio value="{{item.value}}" checked="{{item.checked}}" class='ml10' color="#FF8149"/>
+        </label>
+      </radio-group>
+    </view>
+  </view>
+
+  <view class='userInfo addBorders'>
+    <view class='infoHead'>电话</view>
+    <view class='addInfo'>
+      <input type='text' disabled placeholder='请输入电话' class='addTel' bindtap='orderTel' value='{{orderTel}}'></input>
+      <!-- <button class='getyzm' hidden='{{hadGet == false}}' bindtap='getyzm'>获取验证码</button>
+      <button class='getyzm' hidden='{{hadGet == true}}' >{{last_time}}s</button> -->
+    </view>
+  </view>
+
+  <!-- <view class='userInfo addBorders'>
+    <view class='infoHead'>验证码</view>
+    <view class='addInfo'>
+      <input type='text' placeholder='请输入手机验证码' class='addName' bindinput='orderCode'></input>
+    </view>
+  </view> -->
+  <view class='userInfo'>
+    <view class='infoHead'>用餐人数</view>
+    <view class='addInfo'>
+      <input type='text' placeholder='请输入用餐人数' class='addName' bindinput='orderNum'></input>
+    </view>
+  </view>
+  <view class='block20'></view>
+  <view class='userInfo'>
+    <view class='infoHead'>备注</view>
+    <view class='addInfo'>
+      <input type='text' placeholder='可填写附加要求' class='addName' bindinput='orderDesc'></input>
+    </view>
+  </view>
+  <view class='block20'></view>
+
+  <view class='userInfo addBorders'>
+    <view class='infoHead'>用餐时间</view>
+    <view class='addInfo'>
+      <input type='text' placeholder='请选择用餐时间' class='arriveTime' value='{{date}}' disabled='true'></input>
+      <view class='pleaseChoose'>
+        <picker mode="date" value="{{date}}" start="{{dates}}" end="2100-12-31" bindchange="bindDateChange" class='picker'><text></text><image src='../../images/downArrow.svg' class='chooseImg'></image></picker>
+      </view>
+    </view>
+  </view>
+
+  <view class='userInfo addBorders'>
+    <view class='infoHead'>具体时间</view>
+    <view class='addInfo'>
+      <input type='text' placeholder='请选择具体时间' class='arriveTime' value='{{time}}' disabled='true'></input>
+      <view class='pleaseChoose'>
+        <picker mode="time" value="{{time}}" start="{{times}}" end="23:59" bindchange="bindTimeChange" class='picker'><text></text><image src='../../images/downArrow.svg' class='chooseImg'></image></picker>
+      </view>
+    </view>
+  </view>
+  <form bindsubmit="sellerOrder" report-submit="true">
+      <!-- <button class='orderBtn' bindtap='sellerOrder'>立即预定</button> -->
+      <button class="orderBtn" formType="submit">立即预定</button>
+    </form>
+
+  <!-- <view class='notes'>注意:若用户超过预定用餐时间30分钟还未到店,订单将被商家取消</view> -->
+</view>
+<view class='models' hidden='{{hidden}}'>
+  <view class='notess'>
+    <image src='{{src}}' class='reserve'></image>
+    <view>{{message}}</view>
+  </view>
+</view>
+<view class="cancelFaild show" hidden='{{states}}'>
+  <view class='cancelCont'>{{xiaoxi}}</view>
+</view>
+
+ <view class='modifyModal' hidden='{{stuta}}'>
+  <view class='modifyTel'>
+    <view class='inputTel'>
+      <view class='Tele'><input placeholder='请输入手机号' value='{{modifyTel}}' bindinput='modifyTele' placeholder-class='placeSty'></input></view>
+      <view class='getYZM'>
+        <button class='yzmBtn' hidden='{{hadGet == false}}' bindtap='getyzm'>获取验证码</button>
+        <button class='yzmBtn' hidden='{{hadGet == true}}' >{{last_time}}s</button>
+      </view>
+    </view>
+    <view class='inputYZM'><input placeholder='请输入验证码' placeholder-class='placeSty' bindinput='inputCode' value='{{code}}'></input></view>
+    <view class='confirms'>
+      <button class='bgGray' bindtap='hideModal'>取消</button><button class='bgOrg' bindtap='modifyTels'>确定</button>
+    </view>
+  </view>
+</view>

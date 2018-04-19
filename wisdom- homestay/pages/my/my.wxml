@@ -1,0 +1,19 @@
+<view>
+  <view class='NavBar'>
+    <view><image src="{{avatarUrl}}" class='headImg'></image></view>
+  </view>
+  <view class='userList'>
+    <view class='front'>用户名</view>
+    <view class='back'>{{nickName}}</view>
+  </view>
+  <view class='userList'>
+    <view class='front'>手机号</view>
+    <view class='back'>{{tele}}</view>
+  </view>
+  <view class='userList' bindtap='myEva'>
+    <view class='front'>我的评论</view>
+    <view class='back'><image src='../../images/rightArr.png' class='rightArr'></image></view>
+  </view>
+  <button  class='Contact bgblue' bindtap='callingService'>联系客服:81803771</button>
+  <button class='Contact bgyellow' bindtap='Join'>我要加盟:15922994447</button>
+</view>

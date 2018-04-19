@@ -1,0 +1,143 @@
+  .canvas{
+  width: 100%;
+  height: 100vh;
+}   
+.indexPage{
+  width: 100%;
+  height: 100vh;
+}
+.headImg{
+  width: 94%;
+  height: 350rpx;
+  margin: 20rpx auto;
+}
+.Adimgs{
+  width: 100%;
+  height: 100%;   
+}
+.position{
+  width: 94%;
+  margin: 0 auto;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  font-size: 32rpx;
+}
+.showPosition{
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  width: 230rpx;
+}
+.adrParent{
+  position: relative;
+  margin-left: 30rpx;
+}
+.inputAdress{
+  width: 250rpx;
+  height: 65rpx;
+  padding-left: 30rpx;
+  padding-right: 65rpx;
+  letter-spacing: 2rpx;
+  border-radius: 30rpx;
+  background-color: #F6F6F6;
+}
+
+.searchImg{
+  position: absolute;
+  z-index: 99;
+  top: 15rpx;
+  right: 25rpx;
+}  
+.nearBysale{
+  width: 100%;
+  height: 70rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 35rpx;
+}
+.salers{
+  width: 95%;
+  margin: 0 auto;
+  height: 420rpx;
+  padding: 20rpx 0rpx;
+  border-top: 1rpx solid #F6F6F6;
+  display: flex;
+}
+.salerImg{
+  width: 550rpx;
+  height: 420rpx;
+}
+.salerPosition{
+  height: 50rpx;
+  display: flex;
+  width: 180rpx;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  color: #CDCDCD;
+}
+.salerOrder{
+  width: 180rpx;
+  height: 150rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.orderStyle{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  font-size: 45rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: bold;
+}
+.bgres{
+  background-color: #FF5858;
+}
+.bggray{
+   background-color: #CDCDCD;
+}
+.bgOrg{
+  background-color: #FF6749;
+}
+.salerInfos{
+  width: 550rpx;
+  height: 420rpx;
+  position: relative;
+}
+.salerInfo{
+  width: 100%;
+  height: 100rpx;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  left: 0rpx;
+  bottom: 0rpx;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+.salerName{
+  width:65%;
+  height: 100%;
+  line-height: 100rpx;
+  padding-left: 20rpx;
+}
+.saleNum{
+  width: 35%;
+  height: 100%;
+  font-size: 30rpx;
+  padding-right: 20rpx;
+}
+.saleNum view{
+  text-align: right;
+  line-height: 50rpx;
+}
+/* 宽度 */
+.w350{
+  width: 350rpx;
+}

@@ -1,0 +1,58 @@
+ <view class='Receiving '>
+  <view class='userInfo'><text>{{userInfo.name}}</text><text class='ml30'>{{userInfo.sex}}</text><text class='ml30'>{{userInfo.phone}}</text></view>
+  <view class='userAdr'><text>{{userInfo.address}}</text></view>
+</view> 
+<view class='saleInfo'>
+  <view class='flex'>
+    <image src="{{url}}file/seller-{{sellerId}}-{{headImg}}" class='saleImg'></image><view class='ml30'>{{sallerName}}</view>
+  </view>
+  <view class='flex'><image src='../../images/SaleTel.svg' class='Myicon' bindtap='callSales'></image></view>
+</view>
+<view class='orderFoods'>
+  <view class='orderFood' wx:for="{{dishes}}">
+    <view class='foodName'>{{item.dishe.name}}</view><view class='foodNum'>*{{item.amount}}</view><view class='foodPri'>{{item.sum}}元</view>
+  </view>
+
+  <view class='orderFood'>
+    <view class='foodName'>配送费</view><view class='foodPri'>{{sendOutFee}}元</view>
+  </view>
+</view>
+<view class='total'><view>合计</view><view class='totalPri'>{{total}}元</view></view>
+<view class='Remarks' hidden="{{desc == ''}}"><view>备注</view><view class='news'>{{desc}}</view></view>
+<view class='Explain'>
+    <view class='contaniners'>
+      <image src='../../images/Prompt.svg' class='Myicon'></image>
+      <view class='ml20'>说明：配送费按用户与商家的距离计算</view>
+    </view>
+</view>
+<button class='PayBtn' bindtap='wechat'>支付</button>
+<view style='height:40rpx'></view>
+<view class="cancelFaildsss" hidden='{{hidden}}'>
+  <view class='cancelCont'>{{xiaoxi}}</view>
+</view>
+
+<!-- <view class='modifyModal' hidden='{{stuta}}' bindtap='closeMode'>
+  <view class='modifyTel'>
+   <radio-group class="radio-group">
+    <label class="checkbox mt20" style=' border-bottom: 1rpx solid #F5F5F5' bindtap='wechat'>
+      <image src='../../images/wechat.svg' class='methodIcon'> </image>
+      <text class='methodName'>微信支付</text>
+      <radio value='weixin' checked="{{wechat}}" class='bandtip' />
+    </label>
+     <label class="checkbox" bindtap='alipay'>
+      <image src='../../images/payfor.svg' class='methodIcon'> </image>
+      <text class='methodName'>支付宝支付</text>
+      <radio value='zhifubao' checked="{{payfor}}" class='bandtip' />
+    </label> 
+  </radio-group> 
+  </view>
+</view> -->
+
+<view class='modifyModal' hidden='{{alipay}}'>
+  <view class='modifyTel'>
+   <view class='alipay'>
+    <image style='width:180rpx; height:180rpx;' src='{{url}}rest/orders/order/paymentTwoDimensionalCode/orderId-{{orderId}}/userId-{{userId}}'></image>
+   </view> 
+   <button class='alipayBtn' bindtap='checkPay'>保存图片</button>
+  </view>
+</view>

@@ -1,0 +1,25 @@
+<view class="page">
+  <view class='contain'>
+      <view><image src="{{avatarUrl}}" class='headImg'></image></view>
+       <view class='nickName'>{{nickName}}</view> 
+  </view>
+  <view class='contains'>
+    <view class='project' bindtap='checkAddress'>
+      <view class='flexs'><image src='../../images/position.svg' class='Myicon mr30'></image>我的收货地址</view>
+      <view class='flexs'><image src="../../images/Arrow-right.svg" class='Myicon'></image></view>
+    </view>
+    <view class='project' bindtap='joinUs'>
+      <view class='flexs'><image src='../../images/join.svg' class='Myicon mr30'></image>我要加盟</view>
+      <view class='flexs'><image src="../../images/Arrow-right.svg" class='Myicon'></image></view>
+    </view>
+    <view class='project'>
+      <view class='flexs'><image src='../../images/Customer.svg' class='Myicon mr30'></image>在线客服</view>
+      <view class='flexs'><contact-button type="default-dark" size="20" session-from="weapp">
+</contact-button></view>
+    </view>
+    <view class='project' bindtap='ontactCustomer'>
+      <view class='flexs'><image src='../../images/tel.svg' class='Myicon mr30'></image>客服电话</view>
+      <view class='flexs'>02363701181</view>
+    </view>
+  </view>
+</view>

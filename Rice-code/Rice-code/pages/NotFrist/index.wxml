@@ -1,0 +1,14 @@
+<view>
+  <view class='showAdd' bindtap='checkAdd'>
+    <view class='myInfo'>
+      <view class='userInfo'><text >{{userInfo.name}}</text><text class='ml20'>{{userInfo.sex}}</text><text class='ml20'>{{userInfo.phone}}</text></view>
+      <view class='userInfo userAdd'><text>{{userInfo.address}}</text></view>
+    </view>
+    <view class='checkMyinfo'>
+      <image src='../../images/Arrow-right1.svg' class='ArrowRight'></image></view>
+  </view>
+  <view class='userInfos addRemarks'>
+      <view class='title'>备注</view><input type='text' bindinput='addRemarks' class='userTel' placeholder='可添加附加要求'></input>
+    </view>
+    <button class='SaveBtn' bindtap='confrim'>确定</button>
+</view>

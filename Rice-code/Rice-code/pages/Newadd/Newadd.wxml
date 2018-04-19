@@ -1,0 +1,46 @@
+<view>
+  <view class='modifyInfo'>
+    <view class='userInfo'>
+      <view class='title'>联系人:</view>
+      <view class='userName'><input class='userTel' placeholder='请输入联系人姓名' bindinput='addUserName'></input></view>
+    </view>
+    <view class='userInfo'>
+      <view class='title'></view> 
+      <view class='chooseSex'><view class="userSex {{userSex=='先生'? 'chooseSexs':''}}" data-sex='先生' bindtap='chooseSex'>先生</view><view class="userSex {{userSex=='女士'? 'chooseSexs':''}}" data-sex='女士' bindtap='chooseSex'>女士</view></view>
+    </view>
+    <view class='userInfo'>
+      <view class='title'>联系电话:</view>
+      <view class='userName'><input class='userTel' placeholder='请输入电话号码' bindtap='addUserTel' value='{{userTel}}' disabled></input></view>
+    </view>
+    <view class='userInfo'>
+      <view class='title'>地址:</view>
+      <view class='userName' style='border:none'><image src='../../images/position.svg' bindtap='getLocation' style='width:60rpx;height:60rpx'></image><input bindtap='getLocation' class='userTel' value='{{address}}' placeholder='点击获取地理位置' disabled></input></view>
+    </view>
+    <view class='userInfo'>
+      <view class='title'></view>
+      <view class='userName'><input class='userTel' bindinput='desclocation' placeholder='请输入详细地址'></input></view>
+    </view>
+  </view>
+  <button class='SaveBtn' bindtap='confrim'>保存</button>
+</view>
+
+<view hidden='{{show}}' class='message'>{{message}}</view>
+<view>
+  <loading hidden="{{wait}}" bindchange="loadingChange"> 加载中...</loading>
+</view>
+
+ <view class='modifyModal' hidden='{{stuta}}'>
+  <view class='modifyTel'>
+    <view class='inputTel'>
+      <view class='Tele'><input placeholder='请输入手机号' value='{{modifyTel}}' bindinput='modifyTele' placeholder-class='placeSty'></input></view>
+      <view class='getYZM'>
+        <button class='yzmBtn' hidden='{{hadGet == false}}' bindtap='getyzm'>获取验证码</button>
+        <button class='yzmBtn' hidden='{{hadGet == true}}' >{{last_time}}s</button>
+      </view>
+    </view>
+    <view class='inputYZM'><input placeholder='请输入验证码' placeholder-class='placeSty' bindinput='inputCode' value='{{code}}'></input></view>
+    <view class='confirms'>
+      <button class='bgGray' bindtap='hideModal'>取消</button><button class='bgOrg' bindtap='modifyTels'>确定</button>
+    </view>
+  </view>
+</view>

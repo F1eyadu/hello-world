@@ -1,0 +1,70 @@
+<!--index.wxml-->
+<view class='containers'>
+  <view class='searchVew'>
+  <view class='indexPos'>{{district}}{{street}}</view>
+  <image class='searchVew-image' src="{{Url}}rest/Photo/download/photoType-apiPhoto/fileName-icon/file-refresh.png" bindtap='refresh' animation="{{animation}}"></image>
+  <view style='position:relative;'><input type='text' confirm-type='search' class='searchInput' bindinput='inputHouse' bindblur='searchHouse' value='{{searchText}}'/>
+  <image class='SearchIcon' src='../../images/search.png'></image>
+  </view>
+</view>
+<swiper class="swiper" indicator-dots="true" autoplay="true" circular="true" interval="5000" duration="1000">  
+      <block wx:for="{{Advs}}" wx:key="id">    
+        <swiper-item>   
+          <image src='{{Url}}rest/Photo/download/photoType-advertisement/fileName-{{item.fileName}}/file-{{advImg[index]}}' bindtap='Details' 
+          data-num="{{item.id}}" mode="aspectFill" class='lunboImg'></image> 
+        </swiper-item>  
+      </block>    
+</swiper>
+    <view>
+      <view class='recommend'>个性推荐</view>
+    </view>
+ <scroll-view class="recommend_scroll_x_box" scroll-x>
+ <view class="recommend_hot_box" bindtap='Search' data-id="">
+      <image src='../../images/allHouse.jpg' class="recommend_hot_image"></image>
+      <view class="recommend_hot_title">
+        <view  class="recommend_hot_style {{currentItem==''?'addBorder':''}}">全部类型</view>
+      </view>
+    </view>
+    <view class="recommend_hot_box" wx:for="{{houseType}}" wx:key="id" bindtap='Search' data-id="{{item.id}}">
+      <image src='{{Url}}rest/Photo/download/photoType-houseType/fileName-{{item.fileName}}/file-{{item.typePhoto}}' class="recommend_hot_image"></image>
+      <view class="recommend_hot_title">
+        <view  class="recommend_hot_style {{currentItem==item.id?'addBorder':''}}">{{item.typeName}}</view>
+      </view>
+    </view>
+  </scroll-view>
+    <view wx:for="{{houses}}" wx:key="index" wx:for-index="Findex"  class='hostlist' data-id='{{item.id}}' bindtap='HouseDes'>
+    <image src='{{Url}}rest/Photo/download/photoType-house/fileName-{{houses[Findex].fileName}}/file-{{imgArrs[Findex][0]}}' class='hostImg' mode="aspectFill"></image>
+      <!-- <swiper  circular="true" interval="5000" duration="1000">  
+      <block wx:for="{{imgArrs[Findex]}}" wx:key="index">    
+        <swiper-item>   
+          <image src='{{Url}}rest/Photo/download/photoType-house/fileName-{{houses[Findex].fileName}}/file-{{item}}' class='hostImg' mode="aspectFill"></image>
+        </swiper-item>  
+      </block>    
+</swiper> -->
+      <view class='hostPri'>￥{{item.houseBalance}}/晚</view>
+      <view class='hostName'>{{item.houseName}}</view>
+      <view class='hostAdd'>
+        <view class='hostAddress'>
+          <image src='../../images/position.png' class='mr10 posimg'></image>
+          <view class='houseAddr'>{{item.houseAddress}}</view>
+        </view>
+        <view class='hosrData'>
+          <view wx:for="{{datess[Findex].times}}" wx:key="id" class="orderData">{{item.day}}<view class="{{item.stuta?'Unavailable':''}}"></view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view style='height:20rpx'></view>
+    <!-- <modal hidden="{{youhui}}"  title="领取优惠券" bindcancel="cancel" bindconfirm="confrim" confirm-text="立即领取" cancel-text="残忍拒绝">
+    新用户首单立即抵扣五元,满五元送两元活动优惠红包
+</modal>  -->
+     <!-- <view class="noMore {{noMore == true?'showNo':''}}">没有更多了</view> 
+       <view>
+        <loading hidden="{{hidden}}" bindchange="loadingChange">
+            加载中...
+        </loading>
+    </view>      -->
+</view> 
+<!-- <view class='Agreement'>
+
+</view> -->

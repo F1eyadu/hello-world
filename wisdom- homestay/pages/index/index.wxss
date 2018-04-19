@@ -1,0 +1,183 @@
+/**index.wxss**/
+.containers{
+    height: 100vh;
+}
+.searchVew{
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  color: #616161;
+  text-indent: 20rpx;
+  background-color: #F5F5F5;
+  display: flex;
+  align-items: center;
+}
+.indexPos{
+  width: 300rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.searchVew-image{
+  margin:0rpx 10rpx;
+  width: 30rpx;
+  height: 30rpx;
+}
+.searchInput{
+  background: #ffffff;
+  width: 400rpx;
+  height: 55rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  padding-left: 20rpx;
+  border-radius:27rpx;
+}
+.SearchIcon{
+  z-index: 399;
+  width: 45rpx;
+  height: 45rpx;
+  position: absolute;
+  top: 5rpx;
+  right: 35rpx;
+}
+ .lunboImg{
+  width: 100%;
+   height:150px; 
+} 
+.recommend{
+  font-size: 35rpx;
+  padding-left: 45rpx;
+  line-height: 80rpx;
+}
+.recommend_scroll_x_box {
+  width: 90%;
+  margin: 20rpx auto;
+  height: 205rpx;
+  white-space: nowrap;
+  display: flex;
+  overflow: scroll;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.recommend_hot_box {
+  width: 230rpx;
+  height: 205rpx;
+  margin-right: 24rpx;
+  display: inline-block;
+}
+.recommend_hot_image {
+  width: 230rpx;
+  height: 143rpx;
+}
+.recommend_hot_title{
+  font-size: 25rpx;
+  line-height: 45rpx;
+}
+.recommend_hot_style{
+  display: inline;
+  padding-right: 4rpx;
+  padding-bottom: 6rpx;
+}
+.addBorder{
+  border-bottom: 5rpx solid #7FA7DA;
+  color: #7FA7DA;
+}
+.hostlist{
+  width: 90%;
+  margin: 35rpx auto;
+  position:relative;
+}
+.hostImg{
+  width: 100%;
+  height: 150px;
+}
+.hostPri{
+  position: absolute;
+  padding: 5rpx 15rpx;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 4.5%;
+  left: 0rpx;
+  color: #ffffff;
+  font-size: 36rpx;
+  line-height: 50rpx;
+  border-radius: 0rpx 33rpx 33rpx 0rpx;
+}
+.hostName{
+  font-size: 35rpx;
+  margin-top: 15rpx;
+}
+.hostAdd{
+  margin-top: 15rpx;
+  display: flex;
+}
+.posimg{
+  width: 35rpx;
+  height: 35rpx;
+}
+.hostAddress{
+  display: flex;
+  align-items: center;
+  font-size: 25rpx;
+  line-height: 55rpx;
+  color: #727272;
+}
+.hosrData{
+  margin-left: 20rpx;
+  display: flex;
+}
+.orderData{
+  width: 50rpx;
+  height: 50rpx;
+  border: 1rpx solid #CBCBCB;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0rpx 10rpx;
+  line-height: 50rpx;
+  font-size: 30rpx;
+  color: #2A2A2A;
+  position: relative;
+}
+.houseAddr{
+  width: 250rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+.Agreement{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.25)
+}
+.Unavailable{
+  height: 3rpx;
+  width: 100%;
+  padding: 0 5rpx;
+  top: 46%;
+  left: -10%;
+  background-color: #000000;
+  transform:rotate(40deg);
+  position: absolute;
+}
+.noMore{
+  position: fixed;
+  bottom: 30rpx;
+  left: 40%;
+  text-align: center;
+  font-size: 35rpx;
+  line-height: 35rpx;
+  margin: 20rpx 0rpx;
+  display: none;
+}
+.showNo{
+  display: block;
+}

@@ -1,0 +1,36 @@
+<view class='page'>
+  <view class='position'>
+    <image src='{{Url}}rest/Photo/download/photoType-house/fileName-{{houseInfo.fileName}}/file-{{houseImg}}'  class='hostImg'></image>
+    <view class='hostName'>
+       {{houseInfo.houseName}}
+      <view class='address'>
+        <image src='../../images/position.png' class='posImg'></image>
+        <view>{{houseInfo.houseAddress}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='EvaRoom'>
+    评价房间
+  </view>
+  <textarea maxlength="-1" class='inputEva' placeholder-class='inputEvas' placeholder='请输入你对该民宿的评价' bindinput='inputEva'>
+  </textarea>
+  <view>
+    <view class='addBtn' bindtap='addImg'>
+      <image src='../../images/addIcon.png' class='addImg'></image>
+    </view>
+    <view class='showImg'>
+      <view wx:for="{{imgArrs}}" wx:key="imgId" class='imgView'>
+        <image src="{{item.imgUrl}}" class='HostImg'></image>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='order'>
+  <button class='orderBtn' bindtap='cancelOrder'>提交</button>
+</view>
+<view class="cancelFaild {{stuta ==0?'show':''}}">
+  <view class='cancelCont'>评论不能为空，请写下您宝贵的意见</view>
+</view>
+<view class="cancelFaild {{stuta ==2?'show':''}}">
+  <view class='cancelCont'>评论成功</view>
+</view>

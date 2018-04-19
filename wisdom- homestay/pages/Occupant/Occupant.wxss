@@ -1,0 +1,137 @@
+.pageCont{
+  width: 90%;
+  margin: 0 auto;
+}
+.addUser{
+  display: flex;
+  font-size: 30rpx;
+  align-items: center;
+}
+.addImg{
+  margin-left: 20rpx;
+  width: 75rpx;
+  height: 75rpx;
+}
+.addInfo{
+  display: flex;
+  font-size: 30rpx;
+  line-height: 100rpx;
+  align-items: center;
+}
+.addName{
+  width: 20%
+}
+.addInput{
+  margin-left: 25rpx;
+  width: 75%;
+  border-bottom: 2rpx solid #E4E4E4;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.addInput input{
+  padding: 15rpx 0rpx;
+  font-size: 26rpx;
+}
+.phcolor{  
+    color: #C5C5C5;  
+}
+.Obtain{
+  border-radius: 1rpx;
+  font-size: 25rpx;
+  background-color: #F6F6F6;
+  border: none;
+  outline: none;
+  position:absolute;
+  right: 0rpx;
+}
+.Certificate{
+  margin-top: 40rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.Certificates{
+  position: relative;
+  width: 45%;
+  height: 200rpx;
+  border: 3rpx dashed #909090;
+  border-radius: 15rpx;
+  text-align: center;
+}
+.show-image{
+  position: absolute;
+  top: 0rpx;
+  left: 0rpx;
+  width: 100%;
+  height: 100%;
+  border-radius: 15rpx;
+}
+.addInfomation{
+  width: 60rpx;
+  height: 60rpx;
+  margin-top: 40rpx;
+}
+.photots{
+  font-size: 27rpx;
+  margin-top: 25rpx;
+  color: #C4C4C4;
+}
+.addOther{
+  margin-bottom: 180rpx;
+}
+.buttonOrder{
+  background-color: #F0F0F0;
+  width: 100%;
+  padding: 30rpx 0rpx;
+  position: fixed;
+  bottom: 0rpx;
+  left: 0rpx;
+}
+.orderBtn{
+  width: 90%;
+  line-height: 2.4;
+  font-size: 35rpx;
+  background-color: #588FD3;
+  color: #ffffff;
+}
+.hide{
+ display: none;
+}
+.show{
+ display: block;
+}
+.cancelFaild{
+  width: 40%;
+  position: fixed;
+  z-index: 199;
+  top: 30%;
+  left: 30%; 
+  padding: 25rpx;
+  border-radius: 10rpx;
+  background-color: rgba(0,0,0,0.4);
+}
+.cancelCont{
+  text-align: center;
+  letter-spacing: 5rpx;
+  line-height: 35rpx;
+  font-size: 25rpx;
+  color: #ffffff;
+}
+.deleteUser{
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  bottom: -10rpx;
+  right: 10rpx;
+}
+.delete{
+  width: 100%;
+  height: 45rpx;
+  text-align: right;
+  position: relative;
+  margin-top: 20rpx;
+}
+.hide{
+  display: none;
+}

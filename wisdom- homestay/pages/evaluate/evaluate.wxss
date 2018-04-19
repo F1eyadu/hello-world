@@ -1,0 +1,103 @@
+.position{
+  width: 100%;
+  display: flex;
+  margin-bottom: 60rpx;
+}
+.hostImg{
+  width: 220rpx;
+  height:150rpx;
+}
+.hostName{
+  padding-left: 20rpx;
+  font-size: 35rpx;
+}
+.posImg{
+  width: 30rpx;
+  height: 30rpx;
+}
+.address{
+  display: flex;
+  align-items: center;
+  margin-top: 25rpx;
+  font-size: 26rpx;
+  color: #868686;
+}
+.EvaRoom{
+  margin-top: 20rpx;
+  font-size: 35rpx; 
+}
+.inputEva{
+  width: 100%;
+  height: 450rpx;
+  margin-top: 25rpx;
+  font-size: 30rpx;
+  padding-top: 20rpx;
+  border: 1rpx solid #DEDEDE;
+}
+.inputEvas{
+  font-size: 30rpx;
+}
+.addBtn{
+  margin-top: 30rpx;
+  width: 120rpx;
+  height: 120rpx;
+  border: 3rpx solid #DEDEDE;
+  text-align: center;
+}
+.addImg{
+  margin-top: 30rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+.HostImg{
+  width: 180rpx;
+  height: 180rpx;
+}
+.showImg{
+  margin-top: 20rpx;
+  height: 450rpx;
+  margin-bottom: 200rpx;
+}
+.imgView{
+  width: 180rpx;
+  height: 180rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+  border: 1rpx solid #DEDEDE;
+  float: left;
+}
+.order{
+  position:fixed;
+  bottom: 0rpx;
+  left: 0;
+  width: 100%;
+  padding: 30rpx 0rpx;
+  background-color:#F0F0F0; 
+}
+.orderBtn{
+  width: 90%;
+  line-height: 2.4;
+  font-size: 36rpx;
+  color: #ffffff;
+  background-color: #588FD3;
+}
+.cancelFaild{
+  width: 40%;
+  position: fixed;
+  z-index: 199;
+  top: 30%;
+  left: 30%; 
+  padding: 25rpx;
+  border-radius: 10rpx;
+  background-color: rgba(0,0,0,0.4);
+  display: none;  
+}
+.cancelCont{
+  letter-spacing: 5rpx;
+  line-height: 35rpx;
+  font-size: 25rpx;
+  color: #ffffff;
+}
+.show{
+  display: block;
+}

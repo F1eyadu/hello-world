@@ -1,0 +1,20 @@
+<!-- <map 
+    id="map" 
+    longitude="{{longitude}}" 
+    latitude="{{latitude}}" 
+    scale="14" 
+    show-location="{{true}}"
+    markers="{{markers}}" 
+    bindmarkertap="markertap" 
+    polyline="{{polyline}}" 
+    bindregionchange="regionchange" 
+    show-location style="width: 100%; position:absolute;top:0;bottom:0;height:auto;">
+</map> -->
+
+<map id="map4select"
+ longitude="{{longitude}}" latitude="{{latitude}}" 
+ markers="{{markers}}"
+ style="width: 100%; position:absolute;top:0;bottom:0;height:auto;"
+ bindregionchange="regionchange"
+ controls="{{controls}}">
+</map>

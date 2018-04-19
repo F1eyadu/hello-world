@@ -1,0 +1,68 @@
+<view class='pageCont'>
+  <view class='addUser'>
+    <view>添加入住人</view><image src='../../images/add.png' class='addImg' bindtap='addUser'></image>
+  </view>
+  <view>
+    <view class='addInfo'>
+      <view  class='addName'>入住人1</view>
+      <view class='addInput'><input type='text' bindinput='userNameInput' placeholder-class="phcolor" placeholder='请填写入住人姓名' value='{{userName}}'></input></view>
+    </view>
+    <view class='addInfo'>
+      <view  class='addName'>手机号</view>
+      <view class='addInput'>
+        <input type='text' bindinput='telInput' placeholder-class="phcolor" placeholder='请填写入住人手机号' value='{{userTel}}'></input>
+        <button class="Obtain {{is_show?'show':'hide'}}" bindtap='Active'>点击</button>
+        <button class="Obtain {{is_show?'hide':'show'}}">{{last_time}}s</button>
+      </view>
+    </view>
+    <view class='addInfo'>
+      <view  class='addName'>验证码</view>
+      <view class='addInput'>
+        <input type='text' placeholder-class="phcolor" bindblur='fasong' bindinput='yzmInput' placeholder='请填写入验证码'></input>
+      </view>
+    </view>
+    <view class='Certificate'>
+      <view class='Certificates' bindtap='addPhotof'>
+          <view><image src='../../images/addIcon.png' class='addInfomation'></image></view>
+          <view class='photots'>身份证正面照片</view>
+          <image src="{{srcf}}"  mode="aspectFitf" class= "show-image"></image>
+      </view>
+      <view class='Certificates' bindtap='addPhotob'>
+          <view><image src='../../images/addIcon.png' class='addInfomation'></image></view>
+          <view class='photots'>身份证背面照片</view>
+          <image src="{{srcb}}" mode="aspectFitf" class= "show-image"></image>
+      </view>
+    </view>
+  </view>
+  <view class='addOther'>
+    <view wx:for="{{others}}" wx:key="id" wx:for-index="index">
+    <view class='delete'><image bindtap='DeleteInfo' data-index='{{item.userNums}}' src='../../images/delete.svg' class='deleteUser'></image></view>
+      <view class='addInfo'>
+        <view  class='addName'>入住人{{index+2}}</view>
+        <view class='addInput'><input type='text' bindinput='OtherName' data-index="{{index}}" placeholder-class="phcolor" placeholder='请填写入住人姓名' value='{{item.userName}}'></input></view>
+      </view>
+      <view class='Certificate'>
+        <view class='Certificates' bindtap='addPhotoF' data-index="{{index}}">
+            <view><image src='../../images/addIcon.png' class='addInfomation'></image></view>
+            <view class='photots'>身份证正面照片</view>
+            <image src="{{item.srcF}}" mode="aspectFitf" class= "show-image"></image>
+        </view>
+        <view class='Certificates' bindtap='addPhotoB' data-index="{{index}}">
+          <view><image src='../../images/addIcon.png' class='addInfomation'></image></view>
+            <view class='photots'>身份证背面照片</view>
+            <image src="{{item.srcB}}" mode="aspectFitf" class= "show-image"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view style='height:150rpx'></view>
+  <view class='buttonOrder'>
+    <button class='orderBtn' bindtap='orderHouse'>下一步</button>
+  </view>
+  <modal hidden="{{stuta}}" title="错误提示" bindcancel="cancel" bindconfirm="cancel">
+    {{info}}
+</modal> 
+</view>
+<view class="cancelFaild" hidden='{{hidden}}'>
+  <view class='cancelCont'>{{xiaoxi}}</view>
+</view>

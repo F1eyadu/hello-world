@@ -1,0 +1,34 @@
+<view class='page' style='height: 100vh;'>
+  <view  wx:if="{{Evas[0]}}">
+  <view wx:for="{{Evas}}" wx:key="id" class='content' wx:for-index="Findex">
+    <view class='userInfo'>
+      <image src='{{user.headImgUrl}}' class='userImg'></image>
+      <view class='userName'>{{user.name}}</view>
+      <view class='EvaTime'>{{EvaTime[Findex]}}</view>
+    </view>
+    <view class='userEvas'>{{item.ordercomment.content}}</view>
+    <view  wx:if="{{myEvaImg[Findex][0]}}">
+      <view class='EvaImgs'>
+        <view wx:for="{{myEvaImg[Findex][0]}}" wx:key="index">
+          <image src='{{Url}}rest/Photo/download/photoType-comment/fileName-{{Evas[Findex].ordercomment.fileName}}/file-{{item}}' class='EvaImg'></image>
+        </view>
+      </view>
+    </view>
+    <view wx:else></view>
+    <view class='hostInfo' data-id='{{house[Findex].id}}' bindtap='tiaozhuan'>
+      <image src='{{Url}}rest/Photo/download/photoType-house/fileName-{{house[Findex].fileName}}/file-{{houseImg[Findex]}}'  class='hostImg'></image>
+      <view class='pl20'>
+        <view class='hostName'>{{house[Findex].houseName}}</view>
+        <view class='flexs mt20'>
+          <image src='../../images/position.png' class='iconImg'></image>
+          <view class='position'>{{house[Findex].houseAddress}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  </view>
+  <view wx:else class='Noorder'>
+        <image src="../../images/eva.svg" class='orderImg'></image>
+        <view class='mt20'>暂无评价</view>
+  </view>
+</view>

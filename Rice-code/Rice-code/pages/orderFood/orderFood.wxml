@@ -1,0 +1,19 @@
+<view class='concent'>
+  <image src='../../images/shitang.jpg' class='stImg'></image>
+  <view class='stBgcolor'>
+    <view class='deskNum'>{{tableNum}}号桌</view>
+  </view>
+  <view hidden='{{sellerName==""}}' class='sellerName'>{{sellerName}}</view>
+</view>
+<view>
+  <input placeholder='请输入餐桌验证码' class='Code' placeholder-class='placeCode' bindinput='inputCode'></input>
+  <!-- <view class="clickBtn {{stuta?'bgOrg':'bgGray'}}" bindtap='orderFood'>开始点菜</view> -->
+  <view class="clickBtn bgOrg" bindtap='orderFood'>开始点菜</view>
+</view>
+<view class='botton'>
+  <view class='btText'>点餐规则:由一人获取平台验证码后，同桌人通过该验证码进入当前餐桌菜单同时点餐</view>
+</view>
+
+<view class="cancelFaild {{stutas?'show':''}}">
+  <view class='cancelCont'>{{info}}</view>
+</view>

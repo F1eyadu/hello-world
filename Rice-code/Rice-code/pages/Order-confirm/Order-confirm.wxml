@@ -1,0 +1,56 @@
+<view class='page'>
+  <view class='showCode'>您同桌验证码是：<view class='code'>{{code}}</view></view>
+<view class='contains'>
+  <view class='contain' wx:for='{{dishes}}'>
+    <view class='foodName'>{{item.dishe.name}}</view><view class='foodNum'>{{item.amount}}份</view><view class='foodPri'>{{item.sum}}元</view>
+  </view>
+  <view class='contain' wx:for='{{otherDishes}}'>
+    <view class='foodName clred'>{{item.dishe.name}}</view><view class='foodNum clred'>{{item.amount}}份</view><view class='foodPri clred'>{{item.sum}}元</view>
+  </view> 
+</view>
+<view class='total'><view>合计</view><view class='totalPri'>{{total}}元</view></view>
+<view class='total' hidden='{{discount==null}}'><view>折后价</view><view class='totalPri'>{{discount}}元</view></view>
+<button class='orderBtn' bindtap='payfor'>支付</button>
+</view>
+
+ <view class='modifyModal' hidden='{{stuta}}' catchtouchmove="preventTouchMove">
+  <view class='modifyTel'>
+  <view class='title'>请填写用餐人数 <image src='../../images/close.svg' class='Myicon close' bindtap='close' ></image></view>
+  <view class='userNum'>
+    <input class='inputNum' bindinput='inputNum'></input><view>({{setFree}}元/人)</view>
+  </view>
+  <button class="confrim" bindtap='confrim'>确定</button>
+  </view>
+</view>  
+<view>
+  <loading hidden="{{wait}}" bindchange="loadingChange"> 加载中...</loading>
+</view>
+<view class="cancelFaild show" hidden='{{hiddens}}'>
+  <view class='cancelCont'>{{NewMess}}</view>
+</view>
+
+<!-- <view class='modifyModal' hidden='{{stutas}}' bindtap='closeMode'>
+  <view class='modifyTel'>
+   <radio-group class="radio-group">
+      <label class="checkbox mt20" style=' border-bottom: 1rpx solid #F5F5F5' bindtap='wechat'>
+      <image src='../../images/wechat.svg' class='methodIcon'> </image>
+      <text class='methodName'>微信支付</text>
+      <radio value='weixin' checked="{{wechat}}" class='bandtip' />
+    </label>
+    <label class="checkbox" bindtap='alipay'>
+      <image src='../../images/payfor.svg' class='methodIcon'> </image>
+      <text class='methodName'>支付宝支付</text>
+      <radio value='zhifubao' checked="{{payfor}}" class='bandtip' />
+    </label> 
+  </radio-group> 
+  </view>
+</view> -->
+
+<view class='modifyModal' hidden='{{alipay}}'>
+  <view class='modifyTel'>
+   <view class='alipay'>
+    <image style='width:180rpx; height:180rpx;' src='{{url}}rest/orders/order/paymentTwoDimensionalCode/orderId-{{orderId}}/userId-{{userId}}'></image>
+   </view> 
+   <button class='alipayBtn' bindtap='checkPay'>保存图片</button>
+  </view>
+</view>

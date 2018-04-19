@@ -1,0 +1,17 @@
+<view class='deskType'>
+  <scroll-view scroll-x="true" style=" white-space: nowrap; display: flex; height:100%" >
+  <view wx:for="{{deskType}}" data-type='{{item}}'  class="deskdetail {{currentType==item?'borderBottom':''}}" bindtap='changeCurrent'>{{item}}</view>
+</scroll-view>
+</view>
+<view>
+    <view wx:for="{{currentDesks}}" data-id='{{item.id}}' class="details {{currentDesk==item.id?'cffff':''}}" bindtap='chooseDesk'>
+    <view class='deskNum'>{{item.tableNum}}</view>
+    <view class='deskPri'>
+      <text>{{item.numberOfMeal}}人座</text><text class='ml10'>{{item.seatingFee}}元/位</text>
+    </view>
+    <view class='deskPri'>{{item.desc}}</view>
+  </view>
+  
+</view>
+<view style='height:100rpx;'></view>
+<button class='confrim' bindtap='confrim'>确定</button>

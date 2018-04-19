@@ -1,0 +1,50 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/map/map",
+    "pages/calendar/index",
+    "pages/Occupant/Occupant",
+    "pages/details/details",
+    "pages/my/my",
+    "pages/Order/Order",
+    "pages/Carousel/Carousel",
+    "pages/payment/payment", 
+    "pages/Ordering/Ordering",
+    "pages/Reserve/Reserve",
+    "pages/MyEva/MyEva",
+    "pages/evaluate/evaluate",
+    "pages/complete/complete",
+    "pages/erweima/erweima",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#7EB0E5",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath":"images/home1.png"
+      },
+      {
+        "pagePath": "pages/Order/Order",
+        "text": "订单",
+        "iconPath": "images/order.png",
+        "selectedIconPath": "images/order1.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my1.png"
+      }
+    ]
+  }
+}

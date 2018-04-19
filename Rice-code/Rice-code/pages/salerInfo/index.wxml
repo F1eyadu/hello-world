@@ -1,0 +1,67 @@
+<view class='chooseType'>
+   <view wx:if="{{sellerInfo.canOrder==false || orderState == false}}">
+    <view class='orderType bggray'>订</view>
+    <view class='orderName'>预订</view>
+  </view>
+  <view wx:else="{{sellerInfo.canOrder==true && orderState == true}}">
+    <view class='orderType bgOrg' bindtap="sellerOrder">订</view>
+    <view class='orderName'>预订</view>
+  </view>
+  <!-- 开启外卖功能 -->
+  <!-- <view wx:if="{{sellerInfo.canSendOut==false || sendState == false}}" >
+    <view class='orderType bggray'>
+      <image src='../../images/Take-out1.svg' class='saler'></image>
+    </view>
+    <view class='orderName'>外卖</view>
+  </view> 
+  <view wx:else="{{sellerInfo.canSendOut==true && sendState == true}}">
+    <view class='orderType bggray' bindtap='sellerSend'>
+      <image src='../../images/Take-out2.svg' class='saler'></image>
+    </view>
+    <view class='orderName'>外卖</view>
+  </view> -->
+</view>
+<view class='content'>
+  <view class='salePosition borderBott'>
+    <image src='../../images/position.svg' class='Myicon mr30' bindtap='position'></image>
+    {{sellerInfo.address}}
+  </view>
+  <view class='salePosition '>
+    <image src='../../images/time.svg' class='Myicon mr30'></image>
+    预定 {{orderStartTime}}-{{orderEndTime}}
+  </view>
+  <view class='salePosition borderBott'>
+    <image class='Myicon mr30'></image>
+    外卖 {{sendOutStartTime}}-{{sendOutEndTime}}
+  </view>
+  <view class='saleDiscount'>
+    <view class='disProjects'>
+      <view class='disProject'><image src='../../images/discount.svg' class='Myicon mr30'></image>{{sellerInfo.desc}}</view>
+    </view>
+    <view class='saleTele'> 
+      <image src='../../images/SaleTel.svg' bindtap='callSaller'></image>
+    </view>
+  </view>
+  <view class='salerShow'>
+    <image src='../../images/lid.svg' class='Myicon mr30'></image>商家环境、菜品展示
+  </view>
+  
+   <swiper class='swiperS' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+  <block wx:for="{{sellerInfo.images}}" wx:key="id" wx:for-index="index">
+    <swiper-item>
+      <image bindtap="clickImage" data-src="{{item}}" mode="aspectFill" src='{{url}}file/seller-{{sellerInfo.id}}-{{item}}' class='saleImg'/>
+       <view class='PagNumber'>{{index+1}}/{{sellerInfo.images.length}}</view> 
+    </swiper-item>
+  </block>
+</swiper>
+</view>
+<view style='height:30rpx'></view>
+
+<map id="map4select"
+ longitude="{{longitude}}" latitude="{{latitude}}" 
+ markers="{{markers}}"
+ style="width: 100%; position:absolute;top:0;bottom:0;height:auto;"
+ bindregionchange="regionchange"
+ controls="{{controls}}" hidden='{{hidden}}'>
+</map>
+<view class='remind' hidden='{{hiddens}}'>卖家已休息</view>

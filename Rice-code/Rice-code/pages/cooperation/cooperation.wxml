@@ -1,0 +1,4 @@
+<view class='cooperation'>
+  <image src='../../images/cooperation.jpg' class='cooImg'></image>
+</view>
+<button class='chatNum' bindtap='contact'>联系电话:02363701181</button>

@@ -1,0 +1,32 @@
+<view class='page'>
+  <view class='showCode'>您同桌验证码是：<view class='code'>{{code}}</view></view>
+<view class='contains'>
+  <view class='contain' wx:for='{{dishes}}'>
+    <view class='foodName'>{{item.dishe.name}}</view><view class='foodNum'>{{item.amount}}份</view><view class='foodPri'>{{item.sum}}元</view>
+  </view>
+  <view class='contain' wx:for='{{otherDishes}}'>
+    <view class='foodName clred'>{{item.dishe.name}}</view><view class='foodNum clred'>{{item.amount}}份</view><view class='foodPri clred'>{{item.sum}}元</view>
+  </view>
+</view>
+<view class='total' hidden='{{total==""}}'><view>合计</view><view class='totalPri'>{{total}}元</view></view>
+<button class='orderBtn' bindtap='startDish'>开始上菜</button>
+</view>
+<view class="cancelFaild" hidden='{{hidden}}'>
+  <view class='cancelCont'>{{xiaoxi}}</view>
+</view>
+
+ <view class='modifyModal' hidden='{{stuta}}' catchtouchmove="preventTouchMove">
+  <view class='modifyTel'>
+  <view class='title'>请填写用餐人数 <image src='../../images/close.svg' class='Myicon close' bindtap='close' ></image></view>
+  <view class='userNum'>
+    <input class='inputNum' bindinput='inputNum'></input><view>({{setFree}}元/人)</view>
+  </view>
+  <button class="confrim" bindtap='confrim'>确定</button>
+  </view>
+</view>  
+<view>
+  <loading hidden="{{wait}}" bindchange="loadingChange"> 加载中...</loading>
+</view>
+<view class="cancelFaild show" hidden='{{hiddens}}'>
+  <view class='cancelCont'>{{NewMess}}</view>
+</view>

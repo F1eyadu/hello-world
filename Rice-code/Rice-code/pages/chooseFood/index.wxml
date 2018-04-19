@@ -1,0 +1,72 @@
+<view class='SaleBg' style='background-image: url({{url}}file/seller-{{sellerId}}-{{src[0]}})'>
+  <view class='saleInfo'>
+    <image src='{{url}}file/seller-{{sellerId}}-{{headImg}}' class='saleImg'></image>
+  </view>
+  <view class='saleInfos'>
+    <view class='fz40'>{{sellerName}}</view>
+    <view>
+      <view><text>起送价:</text><text class='ml20'>{{sendOutMinFee}}元</text></view>
+      <view><text>配送费:</text><text class='ml20'>{{sendOutFee}}元</text></view>
+    </view>
+    <image style='width:80rpx; height:80rpx;' src='../../images/saleTele.svg' data-tel='{{sallerTel}}' bindtap='callPhone'></image>
+    </view>
+  </view>
+<view class='flex cneter'>
+  <view class='Guide'>分类</view><view class='content'>点菜</view>
+</view>
+<view class='containers'>
+  <scroll-view scroll-y="true" class='Guide'>
+    <view wx:for='{{typeName}}' wx:key="id" data-id='{{item}}' class="typeName {{typeNameId==item?'click':''}}" bindtap='checkFood'>{{item}}<image src='../../images/triangle-right.svg' class="triangle-right" hidden='{{typeNameId!=item}}'></image></view>
+  </scroll-view>
+  <scroll-view scroll-y="true" class='content'>
+     <view class='titleName'>{{typeNameId}}</view> 
+      <view class='Foods' wx:for="{{foods}}" wx:key="id">
+       <view><image src="{{url}}file/{{sellerId}}-dish-{{item.images[0]}}" class='foodImg' bindtap="clickImage" data-src="{{item.images[0]}}"></image></view>
+       <view class='chooseFood'>
+          <view class='foodName'>{{item.name}}</view>
+          <view class='saleNum' hidden='{{item.soldAmount==null}}'>已售:{{item.soldAmount}}</view>
+          <view class='flex mt10'>
+            <view class='foodPrice' wx:if='{{item.ratio==null}}'>￥{{item.price}}</view>
+            <view class='foodPrice' wx:else>￥{{item.discount}}</view>
+            <view class='foodOpri' hidden='{{item.ratio==null}}'>￥{{item.price}}</view>
+          </view>
+           <view  class='flex mt10'>
+            <view class='discount' hidden='{{item.ratio==null}}'>{{item.ratio}}折</view>
+            <view class='flex Numbers'>
+              <image data-index='{{item.id}}' bindtap='jian' hidden='{{item.chooseNum==0}}'src='../../images/jian.svg' class='icon'></image><view class='foodNum' hidden='{{item.chooseNum==0}}'>{{item.chooseNum}}</view><image  data-index='{{item.id}}' bindtap='jia' class='icon' src='../../images/jia.svg'></image>
+            </view>
+          </view> 
+       </view>
+     </view> 
+  </scroll-view>
+</view>
+<view style='height:{{height}}rpx' hidden='{{chooseFood.length==0}}'></view>
+<view class="shoppingCar" hidden='{{chooseFood.length==0}}' style='height:{{height}}rpx'>
+  <view class='orders' bindtap='showItem'>
+    <image src='../../images/order.svg' class='orderImg'></image>
+  </view>
+  <view class='delete' hidden='{{stuta}}' bindtap='ClearItem'>
+    <image src='../../images/delete.svg' class='deleteItem'></image>清空订单
+  </view>
+  <view class='buyItems' hidden='{{stuta}}'>
+    <view wx:for="{{chooseFood}}" class='buyItem' wx:key="id">
+      <view class='itemName'>{{item.name}}</view>
+      <view class='itemPri' wx:if='{{item.ratio!=null}}'>￥{{item.discount}}</view>
+      <view wx:else class='itemPri'>￥{{item.price}}</view>
+       <view class='flex itemNum'>
+          <image data-index='{{item.id}}' bindtap='jian' hidden='{{item.chooseNum==0}}'src='../../images/jian.svg' class='icon'></image>
+          <view class='foodNum'>{{item.chooseNum}}</view>
+          <image  data-index='{{item.id}}' bindtap='jia' class='icon' src='../../images/jia.svg'></image>
+      </view> 
+    </view>
+  </view>
+  <view class='prices'>
+    <view class='ml80'>￥{{priceSum}}</view>
+     <view class='lunchBox' hidden='{{DifferPri<=0}}'>还差{{DifferPri}}元起送</view> 
+    <button hidden='{{priceSum<sendOutMinFee}}' class='confrim' bindtap='confrim'>去结算</button>
+    <button hidden='{{priceSum>=sendOutMinFee}}' class='confrims'>去结算</button>
+  </view>
+</view>
+ <view>
+  <loading hidden="{{wait}}" bindchange="loadingChange"> 加载中...</loading>
+</view>

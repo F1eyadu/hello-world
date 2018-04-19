@@ -1,0 +1,25 @@
+<view class='page'>
+  <view class='address'>
+    <view>新增收货地址</view>
+    <image src='../../images/add.svg' class='Myicon' bindtap='Addposition'></image>
+  </view>  
+
+  <view class='myAddress' wx:for="{{userInfo}}" catchtap='chooseAddress' data-id="{{item.id}}">
+    <view class='headAdd'>
+      <view>{{item.name}}</view><view>{{item.sex}}</view><view>{{item.phone}}</view><view class="default {{item.isDefault==1?'defaults':''}}" catchtap='setDefault' data-id="{{item.id}}">设为默认</view><image src='../../images/modify.svg' class='Myicon' catchtap='modifyAddress' data-id="{{item.id}}"></image>
+    </view>
+    <view class='Adetails'>
+      <view>{{item.address}}</view><image src='../../images/deletes.svg' class='Myicon' catchtap='deleteAdd' data-id="{{item.id}}"></image>
+    </view>
+  </view>
+</view> 
+
+ <view class='modifyModal' hidden='{{deletes}}'>
+  <view class='modifyTel'>
+    <view class='deleteAdd'>是否删除该地址</view>
+    <view class='confirms'>
+      <button class='bgGray' bindtap='hideModal'>取消</button><button class='bgOrg' bindtap='modifyTels'>确定</button>
+    </view>
+  </view>
+</view>
+

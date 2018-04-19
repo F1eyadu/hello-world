@@ -1,0 +1,114 @@
+page{
+  background-color: #F7F7F7;
+}
+.saleName{
+  padding: 30rpx 0rpx;
+  text-align: center;
+  letter-spacing: 3rpx;
+}
+.saleAdr{
+  background-color: #ffffff;
+  padding: 20rpx 30rpx;
+}
+.p20{
+  padding: 20rpx 0rpx;
+}
+.showInfo{
+  padding: 10rpx 30rpx;
+  background-color: #ffffff;
+}
+.containers{
+  padding: 30rpx 0rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #E3E3E3;
+  font-size: 35rpx;
+}
+.remind{
+  margin-top: 50rpx;
+  background-color: #FFE9CC;
+  color: #A9875F;
+  font-size: 25rpx;
+  padding: 20rpx 0rpx 20rpx 10rpx;
+}
+.bottoms{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 30rpx;
+}
+.confrimBtn{
+  background-color: #FE8049;
+  color: #ffffff;
+  font-size: 35rpx;
+}
+.cancelBtn{
+  color: #FE8049;
+  font-size: 35rpx;
+  border: 1rpx solid #FE8049;
+}
+.bottoms button::after{
+  border: none;
+}
+.models{
+   width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  z-index: 90;
+}
+.notess{
+  width: 70%;
+  height: 350rpx;
+  background-color: #ffffff;
+  border-radius: 10rpx;
+  position: fixed;
+  top: 30%;
+  left: 15%;
+  z-index: 999;
+  text-align: center;
+  color: #636363;
+}
+.noteTit{
+  width: 100%;
+  height: 80rpx;
+  border-radius: 10rpx 10rpx 0rpx 0rpx;
+  color: #ffffff;
+  background-color: #FF8049;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 38rpx;
+  letter-spacing: 3rpx;
+}
+.message{
+  width: 85%;
+  height: 130rpx;
+  margin: 25rpx auto 0rpx;
+  font-size: 35rpx;
+}
+.noteBtn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.noteBtn button::after{
+  border: none;
+}
+.reminds{
+  width: 250rpx;
+  text-align: center;
+  height: 55rpx;
+  line-height: 55rpx;
+  border-radius: 10rpx;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  font-size: 35rpx;
+  position: fixed;
+  top: 40%;
+  left: 35%;
+}

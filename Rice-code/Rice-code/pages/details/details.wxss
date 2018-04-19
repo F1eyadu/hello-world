@@ -1,0 +1,65 @@
+.showCode{
+  background-color: #FAFAFA;
+  color: #272727;
+  padding: 20rpx 0rpx;
+  justify-content: center;
+  display: flex;
+  font-size: 30rpx;
+  letter-spacing: 3rpx;
+  border-bottom: 2rpx solid #dddddd;
+}
+.code{
+  color: #FF4646;
+  letter-spacing: 0;
+}
+
+.contain{
+  height:100rpx;
+  line-height: 100rpx;
+  width: 90%;
+  margin: 0 auto;
+  border-bottom: 2rpx solid #dddddd;
+  display: flex;
+  font-size: 34rpx;
+  color: #000000;
+  position: relative;
+}
+.foodName{
+  position: absolute;
+  left: 0;
+}
+.foodNum{
+  color: #909090;
+  position: absolute;
+  left: 50%;
+}
+.foodPri{
+  position: absolute;
+  right: 0;
+}
+.total{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100rpx;
+  margin: 0 auto;
+  font-size: 35rpx;
+  padding-right: 40rpx;
+  background-color: #ffffff;
+}
+.totalPri{
+  margin-left: 30rpx;
+  color: #ff4949;
+}
+.returnIndex{
+  border: none;
+  width: 90%;
+  line-height: 2;
+  background-color: #FF8049;
+  color: #ffffff;
+  font-size: 34rpx;
+  margin-top: 30rpx;
+}
+.returnIndex::after{
+  border: none;
+}

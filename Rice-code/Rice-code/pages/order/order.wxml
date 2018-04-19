@@ -1,0 +1,63 @@
+<view class='showCode'>您同桌验证码是：<view class='code'>{{code}}</view></view>
+<view class='AdvView'>
+  <image src='../../images/Adv.svg' class='AdvImg'></image>
+  <view class='ml30'>{{desc}}</view>
+  <!-- <view class='ml30'>国宾啤酒买一送一</view>
+  <view class='ml30'>哈啤买一送一</view> -->
+</view>
+<view class='containers'>
+  <scroll-view scroll-y="true"  class='Guide'>
+    <view wx:for='{{typeName}}' wx:key="id" data-id='{{item}}' class="typeName {{typeNameId==item?'click':''}}" bindtap='checkFood'>{{item}}<image src='../../images/triangle-right.svg' class="triangle-right" hidden='{{typeNameId!=item}}'></image></view>
+  </scroll-view>
+  <scroll-view scroll-y="true"  class='content'>
+     <view class='titleName'>{{typeNameId}}</view> 
+      <view class='Foods' wx:for="{{foods}}" wx:key="id">
+       <view><image src="{{url}}file/{{sellerId}}-dish-{{item.images[0]}}" class='foodImg' bindtap="clickImage" data-src="{{item.images[0]}}"></image></view>
+       <view class='chooseFood'>
+          <view class='foodName'>{{item.name}}</view>
+          <view class='saleNum' hidden='{{item.soldAmount==null}}'>已售:{{item.soldAmount}}</view>
+          <view class='flex mt10'>
+            <view class='foodPrice' wx:if='{{item.ratio==null}}'>￥{{item.price}}</view>
+            <view class='foodPrice' wx:else>￥{{item.discount}}</view>
+            <view class='foodOpri' hidden='{{item.ratio==null}}'>￥{{item.price}}</view>
+          </view>
+           <view  class='flex mt10'>
+            <view class='discount' hidden='{{item.ratio==null}}'>{{item.ratio}}折</view>
+            <view class='flex Numbers'>
+              <image data-index='{{item.id}}' bindtap='jian' hidden='{{item.chooseNum==0}}'src='../../images/jian.svg' class='icon'></image><view class='foodNum' hidden='{{item.chooseNum==0}}'>{{item.chooseNum}}</view><image  data-index='{{item.id}}' bindtap='jia' class='icon' src='../../images/jia.svg'></image>
+            </view>
+          </view> 
+       </view>
+     </view> 
+  </scroll-view>
+</view>
+<view style='height:{{height}}rpx' hidden='{{chooseFood.length==0}}'></view>
+<view class="shoppingCar" hidden='{{chooseFood.length==0}}' style='height:{{height}}rpx'>
+  <view class='orders' bindtap='showItem'>
+    <image src='../../images/order.svg' class='orderImg'></image>
+  </view>
+  <view class='delete' hidden='{{stuta}}' bindtap='ClearItem'>
+    <image src='../../images/delete.svg' class='deleteItem'></image>清空订单
+  </view>
+  <view class='buyItems' hidden='{{stuta}}'>
+    <view wx:for="{{chooseFood}}" class='buyItem' wx:key="id">
+      <view class='itemName'>{{item.name}}</view>
+      <view class='itemPri' wx:if='{{item.ratio!=null}}'>￥{{item.discount}}</view>
+      <view wx:else class='itemPri'>￥{{item.price}}</view>
+       <view class='flex itemNum'>
+          <image data-index='{{item.id}}' bindtap='jian' hidden='{{item.chooseNum==0}}'src='../../images/jian.svg' class='icon'></image>
+          <view class='foodNum'>{{item.chooseNum}}</view>
+          <image  data-index='{{item.id}}' bindtap='jia' class='icon' src='../../images/jia.svg'></image>
+      </view> 
+    </view>
+  </view>
+  <view class='prices'><view class='ml100'>￥{{priceSum}}</view>
+    <button class='confrim' bindtap='confrim'>确定</button>
+  </view>
+</view>
+<view class="cancelFaildss" hidden='{{hidden}}'>
+  <view class='cancelCont'>{{xiaoxi}}</view>
+</view>
+ <view>
+  <loading hidden="{{wait}}" bindchange="loadingChange"> 加载中...</loading>
+</view>

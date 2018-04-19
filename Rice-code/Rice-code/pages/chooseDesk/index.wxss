@@ -1,0 +1,57 @@
+.deskType{
+  width: 100%;
+  height: 70rpx;
+  border-bottom: 1rpx solid #EDEDED;
+}
+.deskdetail{
+  display: inline-block;
+  width: 140rpx;
+  margin: 0 30rpx;
+  height: 95%;
+  letter-spacing: 3rpx;
+  font-size: 35rpx;
+  text-align: center;
+  line-height: 70rpx;
+}
+.borderBottom{
+  border-bottom: 5rpx solid #927F8A;
+}
+/* .dateil{
+   display: inline-block;
+  width: 235rpx;
+  height: 230rpx;
+} */
+.details{
+  display: inline-block;
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  border:2rpx solid #FF8049;
+  margin-left: 35rpx;
+  margin-top: 30rpx;
+  text-align: center;
+  font-size: 30rpx;
+  overflow: hidden;
+}
+.cffff{
+  color: #ffffff;
+  background-color: #FF8049;
+}
+.deskNum{
+  font-size: 35rpx;
+  font-weight: bold;
+  margin-top: 20rpx;
+}
+.deskPri{
+  margin-top: 15rpx;
+}
+.confrim{
+  width: 90%;
+  font-size: 35rpx;
+  color: #ffffff;
+  background-color: #FF8049;
+  letter-spacing: 5rpx;
+  position: fixed;
+  bottom: 10rpx;
+  left: 5%;
+}

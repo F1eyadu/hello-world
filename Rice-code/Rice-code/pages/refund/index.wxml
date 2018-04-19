@@ -1,0 +1,29 @@
+<view class='page'>
+  <view class='showCode'>您同桌验证码是：<view class='code'>{{code}}</view></view>
+<view class='contains'>
+  <view class='contain' wx:for='{{dishes}}'>
+    <view class='foodName'>{{item.dishe.name}}</view><view class='foodNum'>{{item.amount}}份</view><view class='foodPri'>{{item.sum}}元</view>
+  </view>
+  </view>
+  <view class='contain'>
+    <view class='foodName'>用餐人数</view><view class='foodNum'>{{userNum}}位</view><view class='foodPri'>{{free}}元</view>
+  </view>
+  <view class='total'><view>合计</view><view class='totalPri'>{{total}}元</view></view>
+  <view class='total'><view>实收</view><view class='totalPri'>{{payment}}元</view></view>
+  <view hidden='{{show}}'><button class='returnMoney' bindtap='returnIndex'>申请退款</button></view>
+</view>
+
+  <view class='modifyModal' hidden='{{stuta}}'>
+  <view class='modifyTel'>
+    <view class='returnTie'>申请退款</view>
+    <view class='pleaseInt'>请输入退款原因:</view>
+    <textarea class='refunds' bindinput='reason'></textarea>
+    <view class='flex mt30'>
+      <button class='clickBtn' bindtap='confrimRe'>提交</button>
+      <button class='clickBtn' bindtap='cancel'>取消</button>
+    </view>
+  </view>
+</view>  
+<view class="cancelFaild show" hidden='{{hidden}}'>
+  <view class='cancelCont'>已申请退款,等待商家确定</view>
+</view>

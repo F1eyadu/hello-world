@@ -1,0 +1,18 @@
+<view class='erweima'>
+  <!-- <view>{{erweima}}</view> -->
+  <!-- <button bindtap='checkErweima' class='checkBtn'>查看二维码</button> -->
+  <view class='contact'>二维码链接已发送您手机</view>
+  <view class='mt20'>二维码开锁</view>
+</view>
+<view>
+  <view class='guideMap'>路线引导图</view>
+  <view class='Nomap' hidden='{{stuta}}'>暂无引导图</view>
+   <view class='map'>
+     <image mode="aspectFill" src='{{Url}}rest/Photo/download/photoType-bootstrapDiagram/fileName-{{house.fileName}}/file-{{house.bootstrapDiagram}}' class='guide'></image> 
+      <!-- <image mode="aspectFill" src='{{Url}}rest/Photo/download/photoType-bootstrapDiagram/fileName-{{houseInfo.fileName}}/file-{{houseInfo.bootstrapDiagram}}' class='guide'></image>   -->
+  </view> 
+</view>
+<view class='indexGui'>
+  <button class='indexGuide' bindtap='indexGuide'>回到首页</button>
+</view>
+<loading hidden="{{hidden}}">加载中...</loading>

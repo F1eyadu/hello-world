@@ -1,0 +1,45 @@
+.erweima{
+  height: 350rpx;
+  background-color: #588FD3;
+  text-align: center;
+  font-size: 30rpx;
+  color: #ffffff;
+  overflow: hidden;
+}
+.guideMap{
+  padding:20rpx;
+  font-size:35rpx;
+  color: #B2B2B2; 
+}
+.guide{
+  width: 100%;
+}
+.map{
+  margin: 0 auto;
+  width: 100%;
+}
+.Nomap{
+  text-align: center;
+  font-size: 40rpx;
+  line-height: 55rpx;
+}
+.indexGui{
+  left: 0;
+  bottom: 0;
+  width: 90%;
+  margin: 35rpx auto;
+}
+.indexGuide{
+  background-color: #588FD3;
+  color: #ffffff;
+}
+.checkBtn{
+  margin-top: 120rpx;
+  margin-bottom: 50rpx;
+  font-size: 35rpx;
+  width: 50%;
+}
+.contact{
+  font-size: 35rpx;
+  margin-top: 120rpx;
+}

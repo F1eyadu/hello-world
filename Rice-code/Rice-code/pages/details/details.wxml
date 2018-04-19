@@ -1,0 +1,14 @@
+<view class='page'>
+  <view class='showCode'>您同桌验证码是：<view class='code'>{{code}}</view></view>
+<view class='contains'>
+  <view class='contain' wx:for='{{dishes}}'>
+    <view class='foodName'>{{item.dishe.name}}</view><view class='foodNum'>{{item.amount}}份</view><view class='foodPri'>{{item.sum}}元</view>
+  </view>
+  </view>
+  <view class='contain'>
+    <view class='foodName'>用餐人数</view><view class='foodNum'>{{userNum}}位</view><view class='foodPri'>{{free}}元</view>
+  </view>
+  <view class='total'><view>合计</view><view class='totalPri'>{{total}}元</view></view>
+  <view class='total'><view>实收</view><view class='totalPri'>{{payment}}元</view></view>
+  <button class='returnIndex' bindtap='returnIndex'>回到首页</button>
+</view>

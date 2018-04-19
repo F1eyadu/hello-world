@@ -1,0 +1,20 @@
+page{
+  background-color: #F6F6F6;
+}
+.cooperation{
+  width: 90%;
+  height: 200rpx;
+  margin: 60rpx auto;
+}
+.cooImg{
+ width: 675rpx;
+ height: 200rpx;
+}
+.chatNum{
+  margin-top: 300rpx;
+  line-height: 3;
+  width: 90%;
+  background-color: #FF8049;
+  color: #ffffff;
+  font-size: 30rpx;
+}

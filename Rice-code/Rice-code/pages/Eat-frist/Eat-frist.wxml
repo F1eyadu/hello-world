@@ -1,0 +1,25 @@
+<view class='concent'>
+  <image src='../../images/shitang.jpg' class='stImg'></image>
+  <view class='stBgcolor'>
+    <view class='deskNum'>{{tableNum}}号桌</view>
+  </view>
+  <view hidden='{{sellerName==""}}' class='sellerName'>{{sellerName}}</view>
+</view>
+<view>
+  <view class='orderCode' wx:if='{{stuta}}'>{{code}}</view><view wx:else></view>
+  <view class='clickBtn bgOrg' hidden='{{stuta}}' bindtap='orderFood'>点击获取餐桌验证码</view>
+  <view class="clickBtn {{stuta?'bgOrg':'bgGray'}}" bindtap='Start'>开始点菜</view>
+</view>
+<view class='botton'>
+  <view class='btText'>点餐规则:由一人获取平台验证码后，同桌人通过该验证码进入当前餐桌菜单同时点餐</view>
+</view>
+
+<view class="cancelFailds {{stutas?'show':''}}">
+  <view class='cancelCont'>{{xiaoxi}}</view>
+</view>
+<view class="cancelFailds {{stutass?'show':''}}">
+  <view class='cancelCont'>网络异常，请确保你的手机网络正常</view>
+</view>
+<view>
+  <loading hidden="{{hidden}}" bindchange="loadingChange"> 加载中...</loading>
+</view>

@@ -1,0 +1,39 @@
+<view class="flex box box-tb box-align-center">
+  <view class="calendar pink-color box box-tb">
+        <view class="top-handle fs34 box box-lr box-align-center box-pack-center mt30">
+            <view class="prev box box-rl" bindtap="handleCalendar" data-handle="prev">
+                <view class="prev-handle box box-lr box-align-center box-pack-center">
+                  <image src='../../images/leftArrow.png' class='arrowImg'></image>
+                </view>
+            </view>
+            <view  class="date-area box box-lr box-align-center box-pack-center">{{cur_year || "--"}} 年 {{cur_month || "--"}} 月</view>
+            <view class="next box box-lr" bindtap="handleCalendar" data-handle="next">
+                <view class="next-handle box box-lr box-align-center box-pack-center">
+                  <image src='../../images/rightArrow.png' class='arrowImg'></image>
+                </view>
+            </view>
+        </view>
+        <view class="weeks box box-lr box-pack-center box-align-center mt30">
+            <view class="flex week fs30" wx:for="{{weeks_ch}}" wx:key="{{index}}" data-idx="{{index}}">{{item}}</view>
+        </view>
+        <!-- 星期 -->
+        <view class="days box box-lr box-wrap mt20">
+            <view wx:if="{{hasEmptyGrid}}" class="grid white-color box box-align-center box-pack-center" wx:for="{{empytGrids}}" wx:key="{{index}}" data-idx="{{index}}">
+            </view>
+            <!-- 空白 -->
+            <view  class="grid white-color box box-align-center box-pack-center " wx:for="{{days}}" wx:key="{{index}}" data-idx="{{index}}" bindtap="tapDayItem">
+                <view style='position:relative' class="day box box-align-center box-pack-center {{item.Size?'':'NotChoose'}} {{item.choose ==true&&item.choosed==false?'choose':''}}">{{item.day}} <view class="{{item.choosed &&item.Size?'hadChoose':''}}"></view></view>
+            </view>
+            <!-- 日期 -->
+        </view>
+    </view>
+     <view class='nights'>{{chooseDate.startTime}} <text class='colBlue' hidden='{{night==null}}'>共{{night}}晚</text> {{chooseDate.endTime}}</view> 
+</view>
+<view class='bottomBtn'>
+  <button class='confrim'  bindtap='choosedDate'>完成</button>
+</view>
+
+<view class="cancelFaild" hidden='{{hidden}}'>
+  <view class='cancelCont'>你未选择日期</view>
+</view>
+

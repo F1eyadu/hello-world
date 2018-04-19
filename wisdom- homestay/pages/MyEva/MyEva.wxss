@@ -1,0 +1,72 @@
+.userImg{
+  width: 65rpx;
+  height: 65rpx;
+  border-radius: 50%;
+}
+.content{
+  padding: 20rpx 0rpx;
+  border-bottom: 2rpx solid #EFEFEF;
+}
+.userInfo{
+  display: flex;
+  align-items: center;
+  position: relative; 
+  padding: 20rpx 0rpx;
+}
+.userName{
+  font-size: 30rpx;
+  margin-left: 20rpx;
+}
+.EvaTime{
+  position: absolute;
+  right: 0rpx;
+  font-size: 27rpx;
+  color: #B2B2B2;
+}
+.userEvas{
+  font-size: 28rpx;
+  color: #7D7D7D;
+  margin-bottom: 20rpx;
+}
+.EvaImgs{
+  display: flex;
+  /* justify-content: space-between; */
+  margin-bottom: 20rpx;
+}
+.EvaImg{
+  margin: 10rpx;
+  width: 200rpx;
+  height: 200rpx;
+}
+.hostInfo{
+  width: 95%;
+  padding: 20rpx;
+  background-color: #EFEFEF;
+  border-radius: 5rpx;
+  display: flex;
+}
+.hostImg{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 5rpx;
+}
+.iconImg{
+  width: 35rpx;
+  height: 35rpx;
+}
+.hostName{
+  font-size: 30rpx;
+}
+.position{
+  font-size: 25rpx;
+  color: #707070;
+}
+.Noorder{
+  font-size: 30rpx;
+  text-align: center;
+}
+.orderImg{
+  margin-top: 45rpx;
+  width: 150rpx;
+  height: 150rpx;
+}

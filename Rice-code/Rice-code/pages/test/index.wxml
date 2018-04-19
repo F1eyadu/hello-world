@@ -1,0 +1,3 @@
+ <!-- <web-view src="{{url}}rest/orders/order/wapPay/orderId-{{orderId}}/userId-{{userId}}"></web-view>  -->
+ <view>{{url}}rest/orders/order/wapPay/orderId-{{orderId}}/userId-{{userId}}</view>
+ <button bindtap='getUrl'>粘贴</button>

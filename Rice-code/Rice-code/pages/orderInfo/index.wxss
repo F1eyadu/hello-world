@@ -1,0 +1,214 @@
+.userInfos{
+  padding: 20rpx 30rpx 0rpx;
+}
+.userInfo{
+  display: flex;
+  align-items: center;
+  height: 80rpx;
+  padding: 10rpx 0rpx;
+}
+.infoHead{
+  font-size: 35rpx;
+  width: 25%;
+  height: 100%;
+  line-height: 80rpx;
+}
+.addInfo{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 75%;
+}
+.addName{
+  width: 100%;
+  font-size: 35rpx;
+  height: 100%;
+}
+.addBorder{
+  border-bottom: 1rpx solid #DDDDDD
+}
+.addBorders{
+  border-bottom: 1rpx solid #F2F2F2
+}
+.addTel{
+  width: 65%;
+  font-size: 35rpx;
+  height: 100%;
+}
+/* .getyzm{
+  width: 30%;
+  font-size: 25rpx;
+  border: none;
+  padding:2rpx 5rpx;
+}
+.getyzm::after{
+  border: none;
+} */
+.block20{
+  height: 20rpx;
+  margin-left: -30rpx;
+  margin-right: -30rpx; 
+  background-color: #F4F4F4;
+}
+.arriveTime{
+  width: 100%;
+  font-size: 35rpx;
+  height: 100%;
+}
+.pleaseChoose{
+  display: flex;
+  width: 40%;
+  height: 100%;
+  align-items: center;
+  font-size: 30rpx;
+  color: #000000;
+  justify-content: center;
+}
+.chooseImg{
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 10rpx;
+}
+.orderBtn{
+  margin-top: 50rpx;
+  width: 90%;
+  color: #ffffff;
+  line-height: 2;
+  border: none;
+  background-color: #FF8049;
+}
+.orderBtn::after{
+  border: none;
+}
+.notes{
+  position: fixed;
+  width: 100%;
+  height: 50rpx;
+  line-height: 50rpx;
+  left: 0;
+  bottom: 0;
+  background-color: #FFE9CC;
+  color: #AA885E;
+  text-align: center;
+  font-size: 28rpx;
+}
+.picker{
+  display: flex;
+   align-items: center; 
+}
+.models{
+   width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  z-index: 90;
+}
+.notess{
+  width: 70%;
+  height: 150rpx;
+  background-color: #ffffff;
+  border-radius: 10rpx;
+  position: fixed;
+  top: 30%;
+  left: 15%;
+  z-index: 999;
+  text-align: center;
+  color: #636363;
+  letter-spacing: 3rpx;
+  font-size: 38rpx;
+}
+.reserve{
+  width: 60rpx;
+  height: 60rpx;
+  margin-top: 10rpx;
+}
+.modifyModal{
+ width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  z-index: 90;
+}
+.modifyTel{
+  width: 70%;
+  height: 300rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 20%;
+  left: 15%;
+  z-index: 100;
+  background: #ffffff;
+  border-radius: 15rpx;
+}
+.inputTel{
+  border-bottom: 1rpx solid #E8E8E8;
+  display: flex;
+  width: 90%;
+  margin: 20rpx auto 0;
+  padding: 10rpx 0;
+}
+.placeSty{
+  padding-left: 20rpx;
+  font-size: 30rpx;
+}
+.getYZM{
+  width: 39%;
+  height: 52rpx;
+  border-left: 1rpx solid #E8E8E8;
+}
+.yzmBtn{
+  border: none;
+  height: 52rpx;
+  line-height: 52rpx;
+  font-size: 30rpx;
+  background-color: #ffffff;
+  padding: 0;
+}
+.yzmBtn::after{
+  border: none;
+}
+.Tele{
+  width: 60%;
+  height: 52rpx;
+}
+.Tele input{
+  padding-left: 20rpx;
+  font-size: 30rpx;
+  height: 52rpx;
+}
+.inputYZM{
+  width: 90%;
+  height: 80rpx;
+  margin: 10rpx auto;
+  border-bottom: 1rpx solid #E7E7E7;
+}
+.inputYZM input{
+  font-size: 30rpx;
+  padding-left: 20rpx;
+  height: 80rpx;
+}
+.confirms{
+  display: flex;
+  width: 90%;
+  margin: 30rpx auto 0rpx;
+}
+.confirms button{
+  /* padding: 0rpx 15rpx; */
+  border: none;
+  font-size: 30rpx;
+  color: #ffffff; 
+}
+.confirms button::after{
+  border:none;
+}
+.chooseSexs{
+  background-color: #FF8149;
+  border: none;
+  color: #ffffff;
+}

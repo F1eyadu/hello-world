@@ -1,0 +1,62 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/Eat-frist/Eat-frist",
+    "pages/test/index",
+    "pages/refoundMoney/index",
+    "pages/orderInfo/index",
+    "pages/goTo/index",
+    "pages/chooseDesk/index",
+    "pages/Newadd/Newadd",
+    "pages/salerInfo/index",
+    "pages/Order-confirm/Order-confirm",
+    "pages/StartDish/StartDish",
+    "pages/orderFood/orderFood",
+    "pages/order/order",
+    "pages/Ordering/Ordering",
+    "pages/details/details",
+    "pages/refund/index",
+    "pages/chooseFood/index",
+    "pages/waitMeal/index",
+    "pages/NotFrist/index",
+    "pages/firstOrder/index",
+    "pages/Pending/index",
+    "pages/payoff/index",
+    "pages/orders/index",
+    "pages/cooperation/cooperation",
+    "pages/modifyAdd/modifyAdd",
+    "pages/address/address",
+    "pages/myIndex/myIndex",
+    "pages/logs/logs"
+  ],
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#7EB0E5",
+    "list": [
+      {
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "images/home.png",
+      "selectedIconPath": "images/home1.png"
+    },
+    {
+      "pagePath": "pages/orders/index",
+      "text": "订单",
+      "iconPath": "images/order.png",
+      "selectedIconPath": "images/order1.png"
+    },
+    {
+      "pagePath": "pages/myIndex/myIndex",
+      "text": "我的",
+      "iconPath": "images/my.png",
+      "selectedIconPath": "images/my1.png"
+    }
+    ]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  }
+}

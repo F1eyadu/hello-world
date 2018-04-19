@@ -1,0 +1,51 @@
+<view class='Receiving '>
+  <view class='userInfo'><text>{{sendAddress.name}}</text><text class='ml30'>{{sendAddress.sex}}</text><text class='ml30'>{{sendAddress.phone}}</text></view>
+  <view class='userAdr'><text>{{sendAddress.address}}</text></view>
+</view>
+
+<view class='Remarkss mt30' style=' border-bottom: 1rpx solid #dddddd'><view>订单号</view><view class='news'>{{infos.orderNumber}}</view></view>
+<view class='Remarkss' hidden='{{infos.expressName==null}}' style=' border-bottom: 1rpx solid #dddddd'><view>物流</view><view class='news'>{{infos.expressName}}</view></view>
+<view class='Remarkss' hidden='{{infos.courierNumber==null}}'><view>运单号</view><view class='news'>{{infos.courierNumber}}</view></view>
+
+<view class='saleInfo'>
+  <view class='flex'>
+    <image src="{{url}}file/seller-{{infos.sellerId}}-{{infos.headIcon}}" class='saleImg'></image><view class='ml30'>{{infos.sellerName}}</view>
+  </view>
+  <view class='flex'><image src='../../images/SaleTel.svg' class='Myicon' bindtap='callSales'></image></view>
+</view>
+<view class='orderFoods'>
+  <view class='orderFood' wx:for="{{dishes[0].dishes}}">
+    <view class='foodName'>{{item.dishe.name}}</view><view class='foodNum'>*{{item.amount}}</view><view class='foodPri'>{{item.sum}}元</view>
+  </view>
+
+  <view class='orderFood'>
+    <view class='foodName'>配送费</view><view class='foodPri'>{{infos.distributionFee}}元</view>
+  </view>
+</view>
+<view class='total'><view>合计</view><view class='totalPri'>{{infos.total}}元</view></view>
+<view class='Remarks' hidden="{{infos.desc==''}}"><view>备注</view><view class='news'>{{infos.desc}}</view></view>
+<view class='Explain'>
+    <view class='contaniners'>
+      <image src='../../images/Prompt.svg' class='Myicon'></image>
+      <view class='ml20'>说明：配送费按用户与商家的距离计算</view>
+    </view>
+</view>
+<view class='PayBtns' hidden='{{hidden}}'>
+  <button class='returnMoney' bindtap='refund'>申请退款</button>
+</view>
+<!-- <button class='returnMoney' bindtap='returnIndex'>返回首页</button> -->
+
+<view class='modifyModal' hidden='{{stuta}}'>
+  <view class='modifyTel'>
+    <view class='returnTie'>申请退款</view>
+    <view class='pleaseInt'>请输入退款原因(非必填):</view>
+    <textarea class='refunds' bindinput='reason'></textarea>
+    <view class='flex mt30'>
+      <button class='clickBtn' bindtap='confrimRe'>提交</button>
+      <button class='clickBtn' bindtap='cancel'>取消</button>
+    </view>
+  </view>
+</view>
+<view style='height:40rpx'></view>
+<view hidden='{{show}}' class='newMessage'>{{message}}</view>
+

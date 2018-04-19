@@ -1,0 +1,111 @@
+<!--details.wxml-->
+<view class='containers'>
+  <swiper class='swiperS' indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+  <block wx:for="{{imgList}}" wx:key="id" wx:for-index="index">
+    <swiper-item>
+      <image mode="aspectFill" src='{{Url}}rest/Photo/download/photoType-house/fileName-{{houseInfo.fileName}}/file-{{item}}' data-index="{{index}}" data-src="{{item}}" class="slide-image" bindtap="imgYu" />
+      <view class='PagNumber'>{{index+1}}/{{Number}}</view>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class='hostAddr'>{{houseInfo.houseName}}</view>
+<view class='hostAddress' bindtap='map'>
+  <image src='{{Url}}rest/Photo/download/photoType-apiPhoto/fileName-icon/file-position.png' class='mr10 posimg'></image>{{houseInfo.houseAddress}}
+</view>
+
+<view class='hostDes'>
+  <view class='hostFun'><image src='{{Url}}rest/Photo/download/photoType-apiPhoto/fileName-icon/file-room.png' class='mr10 posimg'></image>{{houseInfo.room}}</view>
+  <view class='hostFun'><image src='{{Url}}rest/Photo/download/photoType-apiPhoto/fileName-icon/file-user.png' class='mr10 posimg'></image>{{houseInfo.guestRoom}}人客房</view>
+  <view hidden="{{houseInfo.toiletState ==0}} ">
+    <view class='hostFun'><image src='{{Url}}rest/Photo/download/photoType-apiPhoto/fileName-icon/file-toilet.png' class='mr10 posimg'></image>卫生间</view>
+  </view>
+  <!-- <view wx:else class='hostFun'></view> -->
+  <view hidden="{{houseInfo.towelState ==0}}">
+      <view class='hostFun'><image src='{{Url}}rest/Photo/download/photoType-apiPhoto/fileName-icon/file-towel.png' class='mr10 posimg'></image>一次性毛巾</view>
+  </view>
+  <!-- <view wx:else class='hostFun'></view> -->
+</view>
+
+<view class='intoTime'>
+  <view class='intoTimes'>
+    <view class='title'>入住时间</view>
+    <view class='times'>15:00</view>
+  </view>
+  <view class='restri'>
+    <view class='title'>退房时间</view>
+    <view class='times'>13：00</view>
+  </view>
+</view>
+<view class='block30'></view>
+<view class='introduce'>
+  <view class='taber'>
+    <view data-num="1" class="tabers {{_num==1?'addBorder':''}}" bindtap='menuClick'>房间描述</view>
+    <view data-num="2" class="tabers {{_num==2?'addBorder':''}}" bindtap='menuClick'>入住守则</view>
+    <view data-num="3" class="tabers {{_num==3?'addBorder':''}}" bindtap='menuClick'>退房说明</view>
+  </view>
+  <view>
+    <view class="content {{numD==1?'show':''}}" data-num="1">
+      <view class='contents'>
+        <view class="{{isFold?'hide':'shows'}}">{{houseInfo.houseDetails}}</view>
+        <view bindtap='change' class="color {{dataSet==1?'showBtn':'hideBtn'}}" wx:if="{{isFold}}">显示更多</view>
+<view bindtap='change' class="color {{dataSet==1?'showBtn':'hideBtn'}}" wx:else>收起</view>
+      </view>
+    </view>
+    <view class="content {{numD==2?'show':''}}" data-num="2">
+    <view class='contents'>
+        <view class="{{isFold?'hide':'shows'}}">{{houseInfo.checkRules}}</view>
+        <view bindtap='change' class="color {{dataSet==1?'showBtn':'hideBtn'}}" wx:if="{{isFold}}">显示更多</view>
+<view bindtap='change' class="color {{dataSet==1?'showBtn':'hideBtn'}}" wx:else>收起</view>
+      </view>
+    </view>
+    <view class="content {{numD==3?'show':''}}" data-num="3">
+      <view class='contents'>
+        <view class="{{isFold?'hide':'shows'}}">{{houseInfo.checkOutRules}}</view>
+        <view bindtap='change' class="color {{dataSet==1?'showBtn':'hideBtn'}}" wx:if="{{isFold}}">显示更多</view>
+<view bindtap='change' class="color {{dataSet==1?'showBtn':'hideBtn'}}" wx:else>收起</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='evaluate'>
+  <view class='roomEva'>房间评价</view>
+  <view  wx:if="{{evaluates[0]}}">
+  <view wx:for="{{evaluates}}" wx:key="id" wx:for-index="Findex" class='evaluates'>
+    <view class='roomEva-tit'>
+      <image src="{{item.user.headImgUrl}}" class='HeadImg'/>
+      <view class='UserName'>{{item.user.name}}</view>
+      <view class='EvaTime'>{{item.time}}</view>
+    </view>
+    <view class='UserEva'>{{item.ordercomment.content}}</view>
+    <view wx:if="{{Evaimgs[Findex]}}">
+      <view class='EvaImgs'>
+      <view wx:for="{{Evaimgs[Findex][0]}}" wx:key="index">
+        <image src='{{Url}}rest/Photo/download/photoType-comment/fileName-{{evaluates[Findex].ordercomment.fileName}}/file-{{item}}' class='EvaImg'></image>
+      </view>
+    </view>
+    </view>
+    <view wx:else></view>
+  </view>
+</view>
+<view wx:else class='Noorder'>
+        <image src="../../images/eva.svg" class='orderImg'></image>
+        <view class='mt20'>暂无评价</view>
+  </view>
+</view>
+
+<view style='height:200rpx'></view>
+ <view class='order'>
+  <button class='orderBtn' bindtap='orderHouse'>预订</button>
+</view> 
+</view>
+
+<map id="map4select"
+ longitude="{{longitude}}" latitude="{{latitude}}" 
+ markers="{{markers}}"
+ style="width: 100%; position:absolute;top:0;bottom:0;height:auto;"
+ bindregionchange="regionchange"
+ controls="{{controls}}" hidden='{{hidden}}'>
+</map>

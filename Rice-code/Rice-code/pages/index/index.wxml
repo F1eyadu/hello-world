@@ -1,0 +1,56 @@
+ <view class='indexPage'>
+  <view class='headImg'>
+  <image src='../../images/ad.jpg' class='Adimgs'></image>
+</view>
+<view class='position'>
+  <image src='../../images/position.svg' class='Myicon' bindtap='getLocation'></image>
+  <view class='flex w350 ml20'  bindtap='getLocation'>
+    <view class=' showPosition'>{{district+street}}</view><image src="../../images/Arrow-right.svg" class='Myicon'></image>
+  </view>
+  <view class="adrParent">
+    <input type='text' class='inputAdress' placeholder='请输入商家店名' bindinput='inputAdress' bindblur='searchSales' value='{{address}}'></input>
+    <image src='../../images/search.svg' class='Myicons searchImg'></image>
+  </view>
+</view>  
+<view class='block20'></view>
+<view class='nearBysale'>
+  <image src='../../images/compass.svg' class='Myicons mr30'></image>
+  <view>附近商家</view>
+</view>
+
+<view class='salers' wx:for="{{salers}}">
+  <view class='salerInfos' bindtap='salerDetail' data-id="{{item.seller.id}}">
+    <image src='{{url}}file/seller-{{item.seller.id}}-{{item.seller.headIcon}}' class='salerImg'></image>
+    <view class='salerInfo'>
+      <view class='salerName'>{{item.seller.name}}</view>
+      <view class='saleNum'>
+        <view>总售 {{item.seller.soldAmount}}</view>
+        <view hidden='{{item.discount != 10}}'>暂无优惠</view>
+        <view hidden='{{item.discount== 10}}'>优惠 {{item.discount}} 折起</view>
+      </view>
+    </view>
+  </view>
+  <view>
+    <view class='salerPosition'>
+      <image src='../../images/markes.svg' class='Myicons'></image>
+      <view class='ml10'>{{item.distance}}km</view>
+    </view>
+    <view class='salerOrder mt30'>
+       <view class='orderStyle bgres' wx:if="{{item.seller.canOrder ==true && item.seller.orderStartTime < time && item.seller.orderEndTime > time}}"  data-id='{{item.seller.id}}' bindtap='salerOrder'>订</view> 
+      <view class='orderStyle bggray'  wx:else>订</view>
+    </view>
+    <view class='salerOrder mt40'>
+    <!-- 开启外卖功能 -->
+        <view class='orderStyle bgOrg'  wx:if="{{item.seller.canSendOut ==true && item.seller.sendOutStartTime < time && item.seller.sendOutEndTime > time}}" data-id='{{item.seller.id}}' bindtap='salerSend'>
+        <image src='../../images/Take-out.svg' class='saler'></image>
+      </view> 
+      <view class='orderStyle bggray'  wx:else>
+        <image src='../../images/Take-out.svg' class='saler'></image>
+      </view> 
+    </view>
+  </view>
+</view>
+</view> 
+<view>
+  <loading hidden="{{hidden}}" bindchange="loadingChange"> 加载中...</loading>
+</view>

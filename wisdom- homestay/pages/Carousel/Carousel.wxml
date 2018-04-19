@@ -1,0 +1,9 @@
+<view class="title">{{Advs.title}}</view>
+<swiper class="swiper" indicator-dots="true" autoplay="true" circular="true" interval="5000" duration="1000">  
+      <block wx:for="{{imgArr}}" wx:key="index">    
+        <swiper-item>    
+          <image src='{{url}}rest/Photo/download/photoType-advertisement/fileName-{{Advs.fileName}}/file-{{item[index]}}' bindtap='Details' mode="aspectFill" class='lunboImg'></image> 
+        </swiper-item>  
+      </block>    
+  </swiper>
+  <view class='AdvText'>{{Advs.content}}</view>

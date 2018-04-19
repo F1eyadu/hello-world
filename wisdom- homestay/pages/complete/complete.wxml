@@ -1,0 +1,36 @@
+<view class='page'>
+  <view class='position'>
+    <image src='{{Url}}rest/Photo/download/photoType-house/fileName-{{houseInfo.fileName}}/file-{{houseImg}}' class='hostImg'></image>
+    <view class='hostName'>
+      {{houseInfo.houseName}}
+      <view class='address'>
+        <image src='../../images/position.png' class='posImg'></image>
+        <view>{{houseInfo.houseAddress}}</view>
+      </view>
+    </view>
+  </view>
+  <view>
+    <view class='information'>
+      <view class='infoFort'>房客</view>
+      <view class='infoBack'>{{shuliang}}位</view>
+    </view>
+    <view wx:for="{{user}}" wx:key="index">
+      <view wx:if="{{user[index].realName}}" class='information'>
+        <view class='infoFort'>入住人</view>
+        <view class='infoBack'>{{user[index].realName}}</view>
+      </view>
+      <view wx:else></view>
+    </view>
+    <view class='information'>
+      <view class='infoFort'>日期</view>
+      <view class='infoBack'>{{startTime}} 至 {{endTime}}</view>
+    </view>
+    <view class='information'>
+      <view class='infoFort'>金额</view>
+      <view class='infoBack'>￥{{price}}</view>
+    </view>
+  </view>
+</view>
+<view class='order'>
+  <button class='orderBtn' bindtap='Evaorder'>评价</button>
+</view>

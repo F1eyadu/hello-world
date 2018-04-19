@@ -1,0 +1,157 @@
+.orders{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  border-bottom: 3rpx solid #F8F8F8;
+}
+.choose{
+  padding: 0rpx 20rpx;
+}
+.addBoder{
+  border-bottom: 5rpx solid #588FD3;
+}
+.Checking{
+  display: none;
+  width: 100%;
+}
+.show{
+  display: block;
+}
+.checks{
+  display: flex;
+  padding: 20rpx 0rpx;
+  border-bottom: 3rpx solid #DEDEDE;
+}
+.hostImg{
+  width: 240rpx;
+  height:170rpx;
+}
+.checkInfo{
+  width: 100%;
+  padding-left: 20rpx;
+}
+.hostHead{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+.hostName{
+  width: 65%;
+  font-size: 35rpx;
+}
+.hostTime{
+  width: 35%;
+  text-align: right;
+  font-size: 25rpx;
+  color: #C5C5C5;
+}
+.posImg{
+  width: 30rpx;
+  height: 30rpx;
+}
+.hostPos{
+  display: flex;
+  align-items: center;
+}
+.hostPosition{
+  padding-left: 20rpx;
+  font-size: 28rpx;
+  color: #707070;
+  width: 250rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.host-Pos{
+  display: flex;
+}
+.pos-wide{
+  display: flex;
+  align-items: center;
+}
+.host-Poss{
+  width: 60%
+}
+.erweimaView{
+  width: 40%;
+  text-align: right;
+}
+.erweima{
+  width: 100rpx;
+  height: 100rpx;
+  
+}
+.evaBtn{
+  display: none;
+  width: 180rpx;
+  text-align: center;
+  line-height: 2;
+  font-size: 25rpx;
+  border: none;
+  outline: none;
+  margin-right: 0rpx;
+  color:#3399FF
+}
+.evaBtns{
+  width: 100rpx;
+  text-align: center;
+  line-height: 2;
+  font-size: 25rpx;
+  padding: 0rpx;
+  border: none;
+  outline: none;
+  margin-top: 20rpx;
+  margin-left: 0rpx;
+  display: none;
+  color: #3399FF
+}
+.show{
+  display: block;
+}
+.bgBlue{
+  color: #ffffff;
+  background-color: #588FD3;
+}
+.wait-Payfor{
+  border: none;
+  outline: none;
+  color: #000000;
+  background-color: #ECECEC;
+}
+.wait-Into{
+  /* border:1rpx solid #EE7727; */
+  background-color: rgba(0, 0, 0, 0);
+  color: #EE7727;
+}
+.orderImg{
+  margin-top: 45rpx;
+  width: 150rpx;
+  height: 150rpx;
+}
+.Noorder{
+  font-size: 30rpx;
+  text-align: center;
+}
+.cancelFaild{
+  width: 40%;
+  position: fixed;
+  z-index: 199;
+  top: 30%;
+  left: 30%; 
+  padding: 25rpx;
+  border-radius: 10rpx;
+  background-color: rgba(0,0,0,0.4);
+  display: none;  
+}
+.cancelCont{
+  letter-spacing: 5rpx;
+  line-height: 35rpx;
+  font-size: 25rpx;
+  color: #ffffff;
+}
+.xianshi{
+  display: block;
+}

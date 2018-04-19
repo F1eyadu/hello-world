@@ -1,0 +1,62 @@
+.position{
+  width: 100%;
+  display: flex;
+  margin-bottom: 60rpx;
+}
+.hostImg{
+  width: 220rpx;
+  height:150rpx;
+}
+.hostName{
+  padding-left: 20rpx;
+  font-size: 35rpx;
+}
+.posImg{
+  width: 30rpx;
+  height: 30rpx;
+}
+.address{
+  display: flex;
+  align-items: center;
+  margin-top: 25rpx;
+  font-size: 26rpx;
+  color: #868686;
+}
+.information{
+  display: flex;
+  margin-bottom: 35rpx;
+}
+.infoFort{
+  width: 25%;
+  font-size: 30rpx;
+  color: #B2B2B2;
+  padding: 15rpx 0rpx; 
+}
+.infoBack{
+  width: 75%;
+  text-align: right;
+  font-size: 30rpx;
+  padding: 15rpx 0rpx; 
+  border-bottom: 3rpx solid #EFEFEF;
+}
+.notice{
+  padding: 20rpx;
+  line-height: 45rpx;
+  font-size: 30rpx;
+  color: #9B9B9B;
+}
+.order{
+  position:fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 30rpx 0rpx;
+  background-color:#F0F0F0; 
+}
+.orderBtn{
+  width: 90%;
+  line-height: 2.4;
+  font-size: 36rpx;
+  background-color: #588FD3;
+  color: #ffffff;
+}
